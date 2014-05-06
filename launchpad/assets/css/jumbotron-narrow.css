@@ -77,3 +77,11 @@ body {
     border-bottom: 0;
   }
 }
+
+.mychembl-acknowledge * img{
+	padding: 20px;
+}
+
+.ack-logo-width {
+    width: 200px;	
+}

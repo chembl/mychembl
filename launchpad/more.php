@@ -1,31 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="myChEMBL, ">
-    <meta name="author" content="Mark Davies">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+<? include "header.php"; ?> 
 
-    <title>myChEMBL KNIME Integration</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <div class="container">
-    
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="/">Home</a></li>
@@ -53,22 +27,5 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="footer">
-          <div class="col-lg-6">
-            <p>myChEMBL 2014</p>
-          </div>
-          <div class="col-lg-6">
-            <p class="text-right">ChEMBL Version: 18</p>
-          </div>            
-        </div>
-      </row>
-
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  </body>
-</html>
+<? include "footer.php"; ?> 
+      

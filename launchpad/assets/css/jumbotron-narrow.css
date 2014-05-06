@@ -85,3 +85,7 @@ body {
 .ack-logo-width {
     width: 200px;	
 }
+
+.mychembl-faq * h4{
+	padding-top: 20px;
+}

@@ -4,7 +4,7 @@
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="/">Home</a></li>
         </ul>
-        <h3 class="text-muted">More Information</h3>
+        <h3 class="text-muted">myChEMBL More Information</h3>
       </div>
 
 
@@ -39,10 +39,10 @@
           <h4><i class="fa fa-rocket"></i>&nbsp;Can you provide some more details on the ChEMBL database?</h4>
           <p>Have a look at the <a href="/assets/img/chembl_18_schema.png">ChEMBL schema diagram</a> to get an idea of the data captured in the database and how the tables join together. You can then start using the <a href="phppgadmin">phpPgAdmin Interface</a> to query the database directly with SQL. (Note the schema diagram does not include the RDKit tables - see next question)</p>
           
-          <h4><i class="fa fa-rocket"></i>&nbsp;What tables does the RDKit chemical cartridge add to the ChEMBL schmea?</h4>
+          <h4><i class="fa fa-rocket"></i>&nbsp;What tables does the RDKit chemical cartridge add to the ChEMBL schema?</h4>
           <p>Two additional tables are added to the ChEMBL schema after the RDKit cartridge is installed. These tables are:
             <ul>
-              <li><strong>mols_rdkit</strong> - contains the ChEMBL molecules RDKit representation in the mol_from_ctab column.</li>
+              <li><strong>mols_rdkit</strong> - contains the ChEMBL molecules RDKit representation in the column named 'm'.</li>
               <li><strong>fps_rdkit</strong> - contains six fingerprint representations of the ChEMBL molecules created using RDKit. For more details on the RDKit fingerprints please visit <a href="http://code.google.com/p/rdkit/wiki/FingerprintsInTheRDKit">this page</a>.</li>
             </ul>
           </p>

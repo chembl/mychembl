@@ -36,6 +36,21 @@
           <h4><i class="fa fa-rocket"></i>&nbsp;Do you plan to include the official <a href="https://www.ebi.ac.uk/chembl">ChEMBL Web Interface</a> with future releases of myChEMBL?</h4>
           <p>We have no plans to include the existing ChEMBL Web Interface with myChEMBL, this is mainly due to portability issues. We do plan an update of the official ChEMBL Web Interface and when this does happen it will become part of the myChEMBL distribution.</p>
           
+          <h4><i class="fa fa-rocket"></i>&nbsp;Can you provide some more details on the ChEMBL database?</h4>
+          <p>Have a look at the <a href="/assets/img/chembl_18_schema.png">ChEMBL schema diagram</a> to get an idea of the data captured in the database and how the tables join together. You can then start using the <a href="phppgadmin">phpPgAdmin Interface</a> to query the database directly with SQL. (Note the schema diagram does not include the RDKit tables - see next question)</p>
+          
+          <h4><i class="fa fa-rocket"></i>&nbsp;What tables does the RDKit chemical cartridge add to the ChEMBL schmea?</h4>
+          <p>Two additional tables are added to the ChEMBL schema after the RDKit cartridge is installed. These tables are:
+            <ul>
+              <li><strong>mols_rdkit</strong> - contains the ChEMBL molecules RDKit representation in the mol_from_ctab column.</li>
+              <li><strong>fps_rdkit</strong> - contains six fingerprint representations of the ChEMBL molecules created using RDKit. For more details on the RDKit fingerprints please visit <a href="http://code.google.com/p/rdkit/wiki/FingerprintsInTheRDKit">this page</a>.</li>
+            </ul>
+          </p>
+          
+
+          <h4><i class="fa fa-rocket"></i>&nbsp;Can you provide some more details on the ChEMBL group?</h4>
+          <p>Visiting the <a href="https://www.ebi.ac.uk/chembl/">ChEMBL website</a> will provide you with links to all the projects the ChEMBL group is involved with. You may also be interested in following the <a href="http://chembl.blogspot.co.uk/">ChEMBL-og</a> and signing up to the <a href="http://listserver.ebi.ac.uk/mailman/listinfo/chembl-announce">ChEMBL mailing list</a>.</p>
+          
           <h4><i class="fa fa-rocket"></i>&nbsp;Is there a reference for myChEMBL?</h4>
           <p>Yes, please use the following citation:
             <pre class="pre-scrollable">R. Ochoa, M. Davies, G. Papadatos, F. Atkinson & J.P. Overington (2014) 
@@ -43,15 +58,15 @@
           </p>
 
           <h4><i class="fa fa-rocket"></i>&nbsp;What are the future plans for myChEMBL?</h4>
-          <p>myChEMBL is a project which is still evolving so expect new tools to included with each new release. Please let us know of any tools and services you would like to see included in future myChEMBL releases.
-          </p>
-                    
+          <p>myChEMBL is a project which is still evolving so expect new tools to included with each new release. Please let us know of any tools and services you would like to see included in future myChEMBL releases.</p>
+          
           <h4><i class="fa fa-rocket"></i>&nbsp;Are there any acknowledgements?</h4>
           <p>Yes, we thank the people involved in the following projects, whose software, tools and libraries are used to help build the myChEMBL Virtual Machine and related applications. We have made every effort to acknowledge everyone involved, but please get in touch if your acknowledgement is missing from the list below.</p>
           <p class="mychembl-acknowledge text-center">
             <span><a href="http://www.rdkit.org/"><img src="/assets/img/rdkit.png" /></a></span>
             <span><a href="http://www.postgresql.org/"><img class="ack-logo-width" src="/assets/img/postgresql.png" /></a></span>
             <span><a href="http://ipython.org/"><img class="ack-logo-width" src="/assets/img/ipython.png" /></a></span>
+            <span><a href="https://www.djangoproject.com/"><img class="ack-logo-width" src="/assets/img/django.png" /></a></span>
             <span><a href="http://www.knime.org/"><img class="ack-logo-width" src="/assets/img/knime.png" /></a></span>
             <span><a href="http://peter-ertl.com/jsme/"><img class="ack-logo-width" src="/assets/img/jsme.png" /></a></span>
             <span><a href="http://phppgadmin.sourceforge.net/"><img class="ack-logo-width" src="/assets/img/phppgadmin.png" /></a></span>

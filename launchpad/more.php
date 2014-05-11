@@ -11,21 +11,22 @@
       <div class="row mychembl-faq">
         <div class="col-lg-12">
           <h4><i class="fa fa-rocket"></i>&nbsp;What is myChEMBL?</h4>
-          <p>myChEMBL is a completely open platform, which combines public domain bioactivity data with open source database and cheminformatics technologies. myChEMBL consists of a Linux (Ubuntu) Virtual Machine featuring a PostgreSQL schema with the latest version of the ChEMBL database, as well as the latest RDKit cheminformatics libraries.</p>
+          <p>myChEMBL is a completely open platform, which combines public domain bioactivity data with open source web, database and cheminformatics technologies. myChEMBL consists of a Linux (Ubuntu) Virtual Machine featuring a PostgreSQL schema with the latest version of the ChEMBL database, as well as the latest RDKit cheminformatics libraries.</p>
 
           <h4><i class="fa fa-rocket"></i>&nbsp;Why should I use myChEMBL?</h4>
           <p>myChEMBL is a free and open platform aimed at anyone interested in drug discovery, cheminformatics and bioinformatics. Some reasons why you might want to use myChEMBL:
             <ul>
               <li><strong>No Costs</strong> - myChEMBL uses open source tools and libraries, so it removes the expensive licensing costs often associated with similar applications.</li>
-              <li><strong>Security</strong> - myChEMBL runs locally behind a users firewall, the normal concerns regarding the submission of sensitive data to web based applications do not apply.</li>
+              <li><strong>Security</strong> - myChEMBL runs locally behind a firewall, therefore the typical concerns regarding the submission of sensitive data to web-based applications do not apply.</li>
               <li><strong>Application Development</strong> - the source code is available for all myChEMBL applications, so developers can use this as a starting point for applications they wish to develop in the future.</li>
               <li><strong>Non-Technical Usage</strong> - you can quickly get up and running using myChEMBL with no prior programming experience or SQL knowledge. Best place to start is the <a href="/mychembl/app/home.php">myChEMBL Web Interface</a></li>
-              <li><strong>Training</strong> - myChEMBL is a great resource for training others how to use tools essential in the field of drug discovery. Feel free to add your own tools and services and use in your own training courses - we would love to hear from you if you do this.</li>
+              <li><strong>Learning</strong> - myChEMBL provides a versatile platform for learning chemical data mining and cheminformatics in an intuitive and straighford way. The combination of data with relevant pre-installed tools effectively lowers the 'activation barrier' and shifts the focus to hands-on programming and learning.</li>
+              <li><strong>Training</strong> - myChEMBL is a great resource for training scientists on the use of essential tools in the field of drug discovery. Feel free to add your own tools and services and use in your own training courses - we would love to hear from you if you do this.</li>
             </ul>
           </p>
 
           <h4><i class="fa fa-rocket"></i>&nbsp;Who is using myChEMBL?</h4>
-          <p>We (the ChEMBL group) are using myChEMBL for training purposes and we are aware of many users who have started using the system. We would like to hear from the community, so if you are using myChEMBL please let us know.</p>
+          <p>We (the ChEMBL group) are using myChEMBL for training purposes and we are aware of many other academic and industrial users who have started using the system. We would like to hear from the community, so if you are using myChEMBL please let us know.</p>
           
           <h4><i class="fa fa-rocket"></i>&nbsp;What is the difference between the <a href="/chemblws/docs/">myChEMBL Web Services</a> and the official <a href="https://www.ebi.ac.uk/chembl/ws">ChEMBL Web Services</a>?</h4>
           <p>Both sets of Web Services use the same codebase and expose the same set of methods to the end user, so they can be considered functionally identical. Please note the official ChEMBL Web Web Services use an Oracle database and the Accelrys Direct chemical cartridge, where as the myChEMBL Web Services use a PostrgreSQL database and the RDKit chemical cartridge. This change may lead to different chemical search results being returned.</p>

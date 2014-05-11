@@ -32,10 +32,10 @@
         
         <div class="col-lg-4">
         
-          <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/" onclick="javascript:event.target.port=8888">iPython Notebooks</a></h3>
-          <p>A selection programmatic tutorials written in Python and presented using interactive iPython Notebooks.</p> 
+          <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/" onclick="javascript:event.target.port=8888">IPython Notebooks</a></h3>
+          <p>A selection of programmatic tutorials written in Python and presented using interactive IPython Notebooks.</p> 
             <ul>
-              <li><a href="/notebooks/myChEMBL_tutorial.ipynb" onclick="javascript:event.target.port=8888">MyChEMBL Tutorial</a></li>
+              <li><a href="/notebooks/myChEMBL_tutorial.ipynb" onclick="javascript:event.target.port=8888">myChEMBL Tutorial</a></li>
               <li><a href="/notebooks/myChEMBL_predict_targets.ipynb" onclick="javascript:event.target.port=8888">Target Prediction Tutorial</a></li>
             </ul>
           </p>

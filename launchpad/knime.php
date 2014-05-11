@@ -31,9 +31,12 @@
           The node can execute arbitrary SQL SELECT commands and retrieve the results in a KNIME table.</li>
           <li>Calls to the RESTful <a href="/chemblws/docs" target="_blank">web services</a> that are hosted in myChEMBL. 
           This is achieved with the KNIME REST (<a href="http://tech.knime.org/book/krest-rest-nodes-for-knime-trusted-extension" target="_blank">KREST</a>) nodes, which are available as community node contribution. 
-          The KREST nodes send the GET or POST requests to the server and format the response back to a KNIME table.</li>
-          For an example of the KNIME/myChEMBL connectivity, download this workflow to your host machine. 
-          Then, open your KNIME desktop, and click File --> Import KNIME workflow... --> Select archive file --> Browse.. and then navigate to the zip file you’ve just downloaded and click finish. If everything worked you will be able to see something that look like this on your KNIME desktop:
+          The KREST nodes send GET or POST requests to the server and format the response back to a KNIME table.</li>
+          </ul>
+          </p>
+          <p>For an example workflow showcasing the KNIME/myChEMBL connectivity, download <a href="/assets/knime/myChEMBL18_KNIME.zip">this</a> file to your host machine. 
+          Then, open your KNIME desktop on your host machine and click File --> Import KNIME workflow... --> Select archive file --> Browse.. and then navigate to the zip file you’ve just downloaded and click Finish. 
+          If everything worked properly, you will be able to see something like this on your KNIME desktop:
           </p>
 
     

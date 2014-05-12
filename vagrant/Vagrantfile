@@ -1,0 +1,34 @@
+Vagrant::Config.run do |config|
+  config.vm.box = "precise64"
+
+  config.vm.network :forwarded_port, guest: 80, host: 8888
+
+  # Necessary for homesick_agent::data_bag
+  config.ssh.forward_agent = true
+
+  config.vm.provision :chef_solo do |chef|
+
+    # contains "users" and "ssh_known_hosts" databags
+    chef.data_bags_path = "databags"
+
+    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+
+    # stuff that should be in base box
+    chef.add_recipe "build-essential"
+    chef.add_recipe "vim"
+    chef.add_recipe "git"
+    chef.add_recipe "php"
+    chef.add_recipe "postgresql:server"
+    chef.add_recipe "chef-phppgadmin"
+    chef.add_recipe "apache2"
+    chef.add_recipe "apache2:mod_fastcgi"
+    chef.add_recipe "apache2:mod_php5"
+    chef.add_recipe "apache2:mod_ssl"
+    chef.add_recipe "python"
+    chef.add_recipe "ipynb"
+    chef.add_recipe "supervisor"
+
+    # chef.log_level = :debug
+
+  end
+end

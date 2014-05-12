@@ -2,6 +2,7 @@
 
 git clone git://github.com/hw-cookbooks/runit.git
 git clone git://github.com/opscode-cookbooks/iptables.git
+git clone git://github.com/opscode-cookbooks/windows.git
 git clone git://github.com/opscode-cookbooks/dmg.git
 git clone git://github.com/opscode-cookbooks/apt.git
 git clone https://github.com/opscode-cookbooks/yum-epel.git

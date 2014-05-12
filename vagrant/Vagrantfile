@@ -17,6 +17,7 @@ Vagrant::Config.run do |config|
     # stuff that should be in base box
     chef.add_recipe "runit"
     chef.add_recipe "iptables"
+    chef.add_recipe "windows"
     chef.add_recipe "dmg"
     chef.add_recipe "yum-epel"
     chef.add_recipe "yum"

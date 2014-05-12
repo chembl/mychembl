@@ -15,6 +15,7 @@ Vagrant::Config.run do |config|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
     # stuff that should be in base box
+    chef.add_recipe "iptables"
     chef.add_recipe "dmg"
     chef.add_recipe "yum"
     chef.add_recipe "apt"

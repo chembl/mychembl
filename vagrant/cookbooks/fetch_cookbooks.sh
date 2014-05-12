@@ -1,5 +1,6 @@
 #!/bin/bash
 
+git clone git://github.com/opscode-cookbooks/chef_handler.git
 git clone git://github.com/hw-cookbooks/runit.git
 git clone git://github.com/opscode-cookbooks/iptables.git
 git clone git://github.com/opscode-cookbooks/windows.git

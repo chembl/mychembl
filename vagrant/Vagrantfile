@@ -18,6 +18,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "runit"
     chef.add_recipe "iptables"
     chef.add_recipe "dmg"
+    chef.add_recipe "yum-epel"
     chef.add_recipe "yum"
     chef.add_recipe "apt"
     chef.add_recipe "openssh"

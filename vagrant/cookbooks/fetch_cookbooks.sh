@@ -4,6 +4,7 @@ git clone git://github.com/hw-cookbooks/runit.git
 git clone git://github.com/opscode-cookbooks/iptables.git
 git clone git://github.com/opscode-cookbooks/dmg.git
 git clone git://github.com/opscode-cookbooks/apt.git
+git clone https://github.com/opscode-cookbooks/yum-epel.git
 git clone git://github.com/opscode-cookbooks/yum.git
 git clone git://github.com/opscode-cookbooks/openssh.git 
 git clone git://github.com/opscode-cookbooks/build-essential.git

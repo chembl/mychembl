@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+git clone git://github.com/opscode-cookbooks/dmg.git
+git clone git://github.com/opscode-cookbooks/apt.git
+git clone git://github.com/opscode-cookbooks/yum.git
+git clone git://github.com/opscode-cookbooks/openssh.git 
 git clone git://github.com/opscode-cookbooks/build-essential.git
 git clone git://github.com/opscode-cookbooks/php.git
 git clone git://github.com/opscode-cookbooks/vim.git

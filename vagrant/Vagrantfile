@@ -28,6 +28,20 @@ Vagrant::Config.run do |config|
     chef.add_recipe "ipynb"
     chef.add_recipe "supervisor"
 
+    chef.json = { 
+      "postgresql" => {
+        "password" => {
+          "postgres" => "password"
+        }
+      },
+      "database" => {
+        "create" => ["chembl_18"]
+      },
+      "build_essential" => {
+        "compiletime" => true
+      }
+    }
+
     # chef.log_level = :debug
 
   end

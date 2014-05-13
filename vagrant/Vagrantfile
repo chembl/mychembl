@@ -19,7 +19,6 @@ Vagrant::Config.run do |config|
     chef.add_recipe "git"
     chef.add_recipe "php"
     chef.add_recipe "postgresql::server"
-    chef.add_recipe "chef-phppgadmin"
     chef.add_recipe "apache2"
     chef.add_recipe "apache2::mod_fastcgi"
     chef.add_recipe "apache2::mod_php5"

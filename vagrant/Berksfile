@@ -1,0 +1,10 @@
+source 'https://api.berkshelf.com'
+
+cookbook 'php'
+cookbook 'git'
+cookbook 'vim'
+cookbook 'apache2'
+cookbook 'python'
+cookbook 'postgresql'
+cookbook 'supervisor'
+cookbook 'ipynb', git: 'git://github.com/rgbkrk/ipython-notebook-cookbook.git'

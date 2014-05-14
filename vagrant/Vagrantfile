@@ -1,8 +1,13 @@
-Vagrant::Config.run do |config|
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu-13.04"
   config.vm.box_url = "http://goo.gl/Y4aRr"
 
-  config.vm.network :forwarded_port, guest: 80, host: 8888
+  config.vm.network "forwarded_port", guest: 80, host: 8080,
+    auto_correct: true
+
+  config.berkshelf.enabled = true
 
   # Necessary for homesick_agent::data_bag
   config.ssh.forward_agent = true
@@ -11,8 +16,6 @@ Vagrant::Config.run do |config|
 
     # contains "users" and "ssh_known_hosts" databags
     chef.data_bags_path = "databags"
-
-    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
     # stuff that should be in base box
     chef.add_recipe "vim"

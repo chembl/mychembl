@@ -1,0 +1,12 @@
+# Access to myChEMBL Web Application
+Alias /mychembl /var/www/mychembl 
+
+<Location /mychembl>
+    AddType application/x-httpd-php .php
+    DirectoryIndex index.html index.php main.php
+    Order allow,deny
+    Allow from all
+</Location>
+
+# Access to Official ChEMBL Web Services
+Include /home/chembl/chembl_webservices/deployment/deployment/chembl_webservices.inc

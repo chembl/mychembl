@@ -1,8 +1,13 @@
-Vagrant::Config.run do |config|
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu-13.04"
   config.vm.box_url = "http://goo.gl/Y4aRr"
 
-  config.vm.network :forwarded_port, guest: 80, host: 8888
+  config.vm.network "forwarded_port", guest: 80, host: 8080,
+    auto_correct: true
+
+  config.berkshelf.enabled = true
 
   # Necessary for homesick_agent::data_bag
   config.ssh.forward_agent = true
@@ -12,31 +17,32 @@ Vagrant::Config.run do |config|
     # contains "users" and "ssh_known_hosts" databags
     chef.data_bags_path = "databags"
 
-    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
-
     # stuff that should be in base box
-    chef.add_recipe "chef_handler"
-    chef.add_recipe "runit"
-    chef.add_recipe "iptables"
-    chef.add_recipe "windows"
-    chef.add_recipe "dmg"
-    chef.add_recipe "yum-epel"
-    chef.add_recipe "yum"
-    chef.add_recipe "apt"
-    chef.add_recipe "openssh"
-    chef.add_recipe "build-essential"
     chef.add_recipe "vim"
     chef.add_recipe "git"
     chef.add_recipe "php"
-    chef.add_recipe "postgresql:server"
-    chef.add_recipe "chef-phppgadmin"
+    chef.add_recipe "postgresql::server"
     chef.add_recipe "apache2"
-    chef.add_recipe "apache2:mod_fastcgi"
-    chef.add_recipe "apache2:mod_php5"
-    chef.add_recipe "apache2:mod_ssl"
+    chef.add_recipe "apache2::mod_fastcgi"
+    chef.add_recipe "apache2::mod_php5"
+    chef.add_recipe "apache2::mod_ssl"
     chef.add_recipe "python"
     chef.add_recipe "ipynb"
     chef.add_recipe "supervisor"
+
+    chef.json = { 
+      "postgresql" => {
+        "password" => {
+          "postgres" => "password"
+        }
+      },
+      "database" => {
+        "create" => ["chembl_18"]
+      },
+      "build_essential" => {
+        "compiletime" => true
+      }
+    }
 
     # chef.log_level = :debug
 

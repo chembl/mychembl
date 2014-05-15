@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-lg-4">
           <h3><i class="fa fa-rocket"></i>&nbsp;<a href="chemblws/docs/">ChEMBL Web Services</a></h3>
-          <p>Access to a local version of the official ChEMBL Web Services.</p>
+          <p>Access to a local version of the official ChEMBL Web Services, which connect to the myChEMBL PostgreSQL database.</p>
 
           <h3><i class="fa fa-rocket"></i>&nbsp;<a href="mychembl/app/home.php">myChEMBL Web Interface</a></h3>
           <p>The myChEMBL Web Interface is a user-friendly application, providing quick access to the myChEMBL data without any prior knowledge of SQL or RDKit.</p>
@@ -33,10 +33,11 @@
         <div class="col-lg-4">
         
           <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/" onclick="javascript:event.target.port=8888">IPython Notebooks</a></h3>
-          <p>A selection of programmatic tutorials written in Python and presented using interactive IPython Notebooks.</p> 
+          <p>A selection of programmatic tutorials written in Python and presented using interactive IPython Notebooks, some examples:</p> 
             <ul>
-              <li><a href="/notebooks/myChEMBL_tutorial.ipynb" onclick="javascript:event.target.port=8888">myChEMBL Tutorial</a></li>
-              <li><a href="/notebooks/myChEMBL_predict_targets.ipynb" onclick="javascript:event.target.port=8888">Target Prediction Tutorial</a></li>
+              <li><a href="/notebooks/01_myChEMBL_introduction.ipynb" onclick="javascript:event.target.port=8888">myChEMBL Introduction</a></li>
+              <li><a href="/notebooks/02_myChEMBL_web_services.ipynb" onclick="javascript:event.target.port=8888">Using myChEMBL Web Services</a></li>
+              <li><a href="/notebooks/03_myChEMBL_predict_targets.ipynb" onclick="javascript:event.target.port=8888">Building predictive target models</a></li>
             </ul>
           </p>
         

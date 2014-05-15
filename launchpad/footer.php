@@ -1,10 +1,10 @@
       <div class="row">
         <div class="footer">
           <div class="col-lg-6">
-            <p>myChEMBL 2014</p>
+            <p><span>myChEMBL 2014</span>|<span>ChEMBL Release 18</span></p>
           </div>
           <div class="col-lg-6">
-            <p class="text-right">ChEMBL Version: 18</p>
+            <p class="text-right"><span><a href="https://www.ebi.ac.uk/chembl/">ChEMBL Website</a></span>|<span><a href="mailto:mychembl@ebi.ac.uk">myChEMBL Support</a></span></p>         
           </div>            
         </div>
       </row>

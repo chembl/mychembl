@@ -26,7 +26,7 @@
           </p>
 
           <h4><i class="fa fa-rocket"></i>&nbsp;Who is using myChEMBL?</h4>
-          <p>We (the ChEMBL group) are using myChEMBL for training purposes and we are aware of many other academic and industrial users who have started using the system. We would like to hear from the community, so if you are using myChEMBL please let us know.</p>
+          <p>We (the ChEMBL group) are using myChEMBL for training purposes and we are aware of many other academic and industrial users who have started using the system. We would like to hear from the community, so if you are using myChEMBL please <a href="mailto:mychembl@ebi.ac.uk">let us know</a>.</p>
           
           <h4><i class="fa fa-rocket"></i>&nbsp;What is the difference between the <a href="/chemblws/docs/">myChEMBL Web Services</a> and the official <a href="https://www.ebi.ac.uk/chembl/ws">ChEMBL Web Services</a>?</h4>
           <p>Both sets of Web Services use the same codebase and expose the same set of methods to the end user, so they can be considered functionally identical. Please note the official ChEMBL Web Web Services use an Oracle database and the Accelrys Direct chemical cartridge, where as the myChEMBL Web Services use a PostrgreSQL database and the RDKit chemical cartridge. This change may lead to different chemical search results being returned.</p>
@@ -63,7 +63,7 @@
           <p>myChEMBL is a project which is still evolving so expect new tools to included with each new release. Please let us know of any tools and services you would like to see included in future myChEMBL releases.</p>
           
           <h4><i class="fa fa-rocket"></i>&nbsp;Are there any acknowledgements?</h4>
-          <p>Yes, we thank the people involved in the following projects, whose software, tools and libraries are used to help build the myChEMBL Virtual Machine and related applications. We have made every effort to acknowledge everyone involved, but please get in touch if your acknowledgement is missing from the list below.</p>
+          <p>Yes, we thank the people involved in the following projects, whose software, tools and libraries are used to help build the myChEMBL Virtual Machine and related applications. We have made every effort to acknowledge everyone involved, but please <a href="mailto:mychembl@ebi.ac.uk">get in touch</a> if your acknowledgement is missing from the list below.</p>
           <p class="mychembl-acknowledge text-center">
             <span><a href="http://www.rdkit.org/"><img src="/assets/img/rdkit.png" /></a></span>
             <span><a href="http://www.postgresql.org/"><img class="ack-logo-width" src="/assets/img/postgresql.png" /></a></span>

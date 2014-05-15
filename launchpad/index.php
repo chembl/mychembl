@@ -35,7 +35,7 @@
           <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/" onclick="javascript:event.target.port=8888">IPython Notebooks</a></h3>
           <p>A selection of programmatic tutorials written in Python and presented using interactive IPython Notebooks, some examples:</p> 
             <ul>
-              <li><a href="/notebooks/01_myChEMBL_introduction.ipynb" onclick="javascript:event.target.port=8888">myChEMBL Introduction</a></li>
+              <li><a href="/notebooks/01_myChEMBL_introduction.ipynb" onclick="javascript:event.target.port=8888">myChEMBL introduction</a></li>
               <li><a href="/notebooks/02_myChEMBL_web_services.ipynb" onclick="javascript:event.target.port=8888">Using myChEMBL Web Services</a></li>
               <li><a href="/notebooks/03_myChEMBL_predict_targets.ipynb" onclick="javascript:event.target.port=8888">Building predictive target models</a></li>
             </ul>

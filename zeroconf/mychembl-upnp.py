@@ -20,12 +20,12 @@ class myChEMBL(object):
     def _get_ip():
         for iface in netifaces.interfaces():
 
-        keys = netifaces.ifaddresses(iface).keys()
-        if keys.__len__() > 1:
-            addrdict = netifaces.ifaddresses(iface)[keys[1]][0]
+	    keys = netifaces.ifaddresses(iface).keys()
+	    if keys.__len__() > 1:
+	        addrdict = netifaces.ifaddresses(iface)[keys[1]][0]
 
-        if 'addr' in addrdict.keys() and 'broadcast' in addrdict.keys():
-            return  addrdict['addr']
+	        if 'addr' in addrdict.keys() and 'broadcast' in addrdict.keys():
+	            return  addrdict['addr']
 
     def _create_device(self):
         """ Creates the root device object which will represent the device

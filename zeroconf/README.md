@@ -1,6 +1,6 @@
-# myChEMBL auto discovery
+## myChEMBL auto discovery
 
-## AVAHI
+# AVAHI
 
 Tutorial followed from http://peterlaszlo.wordpress.com/2013/06/27/bonjour-avahi-rpi-windows/
 
@@ -9,7 +9,7 @@ Tutorial followed from http://peterlaszlo.wordpress.com/2013/06/27/bonjour-avahi
 	3. Copy the mychembl.service to /etc/avahi/services/
 	4. sudo service avahi-daemon restart
 
-## Universal Plug and Play
+# Universal Plug and Play
 
 Slightly more involved installation due to dependencies.
 
@@ -23,4 +23,5 @@ Slightly more involved installation due to dependencies.
 
 Providing both host and client machines are running on a bridged network (IP Address via DHCP), the myChEMBL instance will appear as a device in the network browser explorer pane on Windows based computers and as myChEMBL.local in Mac OS X / Linux, with Bonjour / AVAHI support enabled.
 
+To run with a dynamic IP address, ensure that two network adapters are enabled in virtualbox and both are set to bridged.
 

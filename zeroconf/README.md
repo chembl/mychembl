@@ -1,6 +1,6 @@
-## myChEMBL auto discovery
+# myChEMBL auto discovery
 
-# AVAHI
+## AVAHI
 
 Tutorial followed from http://peterlaszlo.wordpress.com/2013/06/27/bonjour-avahi-rpi-windows/
 
@@ -9,7 +9,7 @@ Tutorial followed from http://peterlaszlo.wordpress.com/2013/06/27/bonjour-avahi
 	3. Copy the mychembl.service to /etc/avahi/services/
 	4. sudo service avahi-daemon restart
 
-# Universal Plug and Play
+## Universal Plug and Play
 
 Slightly more involved installation due to dependencies.
 

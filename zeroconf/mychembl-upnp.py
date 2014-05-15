@@ -17,7 +17,7 @@ class myChEMBL(object):
         self.server_name = 'myChEMBL'
         self.device = 'myChEMBL'
 
-    def _get_ip():
+    def _get_ip(self):
         for iface in netifaces.interfaces():
 
 	    keys = netifaces.ifaddresses(iface).keys()

@@ -24,7 +24,11 @@ Nothing fancy, just modifying the Plymouth console config to change colours and 
 
 	[ubuntu-text]
 	title=myChEMBL 18
-	black=0x2c001e
-	white=0xffffff
-	brown=0xff4012
-	blue=0x988592
+	black=0x207a7a
+	white=0xafeeee
+	brown=0x70bdbd
+	blue=0x7cd17c
+
+This lives in:
+
+	/lib/plymouth/themes/ubuntu-text.plymouth

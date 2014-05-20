@@ -12,10 +12,14 @@
 #   2. xml tools:
 #      a) libxml in standard and dev flavours
 #      b) the same for libxslt      
-
 sudo apt-get install libffi-dev
 sudo apt-get install libxml2 libxml2-dev
 sudo apt-get install libxslt1.1 libxslt1-dev
+
+# We need indigo toolkit as alternative compound rendering engine:
+wget https://dl.dropboxusercontent.com/u/10967207/indigo-python-1.1.11-linux.zip
+unzip indigo-python-1.1.11-linux.zip
+rm indigo-python-1.1.11-linux.zip
 
 # Install and source virtualenvwrapper because it makes our job lot easier:
 sudo pip install virtualenvwrapper
@@ -26,7 +30,7 @@ mkvirtualenv chembl_webservices
 
 # Configure our new virtualenv, first install postactivate hooks, which will
 # configure our custom PIP index
-printf '#!/bin/bash\nexport PIP_CONFIG_FILE={VIRTUAL_ENV}/.pip/pip.conf\n' > ${VIRTUAL_ENV}/bin/postactivate
+printf '#!/bin/bash\nexport PIP_CONFIG_FILE=${VIRTUAL_ENV}/.pip/pip.conf\n' > ${VIRTUAL_ENV}/bin/postactivate
 deactivate
 workon chembl_webservices
 install -D /dev/null "$PIP_CONFIG_FILE"
@@ -46,8 +50,11 @@ pip install chembl_webservices
 # webservices are DB agnostic so they are not shipped with any specific DB
 # driver. We have to install the driver separately, in case of myChEMBL this
 # will be postgres:
-
 pip install psycopg2
+
+# we want our application to support CORS so we have to install django app
+# which will handle this:
+pip install django-cors-headers
 
 # OK, now we are ready to configure our webservices django app.
 # First, lets create new django project:
@@ -56,10 +63,28 @@ cd chembl_webservices/
 django-admin.py startproject deployment
 
 # Now we have to download configuration files:
-curl %s/%s/%ssettings.py > deployment/deployment/settings.py
-curl %s/%s/%surls.py > deployment/deployment/urls.py
-curl %s/%s/%swsgi.py > deployment/deployment/wsgi.py
-curl %s/%s/%schembl_webservices.inc > deployment/deployment/chembl_webservices.inc
+RAW=https://raw.githubusercontent.com/chembl/mychembl/master/webservices/conf
+
+curl $RAW/settings.py > deployment/deployment/settings.py
+curl $RAW/urls.py > deployment/deployment/urls.py
+curl $RAW/wsgi.py > deployment/deployment/wsgi.py
+curl $RAW/chembl_webservices.inc > deployment/deployment/chembl_webservices.inc
+
+# Lets configure cache by creating DB table for storing the cache:
+cd deployment
+python manage.py createcachetable ws_cache
+
+# We should also take care about places to store static files and logs:
+mkdir deployment/static
+mkdir deployment/logs
+
+# We can collect static files now:
+python manage.py collectstatic --noinput --clear
+
+# Since this app is currently the only one making use of mod_wsgi we should 
+# install it as well, which will have a nice side effect of restarting
+# apache2:
+sudo apt-get install libapache2-mod-wsgi
 
 #TODO: download dotfiles
 

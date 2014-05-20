@@ -47,6 +47,11 @@ workon chembl_webservices
 # OK, we are ready to use pip to install chembl_webservices
 pip install chembl_webservices
 
+# Because webservices on myChEMBL VM will be run against exported CHEMBL schema,
+# which is only a subset of chembl_app schema we will have to install
+# a compatibility layer that can handle differences between schemas:
+pip install chembl_compatibility
+
 # webservices are DB agnostic so they are not shipped with any specific DB
 # driver. We have to install the driver separately, in case of myChEMBL this
 # will be postgres:

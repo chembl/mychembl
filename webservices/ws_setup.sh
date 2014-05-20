@@ -92,8 +92,7 @@ python manage.py collectstatic --noinput --clear
 sudo apt-get install libapache2-mod-wsgi
 
 # Web services should be up and running now so we can generate cache:
-chmod +x ws_ 
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_cache_generation.sh | sh
 
-#TODO: download dotfiles
 
 

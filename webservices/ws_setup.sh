@@ -91,6 +91,9 @@ python manage.py collectstatic --noinput --clear
 # apache2:
 sudo apt-get install libapache2-mod-wsgi
 
+# Web services should be up and running now so we can generate cache:
+chmod +x ws_ 
+
 #TODO: download dotfiles
 
 

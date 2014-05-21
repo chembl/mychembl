@@ -8,12 +8,12 @@
 *
 ***************************************************************************
 
-These instructions use the VirtualBox virtuliastion software to install the 
+These instructions use the VirtualBox virtualisation software to install the 
 myChEMBL virtual machine and describe the usage of a graphical user 
 interface.
 
 1.  If you do not already have VirtualBox installed on your computer, 
-    please download and install this software from the following site:
+    please download and install this free software from the following site:
    
     https://www.virtualbox.org/wiki/Downloads
    

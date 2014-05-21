@@ -5,6 +5,11 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 21.05.2014
 
+# Preliminary step: install all python libraries used in our notebooks that
+# are not well known and not installed by default:
+sudo pip install chembl_webresource_client
+sudo pip install lxml
+
 # First of all we will install supervisor:
 sudo apt-get install supervisor
 

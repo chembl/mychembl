@@ -1,0 +1,29 @@
+***************************************************************************
+*
+* Title:            myChEMBL ACKNOWLEDGMENTS 
+* 
+* myChEMBL Version  18.0
+*
+* ChEMBL Release:   18
+*
+***************************************************************************
+
+
+The myChEMBL virtual machine has only made possible with the use of Open 
+Source software packages. We attempt to acknowledge and reference all of the 
+core software components we have used to build the myChEMBL in this file. 
+
+
+1. Greg Lundrum and the RDKit community (http://www.rdkit.org/)
+
+2. Peter Ertl and Bruno Bienfait for allowing us to disttribute JSME, which
+   is used by the web interface (http://peter-ertl.com/jsme/)
+
+3. PostgreSQL (http://www.postgresql.org/)
+
+4. Ubuntu linux distribution (http://www.ubuntu.com/)
+
+5. Network settings    http://christophermaier.name/blog/2010/09/01/host-only-networking-with-virtualbox
+
+Please get in touch (mychembl@ebi.ac.uk), if you think we have left out 
+any acknowledgments

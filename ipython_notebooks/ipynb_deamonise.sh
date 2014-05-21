@@ -5,7 +5,14 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 21.05.2014
 
-#First of all we will install supervisor:
+# First of all we will install supervisor:
 sudo apt-get install supervisor
 
-curl -o /etc/supervisor/conf.d/ipynb.conf http://ipynb.conf
+# Configure it to take care about ipython notebook server:
+sudo curl -o /etc/supervisor/conf.d/ipynb.conf https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb.conf
+
+# Notify it about changes in configuration:
+sudo supervisorctl reread
+
+# Add new process group:
+sudo supervisorctl update

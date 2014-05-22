@@ -22,7 +22,7 @@ unzip indigo-python-1.1.11-linux.zip
 rm indigo-python-1.1.11-linux.zip
 
 # Install and source virtualenvwrapper because it makes our job lot easier:
-echo "password" | sudo -S pip install virtualenvwrapper
+echo "chemblvm" | sudo -S pip install virtualenvwrapper
 source virtualenvwrapper.sh
 
 # Use the wrapper to create new virtualenv called chembl_webservices
@@ -89,7 +89,7 @@ python manage.py collectstatic --noinput --clear
 # Since this app is currently the only one making use of mod_wsgi we should 
 # install it as well, which will have a nice side effect of restarting
 # apache2:
-echo "password" | sudo -S apt-get install -y libapache2-mod-wsgi
+echo "chemblvm" | sudo -S apt-get install -y libapache2-mod-wsgi
 
 # Web services should be up and running now so we can generate cache:
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_cache_generation.sh | sh

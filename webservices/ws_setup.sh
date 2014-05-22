@@ -44,6 +44,9 @@ printf '[global]\nindex-url = http://howe.ebi.ac.uk:8080/repo/index\nextra-index
 deactivate
 workon chembl_webservices
 
+# Lxml runs faster when Cyhton is available:
+pip install Cython
+
 # OK, we are ready to use pip to install chembl_webservices
 pip install chembl_webservices
 

@@ -2,12 +2,10 @@
 from brisa.core.reactors import install_default_reactor
 reactor = install_default_reactor()
 
-import os,socket,fcntl,struct
-
 from brisa.upnp.device import Device, Service
 from brisa.upnp.base_device import BaseDeviceIcon
 
-
+import netifaces
 
 
 class myChEMBL(object):
@@ -19,15 +17,15 @@ class myChEMBL(object):
         self.server_name = 'myChEMBL'
         self.device = 'myChEMBL'
 
-    def get_ip_address(self,ifname):
-	    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    def _get_ip(self):
+        for iface in netifaces.interfaces():
 
-	    return socket.inet_ntoa(fcntl.ioctl(
-        	s.fileno(),
-        	0x8915,  # SIOCGIFADDR
-        	struct.pack('256s', ifname[:15])
-    	    )[20:24])
+	    keys = netifaces.ifaddresses(iface).keys()
+	    if keys.__len__() > 1:
+	        addrdict = netifaces.ifaddresses(iface)[keys[1]][0]
 
+	        if 'addr' in addrdict.keys() and 'broadcast' in addrdict.keys():
+	            return  addrdict['addr']
 
     def _create_device(self):
         """ Creates the root device object which will represent the device
@@ -35,15 +33,15 @@ class myChEMBL(object):
         """
 
         self.device = Device('urn:schemas-upnp-org:device:myChEMBL:1',
-                             self.server_name,
-                             manufacturer='ChEMBL team',
-                             manufacturer_url='https://www.ebi.ac.uk/chembl/',
-                             model_name='myChEMBL',
-                             model_description='A virtual machine implementation of open data and cheminformatics tools',
-                             model_number='v18',
-                             model_url='https://github.com/chembl/mychembl',
-			     presentation_url='http://'+self.get_ip_address('eth0'),
-				)
+                            self.server_name,
+                            manufacturer='ChEMBL team',
+                            manufacturer_url='https://www.ebi.ac.uk/chembl/',
+                            model_name='myChEMBL',
+                            model_description='A virtual machine implementation of open data and cheminformatics tools',
+                            model_number='v18',
+                            model_url='https://github.com/chembl/mychembl',
+			    presentation_url='http://'+self._get_ip(),)
+
     def _add_icon(self):
 
 	icon = BaseDeviceIcon('image/png','140','140','8','/chembl.png')

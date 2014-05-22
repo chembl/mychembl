@@ -6,6 +6,36 @@ sudo apt-get install php5
 sudo apt-get install php5-pgsql
 sudo apt-get install git
 sudo apt-get install unzip
+sudo apt-get install ipython
+sudo apt-get install ipython-notebook
+sudo apt-get install ipython-qtconsole
+sudo apt-get install libboost-all-dev
+sudo apt-get install postgresql
+sudo apt-get install postgresql-server-dev-all
+sudo apt-get install postgresql-doc
+sudo apt-get install postgresql-contrib
+sudo apt-get install flex
+sudo apt-get install bison
+sudo apt-get install g++
+sudo apt-get install cmake
+sudo apt-get install unzip
+sudo apt-get install git
+sudo apt-get install python-numpy
+sudo apt-get install python-scipy
+sudo apt-get install python-matplotlib
+sudo apt-get install python-pip
+sudo apt-get install python-psycopg2
+sudo apt-get install python-imaging-tk
+sudo apt-get install python-pandas
+sudo apt-get install python-networkx
+sudo apt-get install python-sklearn
+
+sudo pip install -U ipython
+sudo pip install -U jinja2
+sudo pip install -U scikit-learn
+sudo pip install -U tornado
+sudo pip install -U pandas #will update numpy too
+sudo pip install -U requests
 
 cd /home/chembl
 mkdir src

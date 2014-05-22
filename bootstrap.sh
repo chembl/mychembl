@@ -52,4 +52,5 @@ unzip JSME_2013-08-04.zip
 sudo mv JSME_2013-08-04/jsme /var/www/mychembl/static/js/
 sudo cp mychembl/configuration/launchpad_httpd.conf /etc/apache2/httpd.conf
 
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sh
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sh

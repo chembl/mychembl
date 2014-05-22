@@ -12,9 +12,9 @@
 #   2. xml tools:
 #      a) libxml in standard and dev flavours
 #      b) the same for libxslt      
-sudo apt-get install libffi-dev
-sudo apt-get install libxml2 libxml2-dev
-sudo apt-get install libxslt1.1 libxslt1-dev
+sudo apt-get install -y libffi-dev
+sudo apt-get install -y libxml2 libxml2-dev
+sudo apt-get install -y libxslt1.1 libxslt1-dev
 
 # We need indigo toolkit as alternative compound rendering engine:
 wget https://dl.dropboxusercontent.com/u/10967207/indigo-python-1.1.11-linux.zip
@@ -89,7 +89,7 @@ python manage.py collectstatic --noinput --clear
 # Since this app is currently the only one making use of mod_wsgi we should 
 # install it as well, which will have a nice side effect of restarting
 # apache2:
-sudo apt-get install libapache2-mod-wsgi
+sudo apt-get install -y libapache2-mod-wsgi
 
 # Web services should be up and running now so we can generate cache:
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_cache_generation.sh | sh

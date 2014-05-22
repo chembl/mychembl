@@ -11,7 +11,7 @@ sudo pip install chembl_webresource_client
 sudo pip install lxml
 
 # First of all we will install supervisor:
-sudo apt-get install supervisor
+sudo apt-get install -y supervisor
 
 # create directory for storing temporary files:
 mkdir /home/chembl/ipynb_workbench

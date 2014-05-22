@@ -16,6 +16,9 @@ sudo apt-get install supervisor
 # create directory for storing temporary files:
 mkdir /home/chembl/ipynb_workbench
 
+# install some files there:
+curl -o /home/chembl/ipynb_workbench/physchem_props_heatmap.csv https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/physchem_props_heatmap.csv
+
 # Configure it to take care about ipython notebook server:
 sudo curl -o /etc/supervisor/conf.d/ipynb.conf https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb.conf
 

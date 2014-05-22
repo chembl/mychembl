@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo useradd -m chembl
+sudo useradd -G sudo -m chembl
 sudo echo "chembl:chemblvm"| sudo chpasswd
 
 sudo apt-get update

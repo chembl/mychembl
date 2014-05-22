@@ -8,12 +8,12 @@
 *
 ***************************************************************************
 
-These instructions use the VirtualBox virtuliastion software to install the 
+These instructions use the VirtualBox virtualisation software to install the 
 myChEMBL virtual machine and describe the usage of a graphical user 
 interface.
 
 1.  If you do not already have VirtualBox installed on your computer, 
-    please download and install this software from the following site:
+    please download and install this free software from the following site:
    
     https://www.virtualbox.org/wiki/Downloads
    
@@ -63,20 +63,26 @@ interface.
     
     i.   Shutdown the myChEMBL VM
     
-    ii.  Select myChEMBL VM in the VirtualBox Manager window
+    ii.  Go to Virtual Box menu > Preferences > Network > Host-only Networks.
+         - If there are no networks listed there, click the button "Add host-only network".
+           "vboxnet0" will be added to the list.
+         - Click OK
+         - If there is already a network called "vboxnet0" there, click Cancel
     
-    iii. Go to Settings > Network > Adapter 1 and update following settings
+    iii.  Select myChEMBL VM in the VirtualBox Manager window
+    
+    iv. Go to Settings > Network > Adapter 1 and update following settings
          - Check the "Enable Network Adapter" checkbox 
          - Switch the "Attached to:" dropdown menu to "NAT"
 
-    iv.  Go to Settings > Network > Adapter 2 and update following settings
+    v.  Go to Settings > Network > Adapter 2 and update following settings
          - Check the "Enable Network Adapter" checkbox 
          - Switch the "Attached to:" dropdown menu to "Host-only Adapter"
          - Switch the "Name" dropdown menu to "vboxnet0"
          
-    v.   Close the Setting window and now start up the myChEMBL VM
+    vi.   Close the Setting window and now start up the myChEMBL VM
     
-    vi.  Use a web browser to connect to myChEMBL LaunchPad page with the 
+    vii.  Use a web browser to connect to myChEMBL LaunchPad page with the 
          following URL
     
           http://192.168.56.101/ 
@@ -86,6 +92,6 @@ interface.
           ssh chembl@192.168.56.101  (password chemblvm)
     
 
-Keep an eye on the the ChEMBL blog (http://chembl.blogspot.co.uk/), for 
-future myChEMBL updates and if you experience any problems or have any 
+Keep an eye on the the ChEMBL blog (http://chembl.blogspot.co.uk/) for 
+future myChEMBL updates. If you experience any problems or have any 
 questions please get in touch at mychembl@ebi.ac.uk.

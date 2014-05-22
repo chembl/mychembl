@@ -3,6 +3,9 @@
 sudo useradd -G sudo -s /bin/bash -m chembl
 sudo echo "chembl:chemblvm"| sudo chpasswd
 
+sudo sysctl -w kernel.shmmax=2147483648
+sudo /sbin/iptables -A INPUT -i eth0 -p tcp --destination-port 5432 -j ACCEPT
+
 sudo apt-get update
 sudo apt-get install -y apache2
 sudo apt-get install -y php5

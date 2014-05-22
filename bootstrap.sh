@@ -30,6 +30,7 @@ sudo apt-get install -y python-pandas
 sudo apt-get install -y python-networkx
 sudo apt-get install -y python-sklearn
 
+sudo pip install Cython
 sudo pip install -U ipython
 sudo pip install -U jinja2
 sudo pip install -U scikit-learn
@@ -52,5 +53,5 @@ unzip JSME_2013-08-04.zip
 sudo mv JSME_2013-08-04/jsme /var/www/mychembl/static/js/
 sudo cp mychembl/configuration/launchpad_httpd.conf /etc/apache2/httpd.conf
 
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sh
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sh
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sh

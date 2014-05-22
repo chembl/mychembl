@@ -45,8 +45,8 @@ sudo pip install -U pandas
 sudo pip install -U requests
 
 sudo -u chembl mkdir /home/chembl/src
-sudo -u chembl git clone https://github.com/chembl/mychembl_webapp.git /home/chembl/src
-sudo -u chembl git clone https://github.com/chembl/mychembl.git /home/chembl/src
+sudo -u chembl git clone https://github.com/chembl/mychembl_webapp.git /home/chembl/src/mychembl_webapp
+sudo -u chembl git clone https://github.com/chembl/mychembl.git /home/chembl/src/mychembl
 sudo mv /var/www /var/www_old
 sudo mkdir /var/www
 sudo cp -r mychembl/launchpad/* /var/www/

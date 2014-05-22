@@ -36,8 +36,8 @@
           <p>A selection of programmatic tutorials written in Python and presented using interactive IPython Notebooks, some examples:</p> 
             <ul>
               <li><a href="/notebooks/01_myChEMBL_introduction.ipynb" onclick="javascript:event.target.port=8888" target="_blank">myChEMBL introduction</a></li>
-              <li><a href="/notebooks/02_myChEMBL_web_services.ipynb" onclick="javascript:event.target.port=8888" target="_blank">Using myChEMBL Web Services</a></li>
-              <li><a href="/notebooks/03_myChEMBL_predict_targets.ipynb" onclick="javascript:event.target.port=8888" target="_blank">Building predictive target models</a></li>
+              <li><a href="/notebooks/02_myChEMBL_web_services.ipynb" onclick="javascript:event.target.port=8888" target="_blank">Using myChEMBL web services</a></li>
+              <li><a href="/notebooks/03_myChEMBL_predict_targets.ipynb" onclick="javascript:event.target.port=8888" target="_blank">Using target prediction models</a></li>
             </ul>
           </p>
         

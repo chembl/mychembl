@@ -7,11 +7,11 @@
 
 # Preliminary step: install all python libraries used in our notebooks that
 # are not well known and not installed by default:
-echo "password" | sudo -S pip install chembl_webresource_client
-echo "password" | sudo -S pip install lxml
+echo "chemblvm" | sudo -S pip install chembl_webresource_client
+echo "chemblvm" | sudo -S pip install lxml
 
 # First of all we will install supervisor:
-echo "password" | sudo -S apt-get install -y supervisor
+echo "chemblvm" | sudo -S apt-get install -y supervisor
 
 # create directory for storing temporary files:
 mkdir /home/chembl/ipynb_workbench
@@ -20,10 +20,10 @@ mkdir /home/chembl/ipynb_workbench
 curl -o /home/chembl/ipynb_workbench/physchem_props_heatmap.csv https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/physchem_props_heatmap.csv
 
 # Configure it to take care about ipython notebook server:
-echo "password" | sudo -S curl -o /etc/supervisor/conf.d/ipynb.conf https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb.conf
+echo "chemblvm" | sudo -S curl -o /etc/supervisor/conf.d/ipynb.conf https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb.conf
 
 # Notify it about changes in configuration:
-echo "password" | sudo -S supervisorctl reread
+echo "chemblvm" | sudo -S supervisorctl reread
 
 # Add new process group:
-echo "password" | sudo -S supervisorctl update
+echo "chemblvm" | sudo -S supervisorctl update

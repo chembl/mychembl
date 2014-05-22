@@ -13,6 +13,9 @@ sudo pip install lxml
 # First of all we will install supervisor:
 sudo apt-get install supervisor
 
+# create directory for storing temporary files:
+mkdir /home/chembl/ipynb_workbench
+
 # Configure it to take care about ipython notebook server:
 sudo curl -o /etc/supervisor/conf.d/ipynb.conf https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb.conf
 

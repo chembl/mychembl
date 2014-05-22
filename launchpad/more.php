@@ -75,6 +75,7 @@
             <span><a href="http://www.ubuntu.com/"><img class="ack-logo-width" src="/assets/img/ubuntu.png" /></a></span>
             <span><a href="https://www.virtualbox.org/"><img src="/assets/img/virtualbox.png" /></a></span>
             <span><a href="http://www.vmware.com/"><img class="ack-logo-width" src="/assets/img/vmware.png" /></a></span>
+            <span><a href="http://www.ggasoftware.com/opensource/indigo/"><img class="ack-logo-width" src="/assets/img/gga.png" /></a></span>
           </p>
         </div>
       </div>

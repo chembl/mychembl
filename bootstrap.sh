@@ -47,14 +47,14 @@ sudo pip install -U tornado
 sudo pip install -U pandas
 sudo pip install -U requests
 
-sudo -u chembl mkdir /home/chembl/src
-sudo -u chembl git clone https://github.com/chembl/mychembl_webapp.git /home/chembl/src/mychembl_webapp
-sudo -u chembl git clone https://github.com/chembl/mychembl.git /home/chembl/src/mychembl
-sudo mv /var/www /var/www_old
+cd /tmp
+sudo git clone https://github.com/chembl/mychembl_webapp.git
+sudo git clone https://github.com/chembl/mychembl.git
+sudo rm /var/www -rf
 sudo mkdir /var/www
-sudo cp -r /home/chembl/mychembl/launchpad/* /var/www/
+sudo cp -r mychembl/launchpad/* /var/www/
 sudo mkdir /var/www/mychembl/
-sudo cp -r /home/chembl/mychembl_webapp/* /var/www/mychembl/
+sudo cp -r mychembl_webapp/* /var/www/mychembl/
 curl -O http://peter-ertl.com/jsme/download/JSME_2013-08-04.zip
 unzip JSME_2013-08-04.zip
 sudo mv JSME_2013-08-04/jsme /var/www/mychembl/static/js/

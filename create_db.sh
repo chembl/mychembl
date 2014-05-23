@@ -23,4 +23,5 @@ psql --username=chembl -d chembl_18 -c "create user foo password 'secret';"
 psql --username=chembl -d chembl_18 -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO mychembl;"
 
 psql --username=chembl -d chembl_18 -c "create extension rdkit;"
+wget https://raw.githubusercontent.com/chembl/mychembl/master/indexes.sql
 psql --username=chembl -d chembl_18 -a -f indexes.sql

@@ -20,6 +20,4 @@ echo "chemblvm" | sudo -S curl -o /etc/sysctl.conf https://raw.githubusercontent
 echo "chemblvm" | sudo -S service postgresql restart
 
 createuser -P mychembl
-psql --username=chembl chembl_18
-GRANT SELECT ON ALL TABLES IN SCHEMA public TO mychembl;
-\q
+psql --username=chembl -d chembl_18 -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO mychembl;"

@@ -36,7 +36,7 @@ sudo apt-get install -y python-pandas
 sudo apt-get install -y python-networkx
 sudo apt-get install -y python-sklearn
 
-sudo -u postgres createuser -dSr chembl
+sudo -u postgres createuser -dsr chembl
 sudo -u chembl createdb chembl_18
 
 sudo pip install Cython

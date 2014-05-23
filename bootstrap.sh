@@ -60,6 +60,7 @@ unzip JSME_2013-08-04.zip
 sudo mv JSME_2013-08-04/jsme /var/www/mychembl/static/js/
 sudo curl -o /etc/apache2/httpd.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/launchpad_httpd.conf
 sudo curl -o /etc/apache2/envvars https://github.com/chembl/mychembl/blob/master/configuration/apache2_envvars
+sudo curl -o /etc/network/interfaces https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_interfaces
 sudo -u chembl curl -o /home/chembl/.bashrc https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_bashrc
 
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sudo -i -u chembl bash

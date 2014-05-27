@@ -28,7 +28,7 @@
           <h4><i class="fa fa-rocket"></i>&nbsp;Who is using myChEMBL?</h4>
           <p>We (the ChEMBL group) are using myChEMBL for training purposes and we are aware of many other academic and industrial users who have started using the system. We would like to hear from the community, so if you are using myChEMBL please <a href="mailto:mychembl@ebi.ac.uk">let us know</a>.</p>
           
-          <h4><i class="fa fa-rocket"></i>&nbsp;What is the difference between the <a href="/chemblws/docs/">myChEMBL Web Services</a> and the official <a href="https://www.ebi.ac.uk/chembl/ws">ChEMBL Web Services</a>?</h4>
+          <h4><i class="fa fa-rocket"></i>&nbsp;What is the difference between the <a href="/chemblws/docs/">Web Services hosted on myChEMBL</a> and the official <a href="https://www.ebi.ac.uk/chembl/ws">ChEMBL Web Services</a>?</h4>
           <p>Both sets of Web Services use the same codebase and expose the same set of methods to the end user, so they can be considered functionally identical. Please note the official ChEMBL Web Web Services use an Oracle database and the Accelrys Direct chemical cartridge, where as the myChEMBL Web Services use a PostrgreSQL database and the RDKit chemical cartridge. This change may lead to different chemical search results being returned.</p>
           
           <h4><i class="fa fa-rocket"></i>&nbsp;What is the difference between the <a href="/mychembl/app/home.php">myChEMBL Web Interface</a> and the official <a href="https://www.ebi.ac.uk/chembl">ChEMBL Web Interface</a>?</h4>
@@ -46,9 +46,11 @@
               <li><strong>mols_rdkit</strong> - contains the ChEMBL molecules RDKit representation in the column named 'm'.</li>
               <li><strong>fps_rdkit</strong> - contains six fingerprint representations of the ChEMBL molecules created using RDKit. For more details on the RDKit fingerprints please visit <a href="http://code.google.com/p/rdkit/wiki/FingerprintsInTheRDKit">this page</a>.</li>
             </ul>
-            Also, the <a href="/mychembl/app/home.php">myChEMBL Web Interface</a> creates a number of <strong>octmp_*</strong> temporary tables, which are used to cache search results. These tables can be ignored. 
-          </p>
-          
+            Also, the <a href="/chemblws/docs/">Web Services hosted on myChEMBL</a> and the <a href="/mychembl/app/home.php">myChEMBL Web Interface</a> creates a number of temporary tables used to cache results. The Web Services use a table called <strong>ws_cache</strong> and the web interface uses a series of tables, whose names match the following pattern <strong>octmp_*</strong>. These tables can be ignored, but if disk space on the virtual machine does become limited, you may wish to truncate the <strong>ws_cache</strong> table using the following SQL:
+           <br/>
+           <br/>
+           <pre class="pre-scrollable">TRUNCATE TABLE ws_cache;</pre>
+          </p>          
 
           <h4><i class="fa fa-rocket"></i>&nbsp;Can you provide some more details on the ChEMBL group?</h4>
           <p>Visiting the <a href="https://www.ebi.ac.uk/chembl/">ChEMBL website</a> will provide you with links to all the projects the ChEMBL group is involved with. You may also be interested in following the <a href="http://chembl.blogspot.co.uk/">ChEMBL-og</a> and signing up to the <a href="http://listserver.ebi.ac.uk/mailman/listinfo/chembl-announce">ChEMBL mailing list</a>.</p>

@@ -35,6 +35,8 @@ sudo apt-get install -y python-imaging-tk
 sudo apt-get install -y python-pandas
 sudo apt-get install -y python-networkx
 sudo apt-get install -y python-sklearn
+sudo apt-get install -y libnss-mdns
+sudo apt-get install -y avahi-utils
 
 sudo -u postgres createuser -dsr chembl
 sudo -u chembl createdb chembl_18
@@ -47,6 +49,20 @@ sudo pip install -U tornado
 sudo pip install -U pandas
 sudo pip install -U requests
 sudo pip install -U mpld3
+sudo pip install -U service_identity
+sudo pip install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz
+sudo pip install -U paste
+sudo pip install -U python-dev
+sudo pip install -U python-gobject
+sudo pip install -U netifaces
+
+if grep -Fxq "ipv6" /etc/modules
+then
+    modprobe ipv6
+else
+    echo "ipv6" >> file
+fi
+
 
 cd /tmp
 sudo git clone https://github.com/chembl/mychembl_webapp.git
@@ -63,9 +79,19 @@ sudo curl -o /etc/apache2/httpd.conf https://raw.githubusercontent.com/chembl/my
 sudo curl -o /etc/apache2/envvars https://raw.githubusercontent.com/chembl/mychembl/master/configuration/apache2_envvars
 sudo curl -o /etc/network/interfaces https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_interfaces
 sudo -u chembl curl -o /home/chembl/.bashrc https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_bashrc
+sudo curl -o /etc/init/mychembl-upnp.conf https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl-upnp.conf
+sudo curl -o /etc/avahi/services/mychembl.service https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl.service
+sudo curl -o /usr/bin/mychembl-upnp.py https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl-upnp.py
+sudo chmod +x /usr/bin/mychembl-upnp.py
+sudo mkdir /usr/share/themes/mychembl
+sudo curl -o /usr/share/themes/mychembl/mychembl.png https://raw.githubusercontent.com/chembl/mychembl/master/branding/mychembl.png
+sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth https://github.com/chembl/mychembl/blob/master/branding/ubuntu-text.plymouth
 
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh | sudo -i -u chembl bash
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh | sudo -i -u chembl bash
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh | sudo -i -u chembl bash
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sudo -i -u chembl bash
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sudo -i -u chembl bash
+
+echo "GRUB_BACKGROUND=\"/usr/share/themes/mychembl/mychembl.png\"" >> /etc/default/grub
+sudo update-grub

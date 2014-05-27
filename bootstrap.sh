@@ -46,6 +46,7 @@ sudo pip install -U scikit-learn
 sudo pip install -U tornado
 sudo pip install -U pandas
 sudo pip install -U requests
+sudo pip install -U mpld3
 
 cd /tmp
 sudo git clone https://github.com/chembl/mychembl_webapp.git

@@ -106,6 +106,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
+
 ## RDKit ENV variables
 export RDBASE=$HOME/rdkit
 export INDIGOBASE=$HOME/indigo-python-1.1.11-linux

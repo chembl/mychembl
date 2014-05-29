@@ -94,5 +94,5 @@ curl -s https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh | 
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sudo -i -u chembl bash
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sudo -i -u chembl bash
 
-echo "GRUB_BACKGROUND=\"/usr/share/themes/mychembl/mychembl.png\"" >> /etc/default/grub
+sudo echo "GRUB_BACKGROUND=\"/usr/share/themes/mychembl/mychembl.png\"" >> /etc/default/grub
 sudo update-grub

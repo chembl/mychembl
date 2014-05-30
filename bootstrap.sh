@@ -39,7 +39,6 @@ sudo apt-get install -y libnss-mdns
 sudo apt-get install -y avahi-utils
 
 sudo -u postgres createuser -dsr chembl
-sudo -u chembl createdb chembl_18
 
 sudo pip install Cython
 sudo pip install -U ipython

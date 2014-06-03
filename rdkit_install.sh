@@ -19,5 +19,5 @@ ctest
 
 cd $RDBASE/Code/PgSQL/rdkit
 make
-sudo make install
+echo "chemblvm" | sudo -S make install
 make installcheck

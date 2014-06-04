@@ -37,6 +37,8 @@ sudo apt-get install -y python-networkx
 sudo apt-get install -y python-sklearn
 sudo apt-get install -y libnss-mdns
 sudo apt-get install -y avahi-utils
+sudo apt-get install -y python-gobject
+sudo apt-get install -y python-dev
 
 sudo -u postgres createuser -dsr chembl
 
@@ -51,8 +53,6 @@ sudo pip install -U mpld3
 sudo pip install -U service_identity
 sudo pip install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz
 sudo pip install -U paste
-sudo pip install -U python-dev
-sudo pip install -U python-gobject
 sudo pip install -U netifaces
 
 if grep -Fxq "ipv6" /etc/modules

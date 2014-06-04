@@ -15,7 +15,6 @@ cd chembl_18_postgresql/
 psql chembl_18 < chembl_18.pgdump.sql
 
 rm chembl_18_postgresql.tar.gz
-rm chembl_18_postgresql/ -rf
 
 echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.1/main/postgresql.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_postgresql.conf
 echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.1/main/pg_hba.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_pg_hba.conf
@@ -29,3 +28,6 @@ psql --username=chembl -d chembl_18 -c "GRANT SELECT ON ALL TABLES IN SCHEMA pub
 psql --username=chembl -d chembl_18 -c "create extension rdkit;"
 wget https://raw.githubusercontent.com/chembl/mychembl/master/indexes.sql
 psql --username=chembl -d chembl_18 -a -f indexes.sql
+
+cd /home/chembl/
+rm chembl_18_postgresql/ -rf

@@ -60,7 +60,7 @@ if grep -Fxq "ipv6" /etc/modules
 then
     modprobe ipv6
 else
-    echo "ipv6" >> file
+    echo "ipv6" >> /etc/modules
 fi
 
 

@@ -14,7 +14,7 @@
        
         <div class="col-lg-4">      
           <h3><i class="fa fa-rocket"></i>&nbsp;<a href="phppgadmin" target="_blank">phpPgAdmin Console</a></h3>        
-          <p>Use the phpPgAdmin console to explore the myChEMBL PostgreSQL database and run SQL queries (<strong>user:</strong> mychembl, <strong>password:</strong> read).</p>        
+          <p>Use the console to explore the myChEMBL PostgreSQL database and run SQL queries (<strong>user:</strong> mychembl, <strong>password:</strong> read).</p>        
         </div>
         
         <div class="col-lg-4">

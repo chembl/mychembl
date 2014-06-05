@@ -6,7 +6,7 @@ curl -o /home/chembl/notebooks/02_myChEMBL_web_services.ipynb https://raw.github
 curl -o /home/chembl/notebooks/03_myChEMBL_predict_targets.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/03_myChEMBL_predict_targets.ipynb
 curl -o /home/chembl/notebooks/04_myChEMBL_plotting_tutorial.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/04_myChEMBL_plotting_tutorial.ipynb
 curl -o /home/chembl/notebooks/05_myChEMBL_mds_tutorial.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/05_myChEMBL_mds_tutorial.ipynb
-curl -o /home/chembl/notebooks/06_Differences_between_ChEMBL_and_myChEMBL.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/06_Differences_between_ChEMBL_and_myChEMBL.ipynb
+curl -o /home/chembl/notebooks/06_Differences_between_ChEMBL_and_myChEMBL.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/06_myChEMBL_differences_with_ChEMBL.ipynb
 
 ipython profile create mychembl
 curl -o /home/chembl/.ipython/profile_mychembl/ipython_notebook_config.py https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_ipython_notebook_config.py

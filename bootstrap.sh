@@ -47,7 +47,6 @@ sudo pip install -U ipython
 sudo pip install -U jinja2
 sudo pip install -U scikit-learn
 sudo pip install -U tornado
-sudo pip install -U 'openpyxl >=1.6.1,<2.0.0'
 sudo pip install -U pandas
 sudo pip install -U requests
 sudo pip install -U mpld3
@@ -60,7 +59,9 @@ if grep -Fxq "ipv6" /etc/modules
 then
     modprobe ipv6
 else
-    echo "ipv6" >> /etc/modules
+    sudo su
+    echo ipv6 >> /etc/modules
+    exit
 fi
 
 

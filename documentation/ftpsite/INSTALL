@@ -18,7 +18,7 @@ interface.
     https://www.virtualbox.org/wiki/Downloads
    
 2.  Download the .ovf, .vmdk amd .mf myChEMBL files into the same folder 
-    on your computer. (Note the the .vmdk file is ~20GB in size)
+    on your computer. (Note the the .vmdk file is ~9GB in size)
 
 3.  Open VirtualBox
 

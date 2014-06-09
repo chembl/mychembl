@@ -29,5 +29,8 @@ psql --username=chembl -d chembl_18 -c "create extension rdkit;"
 wget https://raw.githubusercontent.com/chembl/mychembl/master/indexes.sql
 psql --username=chembl -d chembl_18 -a -f indexes.sql
 
+wget https://raw.githubusercontent.com/chembl/mychembl_webapp/master/sql/webapp.sql
+psql --username=chembl -d chembl_18 -a -f webapp.sql
+
 cd /home/chembl/
 rm chembl_18_postgresql/ -rf

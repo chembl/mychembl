@@ -42,7 +42,7 @@ interface.
     myChEMBL. For this reason we recommend the following approach for 
     connecting to myChEMBL when using VirtualBox:
     
-    i.   Shutdown the myChEMBL VM 
+    i.   If running, shutdown the myChEMBL VM
     
     ii.  Go to Virtual Box menu > Preferences > Network > Host-only Networks.
          - If there is already a network called "vboxnet0" there, click Cancel
@@ -63,22 +63,23 @@ interface.
          - Switch the "Name" dropdown menu to "vboxnet0"
          
     vi.   Close the Setting window and now start up the myChEMBL VM
+
+8.  Start up the virtual machine by clicking on the myChEMBL-XX.X name,
+    which appears in the VirtualBox Manager menu list. A VirtualBox terminal
+    emulator will appear, which you can ignore and minimise. Use a web 
+    browser to connect to myChEMBL LaunchPad page with the following URL:
     
-    vii.  Use a web browser to connect to myChEMBL LaunchPad page with the 
-         following URL
+    http://192.168.56.101/ 
     
-          http://192.168.56.101/ 
+    or try and ssh into the VM using the command line
     
-          or try and ssh into the VM using the command line
-    
-          ssh chembl@192.168.56.101  (password chemblvm)
-   
-8.  We recommend sshing into the VM and not using the VirtualBox terminal
+    ssh chembl@192.168.56.101  (password chemblvm) 
+
+    We recommend sshing into the VM and not using the VirtualBox terminal
     emulator, as the mouse and clipboard are not configured to work with 
-    host operating system when using VirtualBox terminal emulator. Once 
-    you have logged into the myChEMBL virtual machine (via ssh or the 
-    VirtualBox terminal emulator), you will be prompted for a username 
-    and password, these are:
+    host operating system when using VirtualBox terminal emulator. 
+    
+ 9. The linux username and password for the myChEMBL virtual machine are:
    
     username: chembl
     password: chemblvm

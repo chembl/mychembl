@@ -10,9 +10,9 @@
 
 
 The myChEMBL virtual machine has only made possible with the use of Open 
-Source software packages. We attempt to acknowledge and reference all of the 
-core software components we have used to build the myChEMBL in this file. 
-
+Source software packages. We attempt to acknowledge and reference all of 
+the core software components and tools we have used to build myChEMBL in 
+this file (also refer to the 'LaunchPad More Information' page): 
 
 1. Greg Lundrum and the RDKit community (http://www.rdkit.org/)
 
@@ -23,7 +23,19 @@ core software components we have used to build the myChEMBL in this file.
 
 4. Ubuntu linux distribution (http://www.ubuntu.com/)
 
-5. Network settings    http://christophermaier.name/blog/2010/09/01/host-only-networking-with-virtualbox
+5. IPython notebook (software http://ipython.org)
+
+6. Django Web Framework (https://www.djangoproject.com)
+
+7. KNIME (http://www.knime.org)
+
+8. phpPgAdmin (http://phppgadmin.sourceforge.net)
+
+9. Indigo Toolkit (http://www.ggasoftware.com/opensource/indigo)
+
+10. VirtualBox (https://www.virtualbox.org)
+
+11. VMware (http://www.vmware.com)
 
 Please get in touch (mychembl@ebi.ac.uk), if you think we have left out 
-any acknowledgments
+any acknowledgments.

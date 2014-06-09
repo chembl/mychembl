@@ -31,43 +31,25 @@ interface.
 6.  An "Appliance settings" dialog will appear. This will allow you to edit
     virtual machine import settings (e.g. number of CPUs, allocated RAM).
     Click "Import" button to start import process. This normally takes 20-
-    30 minutes.
-
-7.  Once the import completes a new virtual machine named myChEMBL-XX.X 
-    should appear in the VirtualBox Manager menu list. To start up myChEMBL
-    click on the myChEMBL virtual machine name.
-   
-8.  A VirtualBox terminal emulator will pop up providing you access to an
-    Ubuntu linux shell. You will be prompted for a mychembl username and 
-    password, these are:
-   
-    username: chembl
-    password: chemblvm
+    30 minutes. Once the import completes a new virtual machine named 
+    myChEMBL-XX.X should appear in the VirtualBox Manager menu list, hold
+    off clicking on this until you have configured network settings.
     
-    *The chembl user has been given sudo privileges*
-
-    Note, when interacting with the VirtualBox terminal emulator you may 
-    find it 'captures' your mouse cursor, preventing you from interacting
-    with host operating system. The command to release the mouse cursor 
-    (referred to as "host key" in VirtualBox documentation) is displayed 
-    in bottom right-hand corner of terminal emulator (on Mac OSx it 
-    defaults to left Command key and on Windows deafults to right Control
-    key).
-
-9.  Setting up a stable network connection between the host computer and 
+7.  Setting up a stable network connection between the host computer and 
     the myChEMBL virtual machine has sometimes proved tricky for some 
     myChEMBL users. Local network settings, dropped network connections and
     VPNs have all caused communication issues between the the host OS and 
     myChEMBL. For this reason we recommend the following approach for 
     connecting to myChEMBL when using VirtualBox:
     
-    i.   Shutdown the myChEMBL VM
+    i.   Shutdown the myChEMBL VM 
     
     ii.  Go to Virtual Box menu > Preferences > Network > Host-only Networks.
-         - If there are no networks listed there, click the button "Add host-only network".
-           "vboxnet0" will be added to the list.
-         - Click OK
          - If there is already a network called "vboxnet0" there, click Cancel
+         - If there are no networks listed there, click the button "Add 
+         host-only network" (look for a small Ô+Õ button), "vboxnet0" will be 
+         added to the list.
+         - Click OK
     
     iii.  Select myChEMBL VM in the VirtualBox Manager window
     
@@ -90,8 +72,20 @@ interface.
           or try and ssh into the VM using the command line
     
           ssh chembl@192.168.56.101  (password chemblvm)
+   
+8.  We recommend sshing into the VM and not using the VirtualBox terminal
+    emulator, as the mouse and clipboard are not configured to work with 
+    host operating system when using VirtualBox terminal emulator. Once 
+    you have logged into the myChEMBL virtual machine (via ssh or the 
+    VirtualBox terminal emulator), you will be prompted for a username 
+    and password, these are:
+   
+    username: chembl
+    password: chemblvm
     
+    *The chembl user has been given sudo privileges*
 
 Keep an eye on the the ChEMBL blog (http://chembl.blogspot.co.uk/) for 
 future myChEMBL updates. If you experience any problems or have any 
 questions please get in touch at mychembl@ebi.ac.uk.
+

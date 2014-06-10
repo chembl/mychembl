@@ -22,15 +22,15 @@ echo "chemblvm" | sudo -S curl -o /etc/sysctl.conf https://raw.githubusercontent
 
 echo "chemblvm" | sudo -S service postgresql restart
 
-psql --username=chembl -d chembl_18 -c "create user mychembl password 'read';"
-psql --username=chembl -d chembl_18 -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO mychembl;"
-
 psql --username=chembl -d chembl_18 -c "create extension rdkit;"
 wget https://raw.githubusercontent.com/chembl/mychembl/master/indexes.sql
 psql --username=chembl -d chembl_18 -a -f indexes.sql
 
 wget https://raw.githubusercontent.com/chembl/mychembl_webapp/master/sql/webapp.sql
 psql --username=chembl -d chembl_18 -a -f webapp.sql
+
+psql --username=chembl -d chembl_18 -c "create user mychembl password 'read';"
+psql --username=chembl -d chembl_18 -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO mychembl;"
 
 cd /home/chembl/
 rm chembl_18_postgresql/ -rf

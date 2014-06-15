@@ -14,6 +14,8 @@ createdb chembl_18
 cd chembl_18_postgresql/
 psql chembl_18 < chembl_18.pgdump.sql
 
+cd ..
+
 rm chembl_18_postgresql.tar.gz
 
 echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.1/main/postgresql.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_postgresql.conf

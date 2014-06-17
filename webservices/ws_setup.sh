@@ -28,22 +28,6 @@ source virtualenvwrapper.sh
 # Use the wrapper to create new virtualenv called chembl_webservices
 mkvirtualenv chembl_webservices
 
-# Configure our new virtualenv, first install postactivate hooks, which will
-# configure our custom PIP index
-printf '#!/bin/bash\nexport PIP_CONFIG_FILE=${VIRTUAL_ENV}/.pip/pip.conf\n' > ${VIRTUAL_ENV}/bin/postactivate
-deactivate
-workon chembl_webservices
-install -D /dev/null "$PIP_CONFIG_FILE"
-
-# The URL below is not accessible outside EBI network (at least for now).
-# But that doesn't really matter since we are configuring our VM once and from
-# EBI campus. We need our PIP index only during installation process so this
-# is fine.
-printf '[global]\nindex-url = http://howe.ebi.ac.uk:8080/repo/index\nextra-index-url = https://pypi.python.org/simple/' > $PIP_CONFIG_FILE
-
-deactivate
-workon chembl_webservices
-
 # Lxml runs faster when Cyhton is available:
 pip install Cython
 

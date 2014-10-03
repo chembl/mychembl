@@ -6,6 +6,11 @@ sudo echo "chembl:chemblvm"| sudo chpasswd
 sudo sysctl -w kernel.shmmax=2147483648
 sudo /sbin/iptables -A INPUT -i eth0 -p tcp --destination-port 5432 -j ACCEPT
 
+sudo dd if=/dev/zero of=/swapfile bs=1024 count=524288
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
 sudo apt-get update
 sudo apt-get install -y apache2
 sudo apt-get install -y php5
@@ -97,6 +102,9 @@ curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh 
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh | sudo -i -u chembl bash
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sudo -i -u chembl bash
 curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sudo -i -u chembl bash
+
+sudo swapoff -v /swapfile
+sudo rm /swapfile
 
 sudo echo "GRUB_BACKGROUND=\"/usr/share/themes/mychembl/mychembl.png\"" >> /etc/default/grub
 sudo update-grub

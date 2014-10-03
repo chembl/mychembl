@@ -105,6 +105,7 @@ curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_noteboo
 
 sudo swapoff -v /swapfile
 sudo rm /swapfile
+sudo rm /tmp/* -rf
 
 sudo echo "GRUB_BACKGROUND=\"/usr/share/themes/mychembl/mychembl.png\"" >> /etc/default/grub
 sudo update-grub

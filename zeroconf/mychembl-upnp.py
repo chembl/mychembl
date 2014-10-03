@@ -38,7 +38,7 @@ class myChEMBL(object):
                             manufacturer_url='https://www.ebi.ac.uk/chembl/',
                             model_name='myChEMBL',
                             model_description='A virtual machine implementation of open data and cheminformatics tools',
-                            model_number='v18',
+                            model_number='v19',
                             model_url='https://github.com/chembl/mychembl',
 			    presentation_url='http://'+self._get_ip(),)
 

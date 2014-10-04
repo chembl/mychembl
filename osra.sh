@@ -14,7 +14,7 @@ sudo apt-get install -y libtclap-dev
 sudo apt-get install -y openbabel
 sudo apt-get install -y libopenbabel-dev
 sudo apt-get install -y libnetpbm10-dev
-sudo apt-get install libglib2.0-dev
+sudo apt-get install -y libglib2.0-dev
 
 cd /tmp
 wget http://sourceforge.net/projects/osra/files/gocr-patched/gocr-0.50pre-patched.tgz

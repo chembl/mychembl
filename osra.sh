@@ -23,10 +23,6 @@ cd gocr-0.50pre-patched/
 ./configure
 make libs
 sudo make install
-cd src
-sudo /usr/bin/install -c pgm2asc.h output.h list.h unicode.h gocr.h pnm.h /usr/local/include/gocr
-sudo /usr/bin/install -c ../include/config.h /usr/local/include/gocr
-cd ../..
 
 cd /tmp
 wget sourceforge.net/projects/osra/files/osra/2.0.0/osra-2.0.0.tgz

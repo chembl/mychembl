@@ -37,9 +37,9 @@ sudo apt-get install -y python-matplotlib
 sudo apt-get install -y python-pip
 sudo apt-get install -y python-psycopg2
 sudo apt-get install -y python-imaging-tk
-sudo apt-get install -y python-pandas
+#sudo apt-get install -y python-pandas
 sudo apt-get install -y python-networkx
-sudo apt-get install -y python-sklearn
+#sudo apt-get install -y python-sklearn
 sudo apt-get install -y libnss-mdns
 sudo apt-get install -y avahi-utils
 sudo apt-get install -y python-gobject

@@ -1,12 +1,18 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu-13.04"
-  config.vm.box_url = "http://goo.gl/Y4aRr"
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 5526
+    v.cpus = 4
+  end
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
 
   config.vm.network "forwarded_port", guest: 80, host: 8000, auto_correct: true
   config.vm.network "forwarded_port", guest: 8888, host: 8888, auto_correct: true
+  config.vm.network "forwarded_port", guest: 5432, host: 5432, auto_correct: true
 
   config.vm.provision "shell",
     inline: "time(curl -s https://raw.githubusercontent.com/chembl/mychembl/master/bootstrap.sh | bash)"
 end
+

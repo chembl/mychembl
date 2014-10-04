@@ -41,7 +41,7 @@ wget sourceforge.net/projects/osra/files/osra/2.0.0/osra-2.0.0.tgz
 tar -zxvf osra-2.0.0.tgz
 cd osra-2.0.0/
 ./configure
-make
+make all
 sudo make install
 cd ..
 rm -rf osra-2.0.0/

@@ -65,9 +65,7 @@ if grep -Fxq "ipv6" /etc/modules
 then
     modprobe ipv6
 else
-    sudo su
-    echo ipv6 >> /etc/modules
-    exit
+    sudo echo ipv6 >> /etc/modules
 fi
 
 

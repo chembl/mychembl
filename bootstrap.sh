@@ -94,12 +94,12 @@ sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth https://githu
 sudo curl -o /etc/phppgadmin/apache.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/apache2/conf.d/phppgadmin https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh | sudo -i sh
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh | sudo -i -u chembl sh
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh | sudo -i -u chembl sh
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh | sudo -i -u chembl sh
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sudo -i -u chembl sh
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sudo -i -u chembl sh
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh | sudo -i bash
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh | sudo -i -u chembl bash
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh | sudo -i -u chembl bash
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh | sudo -i -u chembl bash
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sudo -i -u chembl bash
+curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sudo -i -u chembl bash
 
 sudo swapoff -v /swapfile
 sudo rm /swapfile

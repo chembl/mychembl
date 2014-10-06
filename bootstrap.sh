@@ -65,7 +65,7 @@ if grep -Fxq "ipv6" /etc/modules
 then
     modprobe ipv6
 else
-    sudo echo ipv6 >> /etc/modules
+    sudo bash -c "echo ipv6 >> /etc/modules"
 fi
 
 
@@ -106,5 +106,5 @@ sudo swapoff -v /swapfile
 sudo rm /swapfile
 sudo rm /tmp/* -rf
 
-sudo echo "GRUB_BACKGROUND=\"/usr/share/themes/mychembl/mychembl.png\"" >> /etc/default/grub
+sudo bash -c "echo \"GRUB_BACKGROUND=\\\"/usr/share/themes/mychembl/mychembl.png\\\"\" >> /etc/default/grub"
 sudo update-grub

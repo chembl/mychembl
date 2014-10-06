@@ -29,6 +29,7 @@ sudo apt-get install -y flex
 sudo apt-get install -y bison
 sudo apt-get install -y g++
 sudo apt-get install -y cmake
+sudo apt-get install -y libffi-dev
 sudo apt-get install -y python-numpy
 sudo apt-get install -y python-scipy
 sudo apt-get install -y python-matplotlib

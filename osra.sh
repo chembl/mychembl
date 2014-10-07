@@ -4,8 +4,6 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 06.10.2014
 
-exec 0<>/dev/null
-
 # first, let's install all required dependencies, that can be installed from ubuntu repositories
 sudo apt-get install -y graphicsmagick
 sudo apt-get install -y libgraphicsmagick++1-dev

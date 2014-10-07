@@ -94,13 +94,14 @@ sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth https://githu
 sudo curl -o /etc/phppgadmin/apache.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/apache2/conf.d/phppgadmin https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh | sudo -i bash -s
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh | sudo -i -u chembl bash -s
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh | sudo -i -u chembl bash -s
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh | sudo -i -u chembl bash -s
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh | sudo -i -u chembl bash -s
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/install_beaker.sh | sudo -i -u chembl bash -s
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh | sudo -i -u chembl bash -s
+cd /tmp
+wget https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh && bash osra.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh && su -c "bash rdkit_install.sh" chembl
+wget https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh && su -c "bash ipynb_setup.sh" chembl
+wget https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh && su -c "bash create_db.sh" chembl
+wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh && su -c "bash ws_setup.sh" chembl
+wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/install_beaker.sh && su -c "bash install_beaker.sh" chembl
+wget https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh && su -c "bash ipynb_deamonise.sh" chembl
 
 sudo swapoff -v /swapfile
 sudo rm /swapfile

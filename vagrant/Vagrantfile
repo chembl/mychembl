@@ -13,7 +13,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 8888, host: 8888, auto_correct: true
   config.vm.network "forwarded_port", guest: 5432, host: 5432, auto_correct: true
 
-  config.vm.provision "shell",
-    inline: "time(curl -s https://raw.githubusercontent.com/chembl/mychembl/master/bootstrap.sh | bash -s)"
+  config.vm.provision :shell, :path => "../bootstrap.sh"
 end
 

@@ -5,8 +5,8 @@
 # Created date: 06.10.2014
 
 # first, let's install all required dependencies, that can be installed from ubuntu repositories
-sudo apt-get install -y graphicsmagick
-sudo apt-get install -y libgraphicsmagick++1-dev
+apt-get install -y graphicsmagick
+apt-get install -y libgraphicsmagick++1-dev
 sudo apt-get install -y libgraphicsmagick++3
 sudo apt-get install -y libgraphicsmagick1-dev
 sudo apt-get install -y libgraphicsmagick3

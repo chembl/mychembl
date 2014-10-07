@@ -11,62 +11,11 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 
-sudo apt-get update
-sudo apt-get install -y apache2
-sudo apt-get install -y php5
-sudo apt-get install -y php5-pgsql
-sudo apt-get install -y git
-sudo apt-get install -y unzip
-sudo apt-get install -y ipython
-sudo apt-get install -y ipython-notebook
-sudo apt-get install -y ipython-qtconsole
-sudo apt-get install -y libboost-all-dev
-sudo apt-get install -y postgresql
-sudo apt-get install -y postgresql-server-dev-all
-sudo apt-get install -y postgresql-doc
-sudo apt-get install -y postgresql-contrib
-sudo apt-get install -y flex
-sudo apt-get install -y bison
-sudo apt-get install -y g++
-sudo apt-get install -y cmake
-sudo apt-get install -y libffi-dev
-sudo apt-get install -y python-numpy
-sudo apt-get install -y python-scipy
-sudo apt-get install -y python-matplotlib
-sudo apt-get install -y python-pip
-sudo apt-get install -y python-psycopg2
-sudo apt-get install -y python-imaging-tk
-#sudo apt-get install -y python-pandas
-sudo apt-get install -y python-networkx
-#sudo apt-get install -y python-sklearn
-sudo apt-get install -y libnss-mdns
-sudo apt-get install -y avahi-utils
-sudo apt-get install -y python-gobject
-sudo apt-get install -y python-dev
-sudo apt-get install -y phppgadmin
+wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs.sh && bash install_core_libs.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs.sh && bash install_py_libs.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/ensure_ipv6.sh && bash ensure_ipv6.sh
 
 sudo -u postgres createuser -dsr chembl
-
-sudo pip install Cython
-sudo pip install -U ipython
-sudo pip install -U jinja2
-sudo pip install -U scikit-learn
-sudo pip install -U tornado
-sudo pip install -U pandas
-#sudo pip install -U requests
-sudo pip install -U mpld3
-sudo pip install -U service_identity
-sudo pip install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz
-sudo pip install -U paste
-sudo pip install -U netifaces
-
-if grep -Fxq "ipv6" /etc/modules
-then
-    modprobe ipv6
-else
-    sudo bash -c "echo ipv6 >> /etc/modules"
-fi
-
 
 cd /tmp
 sudo git clone https://github.com/chembl/mychembl_webapp.git

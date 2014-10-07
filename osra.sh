@@ -5,19 +5,19 @@
 # Created date: 06.10.2014
 
 # first, let's install all required dependencies, that can be installed from ubuntu repositories
-yes | sudo apt-get install graphicsmagick
-yes | sudo apt-get install libgraphicsmagick++1-dev
-yes | sudo apt-get install libgraphicsmagick++3
-yes | sudo apt-get install libgraphicsmagick1-dev
-yes | sudo apt-get install libgraphicsmagick3
-yes | sudo apt-get install libpotrace-dev
-yes | sudo apt-get install libpotrace0
-yes | sudo apt-get install potrace
-yes | sudo apt-get install libtclap-dev
-yes | sudo apt-get install openbabel
-yes | sudo apt-get install libopenbabel-dev
-yes | sudo apt-get install libnetpbm10-dev
-yes | sudo apt-get install libglib2.0-dev
+sudo apt-get install -y -q=2 graphicsmagick
+sudo apt-get install -y -q=2 libgraphicsmagick++1-dev
+sudo apt-get install -y -q=2 libgraphicsmagick++3
+sudo apt-get install -y -q=2 libgraphicsmagick1-dev
+sudo apt-get install -y -q=2 libgraphicsmagick3
+sudo apt-get install -y -q=2 libpotrace-dev
+sudo apt-get install -y -q=2 libpotrace0
+sudo apt-get install -y -q=2 potrace
+sudo apt-get install -y -q=2 libtclap-dev
+sudo apt-get install -y -q=2 openbabel
+sudo apt-get install -y -q=2 libopenbabel-dev
+sudo apt-get install -y -q=2 libnetpbm10-dev
+sudo apt-get install -y -q=2 libglib2.0-dev
 
 # installing ocrad (https://www.gnu.org/software/ocrad/) from source bacause standard distribution doesn't work for me...
 cd /tmp

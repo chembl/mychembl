@@ -2,6 +2,21 @@
 
 CHEMBL_VERSION=19
 
+## Creating BLAST database
+mkdir -p /home/chembl/blast/chembl
+cd /home/chembl/blast/
+wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.29/ncbi-blast-2.2.29+-x64-linux.tar.gz
+tar -xzf ncbi-blast-2.2.29+-x64-linux.tar.gz 
+rm ncbi-blast-2.2.29+-x64-linux.tar.gz
+cd /home/chembl/blast/chembl
+wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_19/chembl_"$CHEMBL_VERSION".fa.gz
+wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_19/chembl_"$CHEMBL_VERSION"_bio.fa.gz
+gunzip chembl_"$CHEMBL_VERSION".fa.gz
+gunzip chembl_"$CHEMBL_VERSION"_bio.fa.gz
+/home/chembl/blast/ncbi-blast-2.2.29+/bin/makeblastdb -in chembl_"$CHEMBL_VERSION".fa -dbtype prot
+/home/chembl/blast/ncbi-blast-2.2.29+/bin/makeblastdb -in chembl_"$CHEMBL_VERSION"_bio.fa -dbtype prot
+cd /home/chembl
+
 ## Download target prediction models
 wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/target_predictions/chembl_"$CHEMBL_VERSION"_models.tar.gz
 tar -zxf chembl_"$CHEMBL_VERSION"_models.tar.gz

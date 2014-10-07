@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update
+sudo apt-get install -y unattended-upgrades
 sudo apt-get install -y apache2
 sudo apt-get install -y php5
 sudo apt-get install -y php5-pgsql
@@ -33,3 +34,4 @@ sudo apt-get install -y avahi-utils
 sudo apt-get install -y python-gobject
 sudo apt-get install -y python-dev
 sudo apt-get install -y phppgadmin
+sudo apt-get install -y python-biopython

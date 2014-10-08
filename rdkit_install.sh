@@ -4,6 +4,7 @@ export RDBASE=$HOME/rdkit
 export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=$RDBASE:$PYTHONPATH
 
+cd $HOME
 git clone https://github.com/rdkit/rdkit
 cd rdkit/
 git checkout tags/Release_2014_03_1

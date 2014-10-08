@@ -10,7 +10,7 @@ cd rdkit/
 git checkout tags/Release_2014_03_1
 cd $RDBASE/External/INCHI-API
 sed -i 's/sites\/default\/files\/inchi-1.04/wp\/wp-content\/uploads\/2014\/06/g' download-inchi.sh
-sed -i 's/wget/curl -O/g' download-inchi.sh
+sed -i 's/wget http/curl -O http/g' download-inchi.sh
 bash download-inchi.sh
 
 cd $RDBASE

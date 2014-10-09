@@ -49,7 +49,7 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh &
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh && su -c "bash ipynb_setup.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh && su -c "bash create_db.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh && su -c "bash ws_setup.sh" chembl
-wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/install_beaker.sh && su -c "bash install_beaker.sh" chembl
+wget https://raw.githubusercontent.com/chembl/mychembl/master/beaker/install_beaker.sh && su -c "bash install_beaker.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh && su -c "bash ipynb_deamonise.sh" chembl
 
 sudo swapoff -v /swapfile

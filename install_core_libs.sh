@@ -1,7 +1,6 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get install -y unattended-upgrades
 sudo apt-get install -y bash
 sudo apt-get install -y apache2
 sudo apt-get install -y php5

@@ -15,7 +15,7 @@ bash download-inchi.sh
 cd $RDBASE
 mkdir build
 cd build
-cmake -DRDK_BUILD_INCHI_SUPPORT=ON ..
+cmake -DRDK_BUILD_INCHI_SUPPORT=ON -DBoost_USE_STATIC_LIBS=OFF ..
 make -j4 install
 ctest
 

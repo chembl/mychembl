@@ -50,6 +50,7 @@ pip install django-cors-headers
 
 # OK, now we are ready to configure our webservices django app.
 # First, lets create new django project:
+cd /home/chembl
 mkdir chembl_webservices
 cd chembl_webservices/
 django-admin.py startproject deployment
@@ -79,7 +80,7 @@ python manage.py collectstatic --noinput --clear
 echo "chemblvm" | sudo -S apt-get install -y libapache2-mod-wsgi
 
 # Web services should be up and running now so we can generate cache:
-curl -s https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_cache_generation.sh | sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh
 
 
 

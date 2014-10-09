@@ -21,13 +21,12 @@ cd /tmp
 sudo git clone https://github.com/chembl/mychembl_webapp.git
 sudo git clone https://github.com/chembl/mychembl.git
 sudo rm /var/www -rf
-sudo mkdir /var/www
-sudo cp -r mychembl/launchpad/* /var/www/
-sudo mkdir /var/www/mychembl/
-sudo cp -r mychembl_webapp/* /var/www/mychembl/
+sudo mkdir -p /var/www/html/mychembl
+sudo cp -r mychembl/launchpad/* /var/www/html/
+sudo cp -r mychembl_webapp/* /var/www/html/mychembl/
 curl -O http://peter-ertl.com/jsme/download/JSME_2013-08-04.zip
 unzip JSME_2013-08-04.zip
-sudo mv JSME_2013-08-04/jsme /var/www/mychembl/static/js/
+sudo mv JSME_2013-08-04/jsme /var/www/html/mychembl/static/js/
 sudo curl -o /etc/apache2/httpd.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/launchpad_httpd.conf
 sudo curl -o /etc/apache2/apache2.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/apache2.conf
 sudo curl -o /etc/apache2/envvars https://raw.githubusercontent.com/chembl/mychembl/master/configuration/apache2_envvars
@@ -42,6 +41,9 @@ sudo curl -o /usr/share/themes/mychembl/mychembl.png https://raw.githubuserconte
 sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth https://github.com/chembl/mychembl/blob/master/branding/ubuntu-text.plymouth
 sudo curl -o /etc/phppgadmin/apache.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/apache2/conf.d/phppgadmin https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
+sudo curl -o /etc/php5/apache2/php.ini https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_php.ini
+sudo a2enmod rewrite
+sudo apache2ctl restart
 
 cd /tmp
 wget https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh && bash osra.sh

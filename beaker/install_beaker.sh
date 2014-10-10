@@ -6,6 +6,7 @@
 # Created date: 06.10.2014
 
 # First, create a new virtualenv called chembl_beaker
+source virtualenvwrapper.sh
 mkvirtualenv chembl_beaker
 
 # Install all (optional) dependencies 

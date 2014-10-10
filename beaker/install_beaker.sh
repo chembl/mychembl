@@ -19,3 +19,12 @@ pip install matplotlib
 
 #installing beaker:
 pip install chembl_beaker
+
+#configure beaker and Apache:
+mkdir -p /home/chembl/chembl_beaker/conf.d/
+
+# Now we have to download configuration files:
+RAW=https://github.com/chembl/mychembl/blob/master/beaker
+curl $RAW/beaker.py > /home/chembl/chembl_beaker/conf.d/beaker.py
+curl $RAW/beaker.conf > /home/chembl/chembl_beaker/conf.d/beaker.conf
+

@@ -5,7 +5,8 @@ sudo pip install -U ipython
 sudo pip install -U jinja2
 sudo pip install -U scikit-learn
 sudo pip install -U tornado
-sudo pip install -U pandas
+echo "numpy==1.8.2" | cat > /tmp/pandas.requirement.txt
+sudo pip install -U pandas -r /tmp/pandas.requirement.txt
 #sudo pip install -U requests
 sudo pip install -U mpld3
 sudo pip install -U service_identity

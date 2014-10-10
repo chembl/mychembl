@@ -24,7 +24,7 @@ pip install chembl_beaker
 mkdir -p /home/chembl/chembl_beaker/conf.d/
 
 # Now we have to download configuration files:
-RAW=https://github.com/chembl/mychembl/blob/master/beaker
+RAW=https://raw.githubusercontent.com/chembl/mychembl/master/beaker
 curl $RAW/beaker.py > /home/chembl/chembl_beaker/conf.d/beaker.py
 curl $RAW/beaker.conf > /home/chembl/chembl_beaker/conf.d/beaker.conf
 

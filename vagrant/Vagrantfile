@@ -4,7 +4,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |v|
     v.memory = 4096
     v.cpus = 2
-    v.customize(['storagectl', :id, '--name', 'SATA Controller', '--hostiocache', 'off'])
+    v.customize(['storagectl', :id, '--name', 'SATAController', '--hostiocache', 'off'])
   end
   config.vm.box = "ubuntu/trusty64"
   config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"

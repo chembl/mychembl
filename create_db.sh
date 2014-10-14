@@ -35,8 +35,8 @@ cd ..
 
 rm chembl_"$CHEMBL_VERSION"_postgresql.tar.gz
 
-echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.1/main/postgresql.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_postgresql.conf
-echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.1/main/pg_hba.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_pg_hba.conf
+echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.3/main/postgresql.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_postgresql.conf
+echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.3/main/pg_hba.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_pg_hba.conf
 echo "chemblvm" | sudo -S curl -o /etc/sysctl.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_sysctl.conf
 
 echo "chemblvm" | sudo -S service postgresql restart

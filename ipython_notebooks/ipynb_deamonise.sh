@@ -16,8 +16,12 @@ echo "chemblvm" | sudo -S apt-get install -y supervisor
 # create directory for storing temporary files:
 mkdir /home/chembl/ipynb_workbench
 
-# install some files there:
+# we would like to tread ipynb_workbench directory as a regular python module so creating __init__.py:
+touch /home/chembl/ipynb_workbench/__init__.py
+
+# install some files to ipynb_workbench:
 curl -o /home/chembl/ipynb_workbench/physchem_props_heatmap.csv https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/physchem_props_heatmap.csv
+curl -o /home/chembl/ipynb_workbench/settings.py https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/settings.py
 
 # Configure it to take care about ipython notebook server:
 echo "chemblvm" | sudo -S curl -o /etc/supervisor/conf.d/ipynb.conf https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb.conf

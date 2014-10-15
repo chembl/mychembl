@@ -7,8 +7,8 @@ curl -o /home/chembl/notebooks/03_myChEMBL_predict_targets.ipynb https://raw.git
 curl -o /home/chembl/notebooks/04_myChEMBL_plotting_tutorial.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/04_myChEMBL_plotting_tutorial.ipynb
 curl -o /home/chembl/notebooks/05_myChEMBL_MDS_tutorial.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/05_myChEMBL_mds_tutorial.ipynb
 curl -o /home/chembl/notebooks/06_myChEMBL_differences_with_ChEMBL.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/06_myChEMBL_differences_with_ChEMBL.ipynb
-curl -o /home/chembl/notebooks/07_myChEMBL_Beaker.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/07_myChEMBL_using_rdkit_without_rdkit.ipynb
-curl -o /home/chembl/notebooks/08_myChEMBL_Django_ORM.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/08_myChEMBL_using_django_ORM_to_access_ChEMBL_without_SQL.ipynb
+curl -o /home/chembl/notebooks/07_myChEMBL_Beaker.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/07_myChEMBL_Beaker.ipynb.ipynb
+curl -o /home/chembl/notebooks/08_myChEMBL_Django_ORM.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/08_myChEMBL_Django_ORM.ipynb
 curl -o /home/chembl/notebooks/09_myChEMBL_BLAST_and_druggability.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/09_myChEMBL_BLAST_and_Druggability.ipynb
 ##curl -o /home/chembl/notebooks/10_myChEMBL_ADMESARfari_Webservices.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/10_myChEMBL_ADMESARfari_Webservices.ipynb
 curl -o /home/chembl/notebooks/11_myChEMBL_machine_learning.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/11_myChEMBL_machine_learning.ipynb

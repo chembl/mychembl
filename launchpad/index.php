@@ -35,21 +35,23 @@
           <h3><i class="fa fa-rocket"></i>&nbsp;<a href="knime" target="_blank">KNIME Integration</a></h3>
           <p>Learn how to connect the KNIME workbench to myChEMBL and also how to start processing ChEMBL data within a workflow environment.</p>
         </div>
-        
+
+        <div class="col-lg-4">
+          <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/utils/docs" target="_blank">ChEMBL Beaker</a></h3>
+          <p>Access the functionality <a href="http://www.rdkit.org/">RDKit</a> and <a href="http://cactus.nci.nih.gov/osra/">OSRA</a> via a RESTful API.</p> 
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-4"></div>
+            
         <div class="col-lg-4">
           <h3><i class="fa fa-rocket"></i>&nbsp;<a href="more" target="_blank">More Information</a></h3>
           <p>For more details on the myChEMBL project, including background, acknowledgements and references.</p>
         </div>
-
-      </div>
-      
-            <div class="row">
         
-        <div class="col-lg-4">
-          <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/utils/docs" target="_blank">ChEMBL Beaker</a></h3>
-          <p>Access the functionality <a href="http://www.rdkit.org/">RDKit</a> and <a href="http://cactus.nci.nih.gov/osra/">OSRA</a> via a RESTful API</p> 
-        </div>
-
+        <div class="col-lg-4"></div>
+        
       </div>
 
 <? include "footer.php"; ?>

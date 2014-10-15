@@ -57,10 +57,23 @@
           
           <h4><i class="fa fa-rocket"></i>&nbsp;Is there a reference for myChEMBL?</h4>
           <p>Yes, please use the following citation:
+            <pre class="pre-scrollable">M Davies, M. Nowotka, G. Papadatos, F. Atkinson, G.J.P. van Westen, N Dedman, R. Ochoa and J.P. Overington  (2014) 
+'myChEMBL: A Virtual Platform for Distributing Cheminformatics Tools and Open Data' <em>Challenges</em> <strong>5</strong> (334-337) (<a href="http://www.mdpi.com/2078-1547/5/2/334/pdf">pdf</a>)</pre>
+          </p>
+          
+          <p>We also have the following earlier publication:
             <pre class="pre-scrollable">R. Ochoa, M. Davies, G. Papadatos, F. Atkinson & J.P. Overington (2014) 
 'myChEMBL: A virtual machine implementation of open data and cheminformatics tools' <em>Bioinformatics</em> <strong>30</strong> (298-300) (<a href="http://doi.org/10.1093/bioinformatics/btt666">pdf</a>)</pre>
           </p>
-
+          
+          <h4><i class="fa fa-rocket"></i>&nbsp;Has myChEMBL won any awards?</h4>
+          <p>Why yes it has, see below:</p>
+              
+          <ul>
+            <li>The myChEMBL team came second place in the <a href="http://www.mdpi.com/journal/challenges/special_issues/cheminformatic_tool_contest">MPDI and Challenges Award for the Best Open Source Cheminformatics Tool Contest 2014</a>, see <a href="http://www.tdtproject.org/blog/strong-showing-in-tdts-2014-challenge">here</a> for more details.</li>
+            <li>Rodrigo Ochoa picked up the KNIME Award in the 2014 <a href="http://www.tdtproject.org/">Teach-Discover-Treat (TDT) initiative</a>, see <a href="http://www.tdtproject.org/blog/strong-showing-in-tdts-2014-challenge">here</a> for more details.</li>
+          </ul>
+                   
           <h4><i class="fa fa-rocket"></i>&nbsp;What are the future plans for myChEMBL?</h4>
           <p>myChEMBL is a project which is still evolving so expect new tools to included with each new release. Please let us know of any tools and services you would like to see included in future myChEMBL releases.</p>
           
@@ -79,7 +92,8 @@
             <span><a href="http://www.vmware.com/"><img class="ack-logo-width" src="/assets/img/vmware.png" /></a></span>
             <span><a href="http://www.ggasoftware.com/opensource/indigo/"><img class="ack-logo-width" src="/assets/img/gga.png" /></a></span>
             <span><a href="http://cactus.nci.nih.gov/osra/"><img class="ack-logo-width" src="/assets/img/osra.png" /></a></span>
-          </p>
+            <span><a href="http://openbabel.org"><img class="ack-logo-width" src="/assets/img/openbabel.png" /></a></span>
+            </p>
         </div>
       </div>
 

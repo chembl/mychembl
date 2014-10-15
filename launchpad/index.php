@@ -38,7 +38,7 @@
 
         <div class="col-lg-4">
           <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/utils/docs" target="_blank">ChEMBL Beaker</a></h3>
-          <p>Access the functionality <a href="http://www.rdkit.org/">RDKit</a> and <a href="http://cactus.nci.nih.gov/osra/">OSRA</a> via a RESTful API.</p> 
+          <p>Access the functionality of the <a href="http://www.rdkit.org/">RDKit</a> chemical toolkit and the optical structure recognition software <a href="http://cactus.nci.nih.gov/osra/">OSRA</a>, via a RESTful API.</p> 
         </div>
       </div>
       

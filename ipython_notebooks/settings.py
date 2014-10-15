@@ -1,7 +1,3 @@
-import os, sys
-import threading
-threading._DummyThread._Thread__stop = lambda x: 42
-
 DEBUG = False
 
 DATABASES = {
@@ -26,45 +22,4 @@ SECRET_KEY = '3v2xb&amp;@&amp;_kibf0o!4m249njy3!qjxptht0m%q2w&amp;ry8v&amp;ok$na
 INSTALLED_APPS = (
     'chembl_core_db',
     'chembl_core_model',
-    'chembl_webservices',
     )
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        },
-
-        'rot_file': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/tmp/django_router.log'
-        }
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    }
-}
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'ws_cache',
-        }
-}
-
-CACHE_MIDDLEWARE_SECONDS = 3000000
-

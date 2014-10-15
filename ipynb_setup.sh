@@ -10,6 +10,7 @@ curl -o /home/chembl/notebooks/06_myChEMBL_differences_with_ChEMBL.ipynb https:/
 curl -o /home/chembl/notebooks/07_myChEMBL_Beaker.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/07_myChEMBL_using_rdkit_without_rdkit.ipynb
 curl -o /home/chembl/notebooks/08_myChEMBL_Django_ORM.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/08_myChEMBL_using_django_ORM_to_access_ChEMBL_without_SQL.ipynb
 curl -o /home/chembl/notebooks/09_myChEMBL_BLAST_and_druggability.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/09_myChEMBL_BLAST_and_Druggability.ipynb
+curl -o /home/chembl/notebooks/10_myChEMBL_ADMESARfari_Webservices.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/10_myChEMBL_ADMESARfari_Webservices.ipynb
 
 ipython profile create mychembl
 curl -o /home/chembl/.ipython/profile_mychembl/ipython_notebook_config.py https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_ipython_notebook_config.py

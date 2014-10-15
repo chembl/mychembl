@@ -9,10 +9,9 @@ curl -o /home/chembl/notebooks/05_myChEMBL_MDS_tutorial.ipynb https://raw.github
 curl -o /home/chembl/notebooks/06_myChEMBL_differences_with_ChEMBL.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/06_myChEMBL_differences_with_ChEMBL.ipynb
 curl -o /home/chembl/notebooks/07_myChEMBL_Beaker.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/07_myChEMBL_Beaker.ipynb
 curl -o /home/chembl/notebooks/08_myChEMBL_Django_ORM.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/08_myChEMBL_Django_ORM.ipynb
-curl -o /home/chembl/notebooks/09_myChEMBL_BLAST_and_druggability.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/09_myChEMBL_BLAST_and_Druggability.ipynb
-##curl -o /home/chembl/notebooks/10_myChEMBL_ADMESARfari_Webservices.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/10_myChEMBL_ADMESARfari_Webservices.ipynb
-curl -o /home/chembl/notebooks/11_myChEMBL_machine_learning.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/11_myChEMBL_machine_learning.ipynb
-curl -o /home/chembl/notebooks/12_myChEMBL_SureChEMBL.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/12_myChEMBL_SureChEMBL.ipynb
+curl -o /home/chembl/notebooks/09_myChEMBL_BLAST_and_druggability.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/09_myChEMBL_BLAST_and_druggability.ipynb
+curl -o /home/chembl/notebooks/10_myChEMBL_machine_learning.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/10_myChEMBL_machine_learning.ipynb
+curl -o /home/chembl/notebooks/11_myChEMBL_SureChEMBL.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/11_myChEMBL_SureChEMBL.ipynb
 
 
 ipython profile create mychembl

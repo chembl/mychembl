@@ -42,7 +42,7 @@
           <span><img src="/assets/img/knime_workflows.png" /></a>
     
           <h4><i class="fa fa-rocket"></i>&nbsp;Downloads</h4>
-          <p><a href="/assets/knime/myChEMBL18_KNIME.zip">myChEMBL18_KNIME.zip</a></p>
+          <p><a href="/assets/knime/myChEMBL19_KNIME.zip">myChEMBL19_KNIME.zip</a></p>
           
         </div>
       </div>

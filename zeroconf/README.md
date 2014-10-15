@@ -13,9 +13,9 @@ Tutorial followed from http://peterlaszlo.wordpress.com/2013/06/27/bonjour-avahi
 
 Slightly more involved installation due to dependencies.
 
-	1. Install setup tools for Python (ez_setup.py)
+	1. Install setup tools for Python (wget https://bootstrap.pypa.io/ez_setup.py -O - | python)
 	2. sudo apt-get install python-dev python-gobject
-	3. sudo easy_install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz paste
+	3. sudo easy_install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz paste netifaces
 	4. Copy the mychembl-upnp.conf upstart file to /etc/init
 	5. Copy the mychembl-upnp.py to /usr/bin/ (Don’t forget to chmod +x!)
 	6. sudo service mychembl-upnp start

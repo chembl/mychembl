@@ -43,8 +43,6 @@ sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth https://githu
 sudo curl -o /etc/phppgadmin/apache.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/apache2/conf.d/phppgadmin https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/php5/apache2/php.ini https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_php.ini
-sudo a2enmod rewrite
-sudo apache2ctl restart
 
 cd /tmp
 wget https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh && bash osra.sh
@@ -54,6 +52,9 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh && su
 wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh && su -c "bash ws_setup.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/beaker/install_beaker.sh && su -c "bash install_beaker.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh && su -c "bash ipynb_deamonise.sh" chembl
+
+sudo a2enmod rewrite
+sudo apache2ctl restart
 
 sudo swapoff -v /swapfile
 sudo rm /swapfile

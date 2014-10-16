@@ -27,6 +27,8 @@ curl -o /home/chembl/ipynb_workbench/US_antimalarial_patents_cmpds.txt https://r
 curl -o /home/chembl/ipynb_workbench/fps.pkl https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/fps.pkl
 curl -o /home/chembl/ipynb_workbench/smiles_cas_N6512.smi https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/smiles_cas_N6512.smi
 
+curl -o /home/chembl/.ipython/profile_mychembl/static/custom/custom.css https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/custom.css
+
 
 
 # Configure it to take care about ipython notebook server:

@@ -3,7 +3,7 @@
 sudo pip install Cython
 sudo pip install -U ipython
 sudo pip install -U jinja2
-sudo pip install -U scikit-learn
+sudo pip install -U scikit-learn==0.14.1
 sudo pip install -U tornado
 sudo pip install -U chembl_migration_model
 echo "numpy==1.8.2" | cat > /tmp/pandas.requirement.txt

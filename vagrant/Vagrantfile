@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
 
   config.vm.network "forwarded_port", guest: 80, host: 8000, auto_correct: true
-  config.vm.network "forwarded_port", guest: 8888, host: 8888, auto_correct: true
+  config.vm.network "forwarded_port", guest: 9612, host: 9612, auto_correct: true
   config.vm.network "forwarded_port", guest: 5432, host: 5432, auto_correct: true
 
   config.vm.provision :shell, :path => "../bootstrap.sh"

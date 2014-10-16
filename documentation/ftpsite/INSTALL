@@ -56,6 +56,10 @@ interface.
     iv. Go to Settings > Network > Adapter 1 and update following settings
          - Check the "Enable Network Adapter" checkbox 
          - Switch the "Attached to:" dropdown menu to "NAT"
+         - Under the Advanced settings, check the 'Adapter Type' is not a 
+           server version. The name should be similar to: 
+           'Intel PRO/1000 MT Desktop'. 
+
 
     v.  Go to Settings > Network > Adapter 2 and update following settings
          - Check the "Enable Network Adapter" checkbox 

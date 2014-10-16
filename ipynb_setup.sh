@@ -12,7 +12,7 @@ curl -o /home/chembl/notebooks/08_myChEMBL_Django_ORM.ipynb https://raw.githubus
 curl -o /home/chembl/notebooks/09_myChEMBL_BLAST_and_druggability.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/09_myChEMBL_BLAST_and_druggability.ipynb
 curl -o /home/chembl/notebooks/10_myChEMBL_machine_learning.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/10_myChEMBL_machine_learning.ipynb
 curl -o /home/chembl/notebooks/11_myChEMBL_SureChEMBL.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/11_myChEMBL_SureChEMBL.ipynb
-
+curl -o /home/chembl/notebooks/12_myChEMBL_drugs_ADME.ipynb https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/12_myChEMBL_drugs_ADME.ipynb
 
 ipython profile create mychembl
 curl -o /home/chembl/.ipython/profile_mychembl/ipython_notebook_config.py https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_ipython_notebook_config.py

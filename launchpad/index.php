@@ -27,7 +27,7 @@
       <div class="row">
         
         <div class="col-lg-4">
-          <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/" onclick="javascript:event.target.port=8888" target="_blank">IPython Notebooks</a></h3>
+          <h3><i class="fa fa-rocket"></i>&nbsp;<a href="/" onclick="javascript:event.target.port=9612" target="_blank">IPython Notebooks</a></h3>
           <p>A selection of programmatic tutorials written in Python and presented using interactive IPython Notebooks.</p> 
         </div>
 

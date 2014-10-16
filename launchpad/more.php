@@ -57,7 +57,7 @@
           
           <h4><i class="fa fa-rocket"></i>&nbsp;Is there a reference for myChEMBL?</h4>
           <p>Yes, please use the following citation:
-            <pre class="pre-scrollable">M Davies, M. Nowotka, G. Papadatos, F. Atkinson, G.J.P. van Westen, N Dedman, R. Ochoa and J.P. Overington  (2014) 
+            <pre class="pre-scrollable">M. Davies, M. Nowotka, G. Papadatos, F. Atkinson, G.J.P. van Westen, N Dedman, R. Ochoa and J.P. Overington  (2014) 
 'myChEMBL: A Virtual Platform for Distributing Cheminformatics Tools and Open Data' <em>Challenges</em> <strong>5</strong> (334-337) (<a href="http://www.mdpi.com/2078-1547/5/2/334/pdf">pdf</a>)</pre>
           </p>
           

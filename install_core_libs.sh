@@ -36,3 +36,5 @@ sudo apt-get install -y python-gobject
 sudo apt-get install -y python-dev
 sudo apt-get install -y phppgadmin
 sudo apt-get install -y python-biopython
+
+gem install gist

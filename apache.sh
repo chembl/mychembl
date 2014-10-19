@@ -9,6 +9,7 @@ sudo curl -o /etc/apache2/envvars https://raw.githubusercontent.com/chembl/myche
 sudo curl -o /etc/phppgadmin/apache.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/apache2/conf.d/phppgadmin https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/php5/apache2/php.ini https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_php.ini
+sudo kill -9 $(pidof apache2)
 sudo a2enmod rewrite
 sudo service apache2 restart
 

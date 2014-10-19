@@ -5,17 +5,6 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 20.05.2014
 
-# First, install libraries that have to be installed system wide with 
-# root priviledges:
-#   1. libffi for all python cffi-related stuff (in our case this will help)
-#      installing Pillow and cairocffi locally in virtualenv
-#   2. xml tools:
-#      a) libxml in standard and dev flavours
-#      b) the same for libxslt      
-echo "chemblvm" | sudo -S apt-get install -y libffi-dev
-echo "chemblvm" | sudo -S apt-get install -y libxml2 libxml2-dev
-echo "chemblvm" | sudo -S apt-get install -y libxslt1.1 libxslt1-dev
-
 # We need indigo toolkit as alternative compound rendering engine:
 wget https://dl.dropboxusercontent.com/u/10967207/indigo-python-1.1.11-linux.zip
 unzip indigo-python-1.1.11-linux.zip
@@ -74,13 +63,7 @@ mkdir deployment/logs
 # We can collect static files now:
 python manage.py collectstatic --noinput --clear
 
-# Since this app is currently the only one making use of mod_wsgi we should 
-# install it as well, which will have a nice side effect of restarting
-# apache2:
-echo "chemblvm" | sudo -S apt-get install -y libapache2-mod-wsgi
 
-# Web services should be up and running now so we can generate cache:
-wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh
 
 
 

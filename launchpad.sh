@@ -9,4 +9,6 @@ sudo cp -r mychembl_webapp/* /var/www/html/mychembl/
 curl -O http://peter-ertl.com/jsme/download/JSME_2013-08-04.zip
 unzip JSME_2013-08-04.zip
 sudo mv JSME_2013-08-04/jsme /var/www/html/mychembl/static/js/
+
+sudo kill -9 $(pidof apache2)
 sudo service apache2 restart

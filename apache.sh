@@ -11,3 +11,5 @@ sudo curl -o /etc/apache2/conf.d/phppgadmin https://raw.githubusercontent.com/ch
 sudo curl -o /etc/php5/apache2/php.ini https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_php.ini
 sudo a2enmod rewrite
 sudo apache2ctl restart
+
+wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh

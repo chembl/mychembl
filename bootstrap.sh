@@ -18,16 +18,6 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/ensure_ipv6.sh && 
 sudo -u postgres createuser -dsr chembl
 
 cd /tmp
-sudo git clone https://github.com/chembl/mychembl_webapp.git
-sudo git clone https://github.com/chembl/mychembl.git
-sudo rm /var/www -rf
-sudo mkdir -p /var/www/html/mychembl
-sudo cp -r mychembl/launchpad/* /var/www/html/
-sudo cp -r mychembl/launchpad/.htaccess /var/www/html/
-sudo cp -r mychembl_webapp/* /var/www/html/mychembl/
-curl -O http://peter-ertl.com/jsme/download/JSME_2013-08-04.zip
-unzip JSME_2013-08-04.zip
-sudo mv JSME_2013-08-04/jsme /var/www/html/mychembl/static/js/
 sudo curl -o /etc/network/interfaces https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_interfaces
 sudo -u chembl curl -o /home/chembl/.bashrc https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_bashrc
 sudo curl -o /etc/init/mychembl-upnp.conf https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl-upnp.conf
@@ -47,6 +37,7 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_set
 wget https://raw.githubusercontent.com/chembl/mychembl/master/beaker/install_beaker.sh && su -c "bash install_beaker.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh && su -c "bash ipynb_deamonise.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/apache.sh && bash apache.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/launchpad.sh && bash launchpad.sh
 
 
 sudo swapoff -v /swapfile

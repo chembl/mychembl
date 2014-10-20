@@ -16,3 +16,7 @@ curl -o /home/chembl/notebooks/12_myChEMBL_drugs_ADME.ipynb https://raw.githubus
 
 ipython profile create mychembl
 curl -o /home/chembl/.ipython/profile_mychembl/ipython_notebook_config.py https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_ipython_notebook_config.py
+
+cd /home/chembl/.ipython/nbextensions/
+wget https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js
+wget https://cdn.mathjax.org/mathjax/latest/MathJax.js

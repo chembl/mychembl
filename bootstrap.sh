@@ -19,6 +19,7 @@ sudo -u postgres createuser -dsr chembl
 
 cd /tmp
 sudo curl -o /etc/network/interfaces https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_interfaces
+sudo curl -o /etc/init/failsafe.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/failsafe.conf
 sudo -u chembl curl -o /home/chembl/.bashrc https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_bashrc
 sudo curl -o /etc/init/mychembl-upnp.conf https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl-upnp.conf
 sudo curl -o /etc/avahi/services/mychembl.service https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl.service
@@ -39,6 +40,8 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/
 wget https://raw.githubusercontent.com/chembl/mychembl/master/apache.sh && bash apache.sh
 wget https://raw.githubusercontent.com/chembl/mychembl/master/launchpad.sh && bash launchpad.sh
 
+sudo apt-get remove -y cloud-init
+sudo rm /etc/init/cloud-* -rf
 
 sudo swapoff -v /swapfile
 sudo rm /swapfile

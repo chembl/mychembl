@@ -32,5 +32,6 @@ sudo apt-get install -y avahi-utils
 sudo apt-get install -y python-gobject
 sudo apt-get install -y python-dev
 sudo apt-get install -y python-biopython
+sudo apt-get install -y rcconf
 
 gem install gist

@@ -47,7 +47,7 @@ interface.
     ii.  Go to Virtual Box menu > Preferences > Network > Host-only Networks.
          - If there is already a network called "vboxnet0" there, click Cancel
          - If there are no networks listed there, click the button "Add 
-         host-only network" (look for a small Ô+Õ button), "vboxnet0" will be 
+         host-only network" (look for a small '+' button), "vboxnet0" will be 
          added to the list.
          - Click OK
     

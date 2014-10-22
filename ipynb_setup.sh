@@ -19,4 +19,6 @@ curl -o /home/chembl/.ipython/profile_mychembl/ipython_notebook_config.py https:
 
 cd /home/chembl/.ipython/nbextensions/
 wget https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js
+mkdir mathjax
+cd mathjax
 wget https://cdn.mathjax.org/mathjax/latest/MathJax.js

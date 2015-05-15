@@ -7,7 +7,7 @@ export PYTHONPATH=$RDBASE:$PYTHONPATH
 cd $HOME
 git clone https://github.com/rdkit/rdkit
 cd rdkit/
-git checkout tags/Release_2014_03_1
+git checkout tags/Release_2015_03_1
 cd $RDBASE/External/INCHI-API
 sed -i 's/sites\/default\/files\/inchi-1.04\/INCHI-1-API\.ZIP/wp\/wp-content\/uploads\/2014\/06\/INCHI-1-API\.zip/g' download-inchi.sh
 bash download-inchi.sh

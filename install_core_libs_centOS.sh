@@ -7,8 +7,7 @@ sudo yum update
 sudo yum install -y bash
 sudo yum install -y git
 sudo yum install -y unzip
-#sudo apt-get install -y ipython
-#sudo apt-get install -y ipython-notebook
+sudo yum install -y ruby
 #sudo apt-get install -y ipython-qtconsole
 sudo yum install -y boost
 sudo yum install -y postgresql
@@ -27,6 +26,7 @@ sudo yum install -y numpy
 sudo yum install -y scipy
 sudo yum install -y python-matplotlib
 sudo yum install -y python-pip
+sudo pip install "ipython[notebook]"
 sudo yum install -y python-psycopg2
 #sudo apt-get install -y python-imaging-tk
 sudo yum install -y python-networkx
@@ -34,7 +34,7 @@ sudo yum install -y nss-mdns avahi-compat-libdns_sd-devel
 sudo yum install -y avahi-tools
 sudo yum install -y pygobject3
 sudo yum install -y python-devel
-#sudo apt-get install -y python-biopython
-#sudo apt-get install -y rcconf
+sudo pip install biopython
+sudo yum install -y ntsysv
 
-#gem install gist
+gem install gist

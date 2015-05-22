@@ -7,9 +7,7 @@ sudo -H python get-pip.py
 
 sudo -H pip install "ipython[notebook]"
 sudo -H pip install biopython
-sudo -H pip install -U jinja2
 sudo -H pip install -U scikit-learn==0.14.1
-sudo -H pip install -U tornado
 sudo -H pip install -U chembl_migration_model
 echo "numpy==1.8.2" | cat > /tmp/pandas.requirement.txt
 sudo -H pip install -U pandas -r /tmp/pandas.requirement.txt

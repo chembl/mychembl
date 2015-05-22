@@ -3,7 +3,7 @@
 # for  CentOS Linux release 7.1.1503
 
 sudo rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
-sudo yum update
+sudo yum -y update
 sudo yum install -y kernel-devel
 sudo yum install -y bash
 sudo yum install -y git

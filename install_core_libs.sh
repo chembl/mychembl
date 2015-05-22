@@ -5,9 +5,6 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y bash
 sudo apt-get install -y git
 sudo apt-get install -y unzip
-sudo apt-get install -y ipython
-sudo apt-get install -y ipython-notebook
-sudo apt-get install -y ipython-qtconsole
 sudo apt-get install -y libboost-all-dev
 sudo apt-get install -y postgresql
 sudo apt-get install -y postgresql-server-dev-all
@@ -32,7 +29,6 @@ sudo apt-get install -y libnss-mdns
 sudo apt-get install -y avahi-utils
 sudo apt-get install -y python-gobject
 sudo apt-get install -y python-dev
-sudo apt-get install -y python-biopython
 sudo apt-get install -y rcconf
 
 sudo gem install gist

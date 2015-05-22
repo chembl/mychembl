@@ -1,7 +1,7 @@
 #!/bin/bash
 
 wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
+sudo -H python get-pip.py
 sudo ln -s /usr/local/bin/pip /usr/bin/pip
 
 #sudo pip install Cython

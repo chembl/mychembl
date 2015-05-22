@@ -3,7 +3,7 @@
 # for  CentOS Linux release 7.1.1503
 
 wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
+sudo -H python get-pip.py
 
 sudo -H pip install "ipython[notebook]"
 sudo -H pip install biopython

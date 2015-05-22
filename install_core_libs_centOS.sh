@@ -10,6 +10,7 @@ sudo yum install -y bash
 sudo yum install -y git
 sudo yum install -y unzip
 sudo yum install -y ruby
+sudo yum install -y openssl-devel
 #sudo apt-get install -y ipython-qtconsole
 sudo yum install -y boost
 sudo yum install -y postgresql

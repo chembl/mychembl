@@ -4,6 +4,7 @@
 
 sudo rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 sudo yum update
+sudo yum install -y kernel-devel
 sudo yum install -y bash
 sudo yum install -y git
 sudo yum install -y unzip
@@ -16,7 +17,7 @@ sudo yum install -y postgresql-docs
 sudo yum install -y postgresql-contrib
 sudo yum install -y flex
 sudo yum install -y bison
-sudo yum install -y gcc-c++
+sudo yum install -y gcc*
 sudo yum install -y cmake
 sudo yum install -y make
 sudo yum install -y libffi-devel

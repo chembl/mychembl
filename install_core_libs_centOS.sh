@@ -28,7 +28,7 @@ sudo yum install -y python-matplotlib
 sudo yum install -y python-pip
 sudo pip install "ipython[notebook]"
 sudo yum install -y python-psycopg2
-#sudo apt-get install -y python-imaging-tk
+sudo yum install -y tkinter
 sudo yum install -y python-networkx
 sudo yum install -y nss-mdns avahi-compat-libdns_sd-devel
 sudo yum install -y avahi-tools

@@ -38,4 +38,9 @@ sudo yum install -y pygobject3
 sudo yum install -y python-devel
 sudo yum install -y ntsysv
 
+sudo mkdir /media/cdrom/
+sudo mount /dev/cdrom /media/cdrom/
+cd /media/cdrom/
+sudo ./VBoxLinuxAdditions.run
+
 gem install gist

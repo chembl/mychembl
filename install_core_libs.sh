@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update
+sudo apt-get install -y libssl-dev
 sudo apt-get install -y bash
 sudo apt-get install -y git
 sudo apt-get install -y unzip
@@ -23,7 +24,10 @@ sudo apt-get install -y libxslt1.1 libxslt1-dev
 sudo apt-get install -y python-numpy
 sudo apt-get install -y python-scipy
 sudo apt-get install -y python-matplotlib
-sudo apt-get install -y python-pip
+sudo apt-get install -y wget
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+sudo ln -s /usr/local/bin/pip /usr/bin/pip
 sudo apt-get install -y python-psycopg2
 sudo apt-get install -y python-imaging-tk
 sudo apt-get install -y python-networkx

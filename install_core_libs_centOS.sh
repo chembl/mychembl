@@ -34,7 +34,7 @@ sudo yum -y --enablerepo=epel install uuid
 sudo yum install -y postgresql93 postgresql93-server postgresql93-contrib postgresql93-libs --disablerepo=* --enablerepo=pgdg93
 #sudo yum install -y python-psycopg2
 sudo yum install -y tkinter
-sudo yum install -y python-networkx
+#sudo yum install -y python-networkx
 sudo yum install -y nss-mdns avahi-compat-libdns_sd-devel
 sudo yum install -y avahi-tools
 sudo yum install -y pygobject3

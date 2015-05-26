@@ -12,6 +12,8 @@ sudo yum install -y git
 sudo yum install -y unzip
 sudo yum install -y ruby
 sudo yum install -y openssl-devel
+sudo yum install -y libxml2 libxml2-devel
+sudo yum install -y libxslt libxslt-devel
 #sudo apt-get install -y ipython-qtconsole
 sudo yum install -y boost
 sudo yum install -y postgresql93 postgresql93-server postgresql93-contrib postgresql93-libs --disablerepo=* --enablerepo=pgdg93
@@ -25,8 +27,6 @@ sudo yum install -y gcc*
 sudo yum install -y cmake
 sudo yum install -y make
 sudo yum install -y libffi-devel
-sudo yum install -y libxml2 libxml2-devel
-sudo yum install -y libxslt libxslt-devel
 #sudo yum install -y numpy
 #sudo yum install -y scipy
 #sudo yum install -y python-matplotlib

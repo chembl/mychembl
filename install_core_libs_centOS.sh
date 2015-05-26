@@ -18,6 +18,7 @@ sudo yum install -y libxml2 libxml2-devel
 sudo yum install -y libxslt libxslt-devel
 #sudo apt-get install -y ipython-qtconsole
 sudo yum install -y boost
+sudo yum install -y boost-devel
 #sudo yum install -y postgresql
 #sudo yum install -y postgresql-devel
 #sudo yum install -y postgresql-docs

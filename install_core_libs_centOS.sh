@@ -27,10 +27,10 @@ sudo yum install -y make
 sudo yum install -y libffi-devel
 sudo yum install -y libxml2 libxml2-devel
 sudo yum install -y libxslt libxslt-devel
-sudo yum install -y numpy
-sudo yum install -y scipy
-sudo yum install -y python-matplotlib
-sudo yum install -y python-pip
+#sudo yum install -y numpy
+#sudo yum install -y scipy
+#sudo yum install -y python-matplotlib
+#sudo yum install -y python-pip
 sudo yum install -y python-psycopg2
 sudo yum install -y tkinter
 sudo yum install -y python-networkx

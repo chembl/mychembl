@@ -6,6 +6,8 @@ sudo rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.
 sudo rpm -iUvh http://yum.postgresql.org/9.3/redhat/rhel-7-x86_64/pgdg-centos93-9.3-1.noarch.rpm
 sudo yum -y update
 sudo yum install -y kernel-devel
+sudo yum install -y freetype freetype-devel
+sudo yum install -y libpng libpng-devel
 sudo yum install -y dkms
 sudo yum install -y bash
 sudo yum install -y git
@@ -32,7 +34,7 @@ sudo yum install -y libffi-devel
 #sudo yum install -y python-pip
 sudo yum -y --enablerepo=epel install uuid
 sudo yum install -y postgresql93 postgresql93-server postgresql93-contrib postgresql93-libs --disablerepo=* --enablerepo=pgdg93
-#sudo yum install -y python-psycopg2
+sudo yum install -y python-psycopg2
 sudo yum install -y tkinter
 #sudo yum install -y python-networkx
 sudo yum install -y nss-mdns avahi-compat-libdns_sd-devel

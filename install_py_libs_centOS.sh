@@ -5,6 +5,9 @@
 wget https://bootstrap.pypa.io/get-pip.py
 sudo -H python get-pip.py
 
+sudo -H pip install pyopenssl 
+sudo -H pip install ndg-httpsclient 
+sudo -H pip install pyasn1
 sudo -H pip install numpy
 sudo -H pip install matplotlib
 sudo -H pip install networkx

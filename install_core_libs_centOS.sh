@@ -16,7 +16,6 @@ sudo yum install -y libxml2 libxml2-devel
 sudo yum install -y libxslt libxslt-devel
 #sudo apt-get install -y ipython-qtconsole
 sudo yum install -y boost
-sudo yum install -y postgresql93 postgresql93-server postgresql93-contrib postgresql93-libs --disablerepo=* --enablerepo=pgdg93
 #sudo yum install -y postgresql
 #sudo yum install -y postgresql-devel
 #sudo yum install -y postgresql-docs
@@ -31,22 +30,4 @@ sudo yum install -y libffi-devel
 #sudo yum install -y scipy
 #sudo yum install -y python-matplotlib
 #sudo yum install -y python-pip
-sudo yum install -y python-psycopg2
-sudo yum install -y tkinter
-sudo yum install -y python-networkx
-sudo yum install -y nss-mdns avahi-compat-libdns_sd-devel
-sudo yum install -y avahi-tools
-sudo yum install -y pygobject3
-sudo yum install -y python-devel
-sudo yum install -y ntsysv
-
-sudo systemctl enable postgresql-9.3
-sudo /usr/pgsql-9.3/bin/postgresql93-setup initdb
-sudo systemctl start postgresql-9.3
-
-sudo mkdir /media/cdrom/
-sudo mount /dev/cdrom /media/cdrom/
-cd /media/cdrom/
-sudo ./VBoxLinuxAdditions.run
-
-gem install gist
+sudo yum -y --enablerepo=epel install uuid

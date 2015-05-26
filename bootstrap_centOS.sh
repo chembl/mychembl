@@ -17,3 +17,19 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs_
 wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs_centOS.sh && bash install_py_libs_centOS.sh
 
 sudo -Hu postgres createuser -dsr chembl
+
+#cd /tmp
+#sudo curl -o /etc/network/interfaces https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_interfaces
+#sudo curl -o /etc/init/failsafe.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/failsafe.conf
+#sudo -u chembl curl -o /home/chembl/.bashrc https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_bashrc
+#sudo curl -o /etc/init/mychembl-upnp.conf https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl-upnp.conf
+#sudo curl -o /etc/avahi/services/mychembl.service https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl.service
+#sudo curl -o /usr/bin/mychembl-upnp.py https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl-upnp.py
+#sudo chmod +x /usr/bin/mychembl-upnp.py
+#sudo mkdir /usr/share/themes/mychembl
+#sudo curl -o /usr/share/themes/mychembl/mychembl.png https://raw.githubusercontent.com/chembl/mychembl/master/branding/mychembl.png
+#sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth https://github.com/chembl/mychembl/blob/master/branding/ubuntu-text.plymouth
+
+cd /tmp
+wget https://raw.githubusercontent.com/chembl/mychembl/master/osra_centOS.sh && bash osra_centOS.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh && su -c "bash rdkit_install.sh" chembl

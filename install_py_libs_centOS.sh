@@ -5,8 +5,9 @@
 wget https://bootstrap.pypa.io/get-pip.py
 sudo -H python get-pip.py
 
+sudo -H pip install numpy
+sudo -H pip install matplotlib
 sudo -H pip install networkx
-sudo -H pip install psycopg2
 sudo -H pip install "ipython[notebook]"
 sudo -H pip install biopython
 sudo -H pip install -U scikit-learn==0.14.1

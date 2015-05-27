@@ -5,6 +5,7 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y bash
 sudo apt-get install -y git
 sudo apt-get install -y unzip
+sudo apt-get install -y libfreetype6
 sudo apt-get install -y libboost-all-dev
 sudo apt-get install -y postgresql
 sudo apt-get install -y postgresql-server-dev-all

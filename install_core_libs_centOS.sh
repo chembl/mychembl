@@ -8,6 +8,8 @@ sudo yum -y update
 sudo yum install -y kernel-devel
 sudo yum install -y freetype freetype-devel
 sudo yum install -y libpng libpng-devel
+sudo yum install -y openjpeg openjpeg-devel
+sudo yum install -y libtiff libtiff-devel
 sudo yum install -y dkms
 sudo yum install -y bash
 sudo yum install -y git

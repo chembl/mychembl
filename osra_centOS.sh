@@ -4,19 +4,6 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 26.05.2015
 
-# first, let's install all required dependencies, that can be installed from ubuntu repositories
-
-sudo yum install -y GraphicsMagick
-sudo yum install -y GraphicsMagick-devel
-sudo yum install -y GraphicsMagick-c++
-sudo yum install -y GraphicsMagick-c++-devel
-sudo yum install -y potrace
-sudo yum install -y potrace-devel
-sudo yum install -y openbabel
-sudo yum install -y openbabel-devel
-sudo yum install -y netpbm-devel
-sudo yum install -y glib2-devel
-
 # installing TCLAP (http://tclap.sourceforge.net/)
 cd /tmp
 wget http://downloads.sourceforge.net/project/tclap/tclap-1.2.1.tar.gz -O tclap.tgz

@@ -6,6 +6,9 @@ sudo apt-get install -y bash
 sudo apt-get install -y git
 sudo apt-get install -y unzip
 sudo apt-get install -y libfreetype6
+sudo apt-get install -y libjpeg8 libjpeg-dev
+sudo apt-het install -y libtiff5 libtiff5-dev
+sudo apt-get install -y libpng12-0 libpng12-dev
 sudo apt-get install -y libboost-all-dev
 sudo apt-get install -y postgresql
 sudo apt-get install -y postgresql-server-dev-all

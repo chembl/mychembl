@@ -14,7 +14,7 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 
 wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs_centOS.sh && bash install_core_libs_centOS.sh
-wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs_centOS.sh && bash install_py_libs_centOS.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs.sh && bash install_py_libs.sh
 
 sudo -Hu postgres createuser -dsr chembl
 
@@ -31,5 +31,5 @@ sudo -Hu postgres createuser -dsr chembl
 #sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth https://github.com/chembl/mychembl/blob/master/branding/ubuntu-text.plymouth
 
 cd /tmp
-wget https://raw.githubusercontent.com/chembl/mychembl/master/osra_centOS.sh && bash osra_centOS.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh && bash osra.sh
 wget https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh && su -c "bash rdkit_install.sh" chembl

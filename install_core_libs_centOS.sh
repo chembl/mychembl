@@ -33,6 +33,16 @@ sudo yum install -y avahi-tools
 sudo yum install -y pygobject3
 sudo yum install -y python-devel
 sudo yum install -y ntsysv
+sudo yum install -y GraphicsMagick
+sudo yum install -y GraphicsMagick-devel
+sudo yum install -y GraphicsMagick-c++
+sudo yum install -y GraphicsMagick-c++-devel
+sudo yum install -y potrace
+sudo yum install -y potrace-devel
+sudo yum install -y openbabel
+sudo yum install -y openbabel-devel
+sudo yum install -y netpbm-devel
+sudo yum install -y glib2-devel
 
 sudo systemctl enable postgresql-9.3
 sudo /usr/pgsql-9.3/bin/postgresql93-setup initdb

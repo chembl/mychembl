@@ -27,5 +27,18 @@ sudo apt-get install -y avahi-utils
 sudo apt-get install -y python-gobject
 sudo apt-get install -y python-dev
 sudo apt-get install -y rcconf
+sudo apt-get install -y graphicsmagick
+sudo apt-get install -y libgraphicsmagick++1-dev
+sudo apt-get install -y libgraphicsmagick++3
+sudo apt-get install -y libgraphicsmagick1-dev
+sudo apt-get install -y libgraphicsmagick3
+sudo apt-get install -y libpotrace-dev
+sudo apt-get install -y libpotrace0
+sudo apt-get install -y potrace
+sudo apt-get install -y libtclap-dev
+sudo apt-get install -y openbabel
+sudo apt-get install -y libopenbabel-dev
+sudo apt-get install -y libnetpbm10-dev
+sudo apt-get install -y libglib2.0-dev
 
 sudo gem install gist

@@ -18,13 +18,9 @@ sudo apt-get install -y make
 sudo apt-get install -y libffi-dev
 sudo apt-get install -y libxml2 libxml2-dev
 sudo apt-get install -y libxslt1.1 libxslt1-dev
-sudo apt-get install -y python-numpy
-sudo apt-get install -y python-scipy
-sudo apt-get install -y python-matplotlib
 sudo apt-get install -y wget
 sudo apt-get install -y python-psycopg2
 sudo apt-get install -y python-imaging-tk
-sudo apt-get install -y python-networkx
 sudo apt-get install -y libnss-mdns
 sudo apt-get install -y avahi-utils
 sudo apt-get install -y python-gobject

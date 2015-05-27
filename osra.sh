@@ -4,20 +4,17 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 06.10.2014
 
-# first, let's install all required dependencies, that can be installed from ubuntu repositories
-sudo apt-get install -y graphicsmagick
-sudo apt-get install -y libgraphicsmagick++1-dev
-sudo apt-get install -y libgraphicsmagick++3
-sudo apt-get install -y libgraphicsmagick1-dev
-sudo apt-get install -y libgraphicsmagick3
-sudo apt-get install -y libpotrace-dev
-sudo apt-get install -y libpotrace0
-sudo apt-get install -y potrace
-sudo apt-get install -y libtclap-dev
-sudo apt-get install -y openbabel
-sudo apt-get install -y libopenbabel-dev
-sudo apt-get install -y libnetpbm10-dev
-sudo apt-get install -y libglib2.0-dev
+# installing TCLAP (http://tclap.sourceforge.net/)
+cd /tmp
+wget http://downloads.sourceforge.net/project/tclap/tclap-1.2.1.tar.gz -O tclap.tgz
+tar -zxvf tclap.tgz
+cd tclap-1.2.1/
+./configure
+make
+sudo make install
+cd ..
+rm -rf tclap-1.2.1/
+rm tclap.tgz
 
 # installing ocrad (https://www.gnu.org/software/ocrad/) from source bacause standard distribution doesn't work for me...
 cd /tmp
@@ -54,6 +51,3 @@ sudo make install
 cd ..
 rm -rf osra-2.0.0/
 rm osra-2.0.0.tgz
-
-
-

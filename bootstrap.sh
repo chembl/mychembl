@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs.
 wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs.sh && bash install_py_libs.sh
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ensure_ipv6.sh && bash ensure_ipv6.sh
 
-sudo -u postgres createuser -dsr chembl
+echo "vagrant" | sudo -Su postgres createuser -dsr chembl # sudo -u postgres createuser -dsr chembl
 
 cd /tmp
 sudo curl -o /etc/network/interfaces https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_interfaces

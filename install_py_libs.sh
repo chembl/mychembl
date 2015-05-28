@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# for  CentOS Linux release 7.1.1503
-
 wget https://bootstrap.pypa.io/get-pip.py
 sudo -H python get-pip.py
 

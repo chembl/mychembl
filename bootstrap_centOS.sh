@@ -3,7 +3,7 @@
 # for  CentOS Linux release 7.1.1503
 
 sudo useradd -G wheel -s /bin/bash -m chembl
-udo echo "chembl:chemblvm"| sudo chpasswd
+sudo echo "chembl:chemblvm"| sudo chpasswd
 
 sudo sysctl -w kernel.shmmax=2147483648
 sudo /sbin/iptables -A INPUT -i eth0 -p tcp --destination-port 5432 -j ACCEPT

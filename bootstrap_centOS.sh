@@ -32,4 +32,4 @@ sudo -Hu postgres createuser -dsr chembl
 
 cd /tmp
 wget https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh && bash osra.sh
-wget https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh && su -c "bash rdkit_install.sh" chembl
+wget https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh && sudo su -c "bash rdkit_install.sh" chembl

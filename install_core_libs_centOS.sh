@@ -46,13 +46,4 @@ sudo yum install -y openbabel-devel
 sudo yum install -y netpbm-devel
 sudo yum install -y glib2-devel
 
-sudo systemctl enable postgresql-9.3
-sudo /usr/pgsql-9.3/bin/postgresql93-setup initdb
-sudo systemctl start postgresql-9.3
-
-sudo mkdir /media/cdrom/
-sudo mount /dev/cdrom /media/cdrom/
-cd /media/cdrom/
-sudo ./VBoxLinuxAdditions.run
-
-gem install gist
+sudo ln -s /usr/pgsql-9.3/bin/pg_config /usr/local/bin/pg_config

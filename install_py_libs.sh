@@ -22,4 +22,5 @@ sudo -H pip install -U service_identity
 sudo -H pip install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz
 sudo -H pip install -U paste
 sudo -H pip install -U netifaces
-python -c "import mpld3; mpld3.utils.write_ipynb_local_js()
+python -c "import mpld3; mpld3.utils.write_ipynb_local_js()"
+

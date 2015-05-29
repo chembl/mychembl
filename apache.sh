@@ -1,8 +1,3 @@
-sudo apt-get install -y apache2
-sudo apt-get install -y php5
-sudo apt-get install -y php5-pgsql
-sudo apt-get install -y phppgadmin
-sudo apt-get install -y libapache2-mod-wsgi
 sudo curl -o /etc/apache2/httpd.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/launchpad_httpd.conf
 sudo curl -o /etc/apache2/apache2.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/apache2.conf
 sudo curl -o /etc/apache2/envvars https://raw.githubusercontent.com/chembl/mychembl/master/configuration/apache2_envvars

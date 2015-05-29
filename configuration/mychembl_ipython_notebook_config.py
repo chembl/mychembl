@@ -71,7 +71,7 @@ c.NotebookApp.port = 9612
 # c.NotebookApp.base_url = '/'
 
 # The directory to use for notebooks and kernels.
-# c.NotebookApp.notebook_dir = u'/home/chembl'
+c.NotebookApp.notebook_dir = u'/home/chembl/notebooks'
 
 # 
 # c.NotebookApp.file_to_run = ''

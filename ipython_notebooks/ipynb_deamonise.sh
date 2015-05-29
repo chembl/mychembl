@@ -8,10 +8,9 @@
 # Preliminary step: install all python libraries used in our notebooks that
 # are not well known and not installed by default:
 echo "chemblvm" | sudo -S pip install chembl_webresource_client
-echo "chemblvm" | sudo -S pip install lxml
 
 # First of all we will install supervisor:
-echo "chemblvm" | sudo -S apt-get install -y supervisor
+#echo "chemblvm" | sudo -S apt-get install -y supervisor
 
 # create directory for storing temporary files:
 mkdir /home/chembl/ipynb_workbench

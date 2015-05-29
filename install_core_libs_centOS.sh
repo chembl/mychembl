@@ -59,3 +59,9 @@ sudo ./VBoxLinuxAdditions.run
 
 gem install gist
 
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=9612/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=5432/tcp --permanent
+sudo firewall-cmd --reload
+
+

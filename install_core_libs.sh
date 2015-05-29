@@ -43,5 +43,10 @@ sudo apt-get install -y openbabel
 sudo apt-get install -y libopenbabel-dev
 sudo apt-get install -y libnetpbm10-dev
 sudo apt-get install -y libglib2.0-dev
+sudo apt-get install -y apache2
+sudo apt-get install -y php5
+sudo apt-get install -y php5-pgsql
+sudo apt-get install -y phppgadmin
+sudo apt-get install -y libapache2-mod-wsgi
 
 sudo gem install gist

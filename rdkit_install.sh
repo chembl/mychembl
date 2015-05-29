@@ -22,5 +22,5 @@ ctest
 
 cd $RDBASE/Code/PgSQL/rdkit
 make
-echo "chemblvm" | sudo -S make install
+python -mplatform | grep Ubuntu && echo "chemblvm" | sudo -S make install || echo "chemblvm" | sudo -S PATH=$PATH:/usr/pgsql-9.3/bin/ make install
 make installcheck

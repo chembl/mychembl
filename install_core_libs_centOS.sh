@@ -49,6 +49,7 @@ sudo yum install -y glib2-devel
 sudo yum install -y httpd
 sudo yum install -y php 
 sudo yum install -y php-pgsql
+sudo yum install -y phpPgAdmin
 sudo yum install -y mod_wsgi
 
 sudo ln -s /usr/pgsql-9.3/bin/pg_config /usr/local/bin/pg_config

@@ -5,6 +5,7 @@
 sudo rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 sudo rpm -iUvh http://yum.postgresql.org/9.3/redhat/rhel-7-x86_64/pgdg-centos93-9.3-1.noarch.rpm
 sudo yum -y update
+sudo yum install -y net-tools
 sudo yum install -y kernel-devel
 sudo yum install -y freetype freetype-devel
 sudo yum install -y libpng libpng-devel

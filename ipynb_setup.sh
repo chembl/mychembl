@@ -22,3 +22,19 @@ wget https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js
 mkdir mathjax
 cd mathjax
 wget https://cdn.mathjax.org/mathjax/latest/MathJax.js
+
+# create directory for storing temporary files:
+mkdir /home/chembl/ipynb_workbench
+
+# we would like to tread ipynb_workbench directory as a regular python module so creating __init__.py:
+touch /home/chembl/ipynb_workbench/__init__.py
+
+# install some files to ipynb_workbench:
+curl -o /home/chembl/ipynb_workbench/physchem_props_heatmap.csv https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/physchem_props_heatmap.csv
+curl -o /home/chembl/ipynb_workbench/settings.py https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/settings.py
+curl -o /home/chembl/ipynb_workbench/A2A_Adenosine_set_mychembl.csv https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/A2A_Adenosine_set_mychembl.csv
+curl -o /home/chembl/ipynb_workbench/US_antimalarial_patents_cmpds.txt https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/US_antimalarial_patents_cmpds.txt
+curl -o /home/chembl/ipynb_workbench/fps.pkl https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/fps.pkl
+curl -o /home/chembl/ipynb_workbench/smiles_cas_N6512.smi https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/smiles_cas_N6512.smi
+
+curl -o /home/chembl/.ipython/profile_mychembl/static/custom/custom.css https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/custom.css

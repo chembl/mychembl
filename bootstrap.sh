@@ -1,5 +1,9 @@
 #!/bin/bash
 
+wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs.sh && bash install_core_libs.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs.sh && bash install_py_libs.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/ensure_ipv6.sh && bash ensure_ipv6.sh
+
 sudo useradd -G sudo -s /bin/bash -m chembl
 sudo echo "chembl:chemblvm"| sudo chpasswd
 
@@ -10,10 +14,6 @@ sudo dd if=/dev/zero of=/swapfile bs=1024 count=524288
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
-
-wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs.sh && bash install_core_libs.sh
-wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs.sh && bash install_py_libs.sh
-wget https://raw.githubusercontent.com/chembl/mychembl/master/ensure_ipv6.sh && bash ensure_ipv6.sh
 
 echo "vagrant" | sudo -Su postgres createuser -dsr chembl # sudo -u postgres createuser -dsr chembl
 

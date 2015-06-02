@@ -2,6 +2,9 @@
 
 # for  CentOS Linux release 7.1.1503
 
+wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs_centOS.sh && bash install_core_libs_centOS.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs.sh && bash install_py_libs.sh
+
 sudo useradd -G wheel -s /bin/bash -m chembl
 sudo echo "chembl:chemblvm"| sudo chpasswd
 
@@ -12,9 +15,6 @@ sudo dd if=/dev/zero of=/swapfile bs=1024 count=524288
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
-
-wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs_centOS.sh && bash install_core_libs_centOS.sh
-wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs.sh && bash install_py_libs.sh
 
 sudo -Hu postgres createuser -dsr chembl
 

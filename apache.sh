@@ -1,5 +1,5 @@
 python -mplatform | grep Ubuntu && export APACHE_HOME=/etc/apache2 || export APACHE_HOME=/etc/httpd
-python -mplatform | grep Ubuntu && export APACHE_ENV_FILE=/etc/apache2/apache2.conf || export APACHE_ENV_FILE=/etc/sysconfig/httpd
+python -mplatform | grep Ubuntu && export APACHE_ENV_FILE=/etc/apache2/envvars || export APACHE_ENV_FILE=/etc/sysconfig/httpd
 RAW=https://raw.githubusercontent.com/chembl/mychembl/master
 
 sudo -E curl -o $APACHE_HOME/conf.d/launchpad.conf $RAW/configuration/launchpad.conf

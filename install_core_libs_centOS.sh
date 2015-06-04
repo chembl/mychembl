@@ -71,4 +71,6 @@ sudo firewall-cmd --zone=public --add-port=9612/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=5432/tcp --permanent
 sudo firewall-cmd --reload
 
+sudo systemctl enable httpd
+
 

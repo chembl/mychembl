@@ -1,9 +1,9 @@
 python -mplatform | grep Ubuntu && export APACHE_HOME=/etc/apache2 || export APACHE_HOME=/etc/httpd
+python -mplatform | grep Ubuntu && export APECHE_ENV_FILE=/etc/apache2/apache2.conf || export APECHE_ENV_FILE=/etc/sysconfig/httpd
 RAW=https://raw.githubusercontent.com/chembl/mychembl/master
 
 sudo curl -o $APACHE_HOME/conf.d/launchpad.conf $RAW/configuration/launchpad.conf
-#sudo curl -o /etc/apache2/apache2.conf $RAW/configuration/apache2.conf
-python -mplatform | grep Ubuntu && sudo curl -o /etc/apache2/envvars $RAW/configuration/apache2_envvars || TODO
+sudo echo "export LD_LIBRARY_PATH=/home/chembl/rdkit/lib:$LD_LIBRARY_PATH" >> APECHE_ENV_FILE
 sudo curl -o /etc/phppgadmin/apache.conf $RAW/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/apache2/conf.d/phppgadmin $RAW/configuration/mychembl_phppgadmin_httpd.conf
 sudo curl -o /etc/php5/apache2/php.ini $RAW/configuration/mychembl_php.ini

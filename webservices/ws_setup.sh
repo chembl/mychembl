@@ -46,11 +46,12 @@ django-admin.py startproject deployment
 
 # Now we have to download configuration files:
 RAW=https://raw.githubusercontent.com/chembl/mychembl/master/webservices/conf
+python -mplatform | grep Ubuntu && export APACHE_HOME=/etc/apache2 || export APACHE_HOME=/etc/httpd
 
 curl $RAW/settings.py > deployment/deployment/settings.py
 curl $RAW/urls.py > deployment/deployment/urls.py
 curl $RAW/wsgi.py > deployment/deployment/wsgi.py
-curl $RAW/chembl_webservices.inc > deployment/deployment/chembl_webservices.inc
+sudo curl -o $APACHE_HOME/conf.d/chembl_webservices.conf $RAW/chembl_webservices.inc
 
 # Lets configure cache by creating DB table for storing the cache:
 cd deployment

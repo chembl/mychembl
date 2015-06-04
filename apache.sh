@@ -5,6 +5,7 @@ python -mplatform | grep Ubuntu && export APACHE_NAME="apache2" || export APACHE
 python -mplatform | grep Ubuntu && export AUX_OS_NAME="Ubuntu" || export AUX_OS_NAME="CentOS"
 python -mplatform | grep Ubuntu && export AUX_CONF="" || export AUX_CONF=".conf"
 python -mplatform | grep Ubuntu && export PHPPGADMIN="phppgadmin" || export PHPPGADMIN="phpPgAdmin"
+python -mplatform | grep Ubuntu && export PHP_INI="/etc/php5/apache2/php.ini" || export PHP_INI="/etc/php.ini"
 RAW=https://raw.githubusercontent.com/chembl/mychembl/master
 
 sudo -E curl -o $APACHE_HOME/conf.d/launchpad.conf $RAW/configuration/launchpad.conf
@@ -12,9 +13,9 @@ sudo -E bash -c 'echo "${APACHE_EXPORT}LD_LIBRARY_PATH=/home/chembl/rdkit/lib:\$
 sudo -E curl -o /etc/$PHPPGADMIN/config.inc.php $RAW/configuration/phppgadmin_config.inc.php
 sudo -E curl -o /etc/$APACHE_NAME/conf.d/${PHPPGADMIN}${AUX_CONF} $RAW/configuration/phppgadmin_${AUX_OS_NAME}.conf
 
-sudo curl -o /etc/php5/apache2/php.ini $RAW/configuration/mychembl_php.ini
-sudo kill -9 $(pidof apache2)
+sudo -E curl -o $PHP_INI $RAW/configuration/mychembl_php.ini
+sudo -E kill -9 $(pidof $APACHE_NAME)
 sudo a2enmod rewrite
-sudo service apache2 restart
+python -mplatform | grep Ubuntu && sudo service apache2 restart || sudo systemctl start httpd -l
 
 wget $RAW/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh

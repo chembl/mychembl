@@ -15,7 +15,7 @@ sudo -E curl -o /etc/$APACHE_NAME/conf.d/${PHPPGADMIN}${AUX_CONF} $RAW/configura
 
 sudo -E curl -o $PHP_INI $RAW/configuration/mychembl_php.ini
 sudo -E kill -9 $(pidof $APACHE_NAME)
-sudo a2enmod rewrite
+python -mplatform | grep Ubuntu && sudo a2enmod rewrite || sudo bash -c 'echo "LoadModule rewrite_module modules/mod_rewrite.so" > /etc/httpd/conf.modules.d/10-rewrite.conf'
 python -mplatform | grep Ubuntu && sudo service apache2 restart || sudo systemctl start httpd -l
 
 wget $RAW/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh

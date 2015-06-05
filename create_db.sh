@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CHEMBL_VERSION=19
+CHEMBL_VERSION=20
 
 ## Creating BLAST database
 mkdir -p /home/chembl/blast/chembl

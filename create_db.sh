@@ -1,16 +1,21 @@
 #!/bin/bash
 
 CHEMBL_VERSION=20
+python -mplatform | grep Ubuntu && export POSTGRES_CONFIG=/etc/postgresql/9.3/main || export POSTGRES_CONFIG=/var/lib/pgsql/9.3/data
+python -mplatform | grep Ubuntu && export AUX_OS_NAME="Ubuntu" || export AUX_OS_NAME="CentOS"
+RAW="https://raw.githubusercontent.com/chembl/mychembl/master"
+EBI_FTP="ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_${CHEMBL_VERSION}"
+NCBI_FTP="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.29/ncbi-blast-2.2.29+-x64-linux.tar.gz"
 
 ## Creating BLAST database
 mkdir -p /home/chembl/blast/chembl
 cd /home/chembl/blast/
-wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.29/ncbi-blast-2.2.29+-x64-linux.tar.gz
+wget $NCBI_FTP
 tar -xzf ncbi-blast-2.2.29+-x64-linux.tar.gz 
 rm ncbi-blast-2.2.29+-x64-linux.tar.gz
 cd /home/chembl/blast/chembl
-wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_${CHEMBL_VERSION}/chembl_${CHEMBL_VERSION}.fa.gz
-wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_${CHEMBL_VERSION}/chembl_${CHEMBL_VERSION}_bio.fa.gz
+wget $EBI_FTP/chembl_${CHEMBL_VERSION}.fa.gz
+wget $EBI_FTP/chembl_${CHEMBL_VERSION}_bio.fa.gz
 gunzip chembl_${CHEMBL_VERSION}.fa.gz
 gunzip chembl_${CHEMBL_VERSION}_bio.fa.gz
 /home/chembl/blast/ncbi-blast-2.2.29+/bin/makeblastdb -in chembl_${CHEMBL_VERSION}.fa -dbtype prot
@@ -23,7 +28,7 @@ cd /home/chembl
 #rm chembl_${CHEMBL_VERSION}_models.tar.gz
 
 ## Install ChEMBLdb
-wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_${CHEMBL_VERSION}/chembl_${CHEMBL_VERSION}_postgresql.tar.gz
+wget $EBI_FTP/chembl_${CHEMBL_VERSION}_postgresql.tar.gz
 tar zxf chembl_${CHEMBL_VERSION}_postgresql.tar.gz
 
 createdb chembl_${CHEMBL_VERSION}
@@ -35,18 +40,18 @@ cd ..
 
 rm chembl_${CHEMBL_VERSION}_postgresql.tar.gz
 
-echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.3/main/postgresql.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_postgresql.conf
-echo "chemblvm" | sudo -S curl -o /etc/postgresql/9.3/main/pg_hba.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_pg_hba.conf
-echo "chemblvm" | sudo -S curl -o /etc/sysctl.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_sysctl.conf
+echo "chemblvm" | sudo -S curl -o $POSTGRES_CONFIG/postgresql.conf $RAW/configuration/mychembl_postgresql_${AUX_OS_NAME}.conf
+echo "chemblvm" | sudo -S curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configuration/mychembl_pg_hba.conf
+echo "chemblvm" | sudo -S curl -o /etc/sysctl.conf $RAW/configuration/mychembl_sysctl.conf
 
 echo "chemblvm" | sudo -S service postgresql restart
 
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -c "create extension rdkit;"
-wget https://raw.githubusercontent.com/chembl/mychembl/master/indexes.sql
+wget $RAW/indexes.sql
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -a -f indexes.sql
 rm indexes.sql
 
-wget https://raw.githubusercontent.com/chembl/mychembl_webapp/master/sql/webapp.sql
+wget $RAW/sql/webapp.sql
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -a -f webapp.sql
 rm webapp.sql
 

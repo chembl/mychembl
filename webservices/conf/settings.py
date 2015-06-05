@@ -4,6 +4,8 @@ import os, sys
 import threading
 threading._DummyThread._Thread__stop = lambda x: 42
 
+TASTYPIE_DOC_API = 'chembl_webservices.api'
+TASTYPIE_DOC_NAME = 'ChEMBL web services API live documentation'
 TASTYPIE_ALLOW_MISSING_SLASH = True
 TASTYPIE_CANNED_ERROR = "An internal server error occurred. Please contact ChEMBL help."
 
@@ -134,6 +136,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'corsheaders',
     'tastypie',
+    'tastypie_spore_docs',
     'chembl_core_db',
     'chembl_core_model',
     'chembl_webservices',

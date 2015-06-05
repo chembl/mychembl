@@ -15,6 +15,7 @@ python -mplatform | grep Ubuntu && sudo a2dissite 000-default
 python -mplatform | grep Ubuntu && sudo service apache2 reload
 python -mplatform | grep Ubuntu && sudo -E rm $APACHE_SITES/*
 sudo -E curl -o $APACHE_SITES/launchpad.conf $RAW/configuration/launchpad.conf
+sudo -E curl -o $APACHE_SITES/chembl_webservices.conf $RAW/webservices/conf/chembl_webservices.inc
 sudo -E bash -c 'echo "${APACHE_EXPORT}LD_LIBRARY_PATH=/home/chembl/rdkit/lib:\$LD_LIBRARY_PATH" >> ${APACHE_ENV_FILE}'
 sudo -E curl -o /etc/$PHPPGADMIN/config.inc.php $RAW/configuration/phppgadmin_config.inc.php
 sudo -E curl -o $PGADMIN_CONFIG $RAW/configuration/phppgadmin_${AUX_OS_NAME}.conf
@@ -24,6 +25,7 @@ sudo -E kill -9 $(pidof $APACHE_NAME)
 python -mplatform | grep Ubuntu && sudo a2enmod rewrite || sudo bash -c 'echo "LoadModule rewrite_module modules/mod_rewrite.so" > /etc/httpd/conf.modules.d/10-rewrite.conf'
 python -mplatform | grep Ubuntu && sudo a2ensite phppgadmin
 python -mplatform | grep Ubuntu && sudo a2ensite launchpad
+python -mplatform | grep Ubuntu && sudo a2ensite chembl_webservices
 python -mplatform | grep Ubuntu && sudo service apache2 restart || sudo systemctl restart httpd -l
 
 wget $RAW/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh

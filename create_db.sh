@@ -32,10 +32,10 @@ cd /home/chembl
 wget $EBI_FTP/chembl_${CHEMBL_VERSION}_postgresql.tar.gz
 tar zxf chembl_${CHEMBL_VERSION}_postgresql.tar.gz
 
-echo "chemblvm" | sudo -S curl -o $POSTGRES_CONFIG/postgresql.conf $RAW/configuration/mychembl_postgresql_${AUX_OS_NAME}.conf
-echo "chemblvm" | sudo -S curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configuration/mychembl_pg_hba.conf
+echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/postgresql.conf $RAW/configuration/mychembl_postgresql_${AUX_OS_NAME}.conf
+echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configuration/mychembl_pg_hba.conf
 # see: http://michael.otacoo.com/postgresql-2/take-care-of-kernel-memory-limitation-for-postgresql-shared-buffers/
-echo "chemblvm" | sudo -E bash -c 'echo "kernel.shmmax = 2147483648" > ${SYSCTL_PATH}/sysctl.d/10-mychembl-pgsql.conf'
+echo "chemblvm" | sudo -SE bash -c 'echo "kernel.shmmax = 2147483648" > ${SYSCTL_PATH}/sysctl.d/10-mychembl-pgsql.conf'
 
 echo "chemblvm" | sudo -S service postgresql restart
 

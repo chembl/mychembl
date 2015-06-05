@@ -10,8 +10,7 @@ wget https://dl.dropboxusercontent.com/u/10967207/indigo-python-1.1.11-linux.zip
 unzip indigo-python-1.1.11-linux.zip
 rm indigo-python-1.1.11-linux.zip
 
-# Install and source virtualenvwrapper because it makes our job lot easier:
-echo "chemblvm" | sudo -S pip install virtualenvwrapper
+# Source virtualenvwrapper because it makes our job lot easier:
 source virtualenvwrapper.sh
 
 # Use the wrapper to create new virtualenv called chembl_webservices

@@ -37,7 +37,7 @@ echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configurati
 # see: http://michael.otacoo.com/postgresql-2/take-care-of-kernel-memory-limitation-for-postgresql-shared-buffers/
 echo "chemblvm" | sudo -SE bash -c 'echo "kernel.shmmax = 2147483648" > ${SYSCTL_PATH}/sysctl.d/10-mychembl-pgsql.conf'
 
-echo "chemblvm" | sudo -S service postgresql restart
+python -mplatform | grep Ubuntu && echo "chemblvm" | sudo -S service postgresql restart || echo "chemblvm" | sudo -S systemctl restart postgresql-9.3
 
 createdb chembl_${CHEMBL_VERSION}
 

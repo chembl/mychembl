@@ -18,9 +18,9 @@ gunzip chembl_${CHEMBL_VERSION}_bio.fa.gz
 cd /home/chembl
 
 ## Download target prediction models
-wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/target_predictions/chembl_${CHEMBL_VERSION}_models.tar.gz
-tar -zxf chembl_${CHEMBL_VERSION}_models.tar.gz
-rm chembl_${CHEMBL_VERSION}_models.tar.gz
+#wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/target_predictions/chembl_${CHEMBL_VERSION}_models.tar.gz
+#tar -zxf chembl_${CHEMBL_VERSION}_models.tar.gz
+#rm chembl_${CHEMBL_VERSION}_models.tar.gz
 
 ## Install ChEMBLdb
 wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_${CHEMBL_VERSION}/chembl_${CHEMBL_VERSION}_postgresql.tar.gz

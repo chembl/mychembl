@@ -37,3 +37,4 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh && 
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh && bash ipynb_deamonise.sh
 wget https://raw.githubusercontent.com/chembl/mychembl/master/beaker/install_beaker.sh && sudo su -c "bash install_beaker.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/apache.sh && bash apache.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/launchpad.sh && bash launchpad.sh

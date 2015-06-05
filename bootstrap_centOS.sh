@@ -35,6 +35,8 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh && bash os
 wget https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh && sudo su -c "bash rdkit_install.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh && sudo su -c "bash ipynb_setup.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ipython_notebooks/ipynb_deamonise.sh && bash ipynb_deamonise.sh
+wget https://raw.githubusercontent.com/chembl/mychembl/master/create_db.sh && sudo su -c "bash create_db.sh" chembl
+wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_setup.sh && sudo su -c "bash ws_setup.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/beaker/install_beaker.sh && sudo su -c "bash install_beaker.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/apache.sh && bash apache.sh
 wget https://raw.githubusercontent.com/chembl/mychembl/master/launchpad.sh && bash launchpad.sh

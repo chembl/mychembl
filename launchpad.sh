@@ -3,8 +3,8 @@ python -mplatform | grep Ubuntu && export APACHE_NAME="apache2" || export APACHE
 cd /tmp
 sudo git clone https://github.com/chembl/mychembl_webapp.git
 sudo git clone https://github.com/chembl/mychembl.git
-sudo rm /var/www/html -rf
-sudo mkdir /var/www/html/mychembl
+sudo rm /var/www/html/* -rf
+sudo mkdir -p /var/www/html/mychembl
 sudo cp -r mychembl/launchpad/* /var/www/html/
 sudo cp -r mychembl/launchpad/.htaccess /var/www/html/
 sudo cp -r mychembl_webapp/* /var/www/html/mychembl/

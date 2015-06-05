@@ -19,6 +19,9 @@ mkvirtualenv chembl_webservices
 # OK, we are ready to use pip to install chembl_webservices
 pip install chembl_webservices
 
+# We need live online documentation as well
+pip install tastypie_spore_docs
+
 # Because webservices on myChEMBL VM will be run against exported CHEMBL schema,
 # which is only a subset of chembl_app schema we will have to install
 # a compatibility layer that can handle differences between schemas:

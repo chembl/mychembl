@@ -40,3 +40,7 @@ wget https://raw.githubusercontent.com/chembl/mychembl/master/webservices/ws_set
 wget https://raw.githubusercontent.com/chembl/mychembl/master/beaker/install_beaker.sh && sudo su -c "bash install_beaker.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/apache.sh && bash apache.sh
 wget https://raw.githubusercontent.com/chembl/mychembl/master/launchpad.sh && bash launchpad.sh
+
+sudo swapoff -v /swapfile
+sudo rm /swapfile
+sudo rm /tmp/* -rf

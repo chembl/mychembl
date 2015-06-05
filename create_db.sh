@@ -6,6 +6,7 @@ python -mplatform | grep Ubuntu && export AUX_OS_NAME="Ubuntu" || export AUX_OS_
 RAW="https://raw.githubusercontent.com/chembl/mychembl/master"
 EBI_FTP="ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_${CHEMBL_VERSION}"
 NCBI_FTP="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.29/ncbi-blast-2.2.29+-x64-linux.tar.gz"
+python -mplatform | grep Ubuntu && export SYSCTL_PATH=/etc || export SYSCTL_PATH=/usr/lib
 
 ## Creating BLAST database
 mkdir -p /home/chembl/blast/chembl
@@ -31,6 +32,13 @@ cd /home/chembl
 wget $EBI_FTP/chembl_${CHEMBL_VERSION}_postgresql.tar.gz
 tar zxf chembl_${CHEMBL_VERSION}_postgresql.tar.gz
 
+echo "chemblvm" | sudo -S curl -o $POSTGRES_CONFIG/postgresql.conf $RAW/configuration/mychembl_postgresql_${AUX_OS_NAME}.conf
+echo "chemblvm" | sudo -S curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configuration/mychembl_pg_hba.conf
+# see: http://michael.otacoo.com/postgresql-2/take-care-of-kernel-memory-limitation-for-postgresql-shared-buffers/
+echo "chemblvm" | sudo -E bash -c 'echo "kernel.shmmax = 2147483648" > ${SYSCTL_PATH}/sysctl.d/10-mychembl-pgsql.conf'
+
+echo "chemblvm" | sudo -S service postgresql restart
+
 createdb chembl_${CHEMBL_VERSION}
 
 cd chembl_${CHEMBL_VERSION}_postgresql/
@@ -39,12 +47,6 @@ psql chembl_${CHEMBL_VERSION} < chembl_${CHEMBL_VERSION}.pgdump.sql
 cd ..
 
 rm chembl_${CHEMBL_VERSION}_postgresql.tar.gz
-
-echo "chemblvm" | sudo -S curl -o $POSTGRES_CONFIG/postgresql.conf $RAW/configuration/mychembl_postgresql_${AUX_OS_NAME}.conf
-echo "chemblvm" | sudo -S curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configuration/mychembl_pg_hba.conf
-echo "chemblvm" | sudo -S curl -o /etc/sysctl.conf $RAW/configuration/mychembl_sysctl.conf
-
-echo "chemblvm" | sudo -S service postgresql restart
 
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -c "create extension rdkit;"
 wget $RAW/indexes.sql

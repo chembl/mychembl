@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000000
 HISTFILESIZE=1000000
@@ -9,5 +11,5 @@ export RDBASE=$HOME/rdkit
 export INDIGOBASE=$HOME/indigo-python-1.1.11-linux
 export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=$RDBASE:$INDIGOBASE:$PYTHONPATH
-source /usr/local/bin/virtualenvwrapper.sh
+source virtualenvwrapper.sh
 

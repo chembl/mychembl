@@ -16,9 +16,6 @@ source virtualenvwrapper.sh
 # Use the wrapper to create new virtualenv called chembl_webservices
 mkvirtualenv chembl_webservices
 
-# Lxml runs faster when Cyhton is available:
-pip install Cython
-
 # OK, we are ready to use pip to install chembl_webservices
 pip install chembl_webservices
 

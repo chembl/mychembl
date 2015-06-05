@@ -1,3 +1,5 @@
+#!/bin/bash
+
 python -mplatform | grep Ubuntu && export APACHE_NAME="apache2" || export APACHE_NAME="httpd"
 
 cd /tmp

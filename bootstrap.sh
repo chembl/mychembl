@@ -20,7 +20,7 @@ echo "vagrant" | sudo -Su postgres createuser -dsr chembl # sudo -u postgres cre
 cd /tmp
 sudo curl -o /etc/network/interfaces https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_interfaces
 sudo curl -o /etc/init/failsafe.conf https://raw.githubusercontent.com/chembl/mychembl/master/configuration/failsafe.conf
-sudo -u chembl curl -o /home/chembl/.bashrc https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_bashrc
+sudo curl -o /etc/profile.d/mychembl.sh https://raw.githubusercontent.com/chembl/mychembl/master/configuration/mychembl_bashrc
 sudo curl -o /etc/init/mychembl-upnp.conf https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl-upnp.conf
 sudo curl -o /etc/avahi/services/mychembl.service https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl.service
 sudo curl -o /usr/bin/mychembl-upnp.py https://raw.githubusercontent.com/chembl/mychembl/master/zeroconf/mychembl-upnp.py

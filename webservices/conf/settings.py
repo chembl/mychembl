@@ -12,6 +12,7 @@ TASTYPIE_CANNED_ERROR = "An internal server error occurred. Please contact ChEMB
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+WS_NAME='chemblws'
 WS_BASE_URL='/chemblws'
 WS_DOCS_TITLE='ChEMBL web services live documentation'
 

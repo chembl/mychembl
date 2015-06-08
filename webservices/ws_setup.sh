@@ -5,6 +5,8 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 20.05.2014
 
+cd /home/chembl
+
 # We need indigo toolkit as alternative compound rendering engine:
 wget https://dl.dropboxusercontent.com/u/10967207/indigo-python-1.1.11-linux.zip
 unzip indigo-python-1.1.11-linux.zip

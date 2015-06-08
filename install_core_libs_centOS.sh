@@ -51,6 +51,7 @@ sudo yum install -y php
 sudo yum install -y php-pgsql
 sudo yum install -y phpPgAdmin
 sudo yum install -y mod_wsgi
+sudo yum install -y vim-enhanced
 
 sudo ln -s /usr/pgsql-9.3/bin/pg_config /usr/local/bin/pg_config
 sudo systemctl enable postgresql-9.3

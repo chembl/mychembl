@@ -2,6 +2,8 @@
 
 sudo su -c "chmod -R 755 /home/chembl" chembl
 python -mplatform | grep Ubuntu && : || sudo su -c "chcon -R -t httpd_user_content_t /home/chembl" chembl
+python -mplatform | grep Ubuntu && : || sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/rdkit" chembl
+python -mplatform | grep Ubuntu && : || sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/indigo-python-1.1.11-linux" chembl
 python -mplatform | grep Ubuntu && : || sudo setsebool -P httpd_can_network_connect_db on
 python -mplatform | grep Ubuntu && : || sudo setsebool -P httpd_can_network_connect on
 python -mplatform | grep Ubuntu && : || sudo setsebool -P httpd_enable_homedirs on

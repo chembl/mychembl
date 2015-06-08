@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo su -c "chmod -R 755 /home/chembl" chembl
+
 python -mplatform | grep Ubuntu && export APACHE_NAME="apache2" || export APACHE_NAME="httpd"
 export APACHE_HOME=/etc/$APACHE_NAME
 python -mplatform | grep Ubuntu && export APACHE_ENV_FILE=/etc/apache2/envvars || export APACHE_ENV_FILE=/etc/sysconfig/httpd

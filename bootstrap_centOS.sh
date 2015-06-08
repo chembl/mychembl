@@ -2,6 +2,8 @@
 
 # for  CentOS Linux release 7.1.1503
 
+sudo yum install -y wget
+
 wget https://raw.githubusercontent.com/chembl/mychembl/master/install_core_libs_centOS.sh && bash install_core_libs_centOS.sh
 wget https://raw.githubusercontent.com/chembl/mychembl/master/install_py_libs.sh && bash install_py_libs.sh
 

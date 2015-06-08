@@ -1,6 +1,10 @@
 #!/bin/bash
 
 sudo su -c "chmod -R 755 /home/chembl" chembl
+python -mplatform | grep Ubuntu && : || sudo su -c "chcon -R -t httpd_user_content_t /home/chembl" chembl
+python -mplatform | grep Ubuntu && : || sudo setsebool -P httpd_can_network_connect_db on
+python -mplatform | grep Ubuntu && : || sudo setsebool -P httpd_can_network_connect on
+python -mplatform | grep Ubuntu && : || sudo setsebool -P httpd_enable_homedirs on
 
 python -mplatform | grep Ubuntu && export APACHE_NAME="apache2" || export APACHE_NAME="httpd"
 export APACHE_HOME=/etc/$APACHE_NAME
@@ -30,4 +34,4 @@ python -mplatform | grep Ubuntu && sudo a2ensite launchpad
 python -mplatform | grep Ubuntu && sudo a2ensite chembl_webservices
 python -mplatform | grep Ubuntu && sudo service apache2 restart || sudo systemctl restart httpd -l
 
-wget $RAW/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh
+#wget $RAW/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh

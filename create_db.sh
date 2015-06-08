@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /tmp
+
 CHEMBL_VERSION=20
 python -mplatform | grep Ubuntu && export POSTGRES_CONFIG=/etc/postgresql/9.3/main || export POSTGRES_CONFIG=/var/lib/pgsql/9.3/data
 python -mplatform | grep Ubuntu && export AUX_OS_NAME="Ubuntu" || export AUX_OS_NAME="CentOS"

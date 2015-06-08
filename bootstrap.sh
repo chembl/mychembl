@@ -29,7 +29,6 @@ sudo mkdir /usr/share/themes/mychembl
 sudo curl -o /usr/share/themes/mychembl/mychembl.png https://raw.githubusercontent.com/chembl/mychembl/master/branding/mychembl.png
 sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth https://github.com/chembl/mychembl/blob/master/branding/ubuntu-text.plymouth
 
-cd /tmp
 wget https://raw.githubusercontent.com/chembl/mychembl/master/osra.sh && bash osra.sh
 wget https://raw.githubusercontent.com/chembl/mychembl/master/rdkit_install.sh && sudo su -c "bash rdkit_install.sh" chembl
 wget https://raw.githubusercontent.com/chembl/mychembl/master/ipynb_setup.sh && sudo su -c "bash ipynb_setup.sh" chembl

@@ -28,7 +28,7 @@ DATABASES = {
         'NAME': 'chembl_20', # Or path to database file if using sqlite3.
         'USER': 'chembl', # Not used with sqlite3.
         'PASSWORD': '', # Not used witis oracle
-        'HOST': '/var/pgsql', # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': '/var/run/postgresql', # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '5432', # Set to empty string for default. Not used with sqlite3.
     },
 }

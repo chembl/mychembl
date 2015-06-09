@@ -25,6 +25,12 @@ gunzip chembl_${CHEMBL_VERSION}_bio.fa.gz
 /home/chembl/blast/ncbi-blast-2.2.29+/bin/makeblastdb -in chembl_${CHEMBL_VERSION}_bio.fa -dbtype prot
 cd /home/chembl
 
+echo "chemblvm" | sudo -S mkdir /var/pgsql
+echo "chemblvm" | sudo -S chown postgres:postgres /var/pgsql
+echo "chemblvm" | sudo -S chmod 0755 /var/pgsql
+python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S semanage fcontext -a -t httpd_var_run_t "/var/pgsql(/.*)?"
+python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S restorecon -R /var/pgsql
+
 ## Download target prediction models
 #wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/target_predictions/chembl_${CHEMBL_VERSION}_models.tar.gz
 #tar -zxf chembl_${CHEMBL_VERSION}_models.tar.gz

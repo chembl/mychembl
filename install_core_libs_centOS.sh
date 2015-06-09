@@ -52,6 +52,7 @@ sudo yum install -y php-pgsql
 sudo yum install -y phpPgAdmin
 sudo yum install -y mod_wsgi
 sudo yum install -y vim-enhanced
+sudo yum install -y policycoreutils-python
 
 sudo ln -s /usr/pgsql-9.3/bin/pg_config /usr/local/bin/pg_config
 sudo systemctl enable postgresql-9.3
@@ -64,6 +65,9 @@ cd /media/cdrom/
 sudo ./VBoxLinuxAdditions.run
 
 gem install gist
+
+sudo audit2allow -a -M httpd_postgresql_unix_socket_connect
+sudo semodule -i httpd_postgresql_unix_socket_connect.pp
 
 sudo firewall-cmd --zone=public --add-service=http --permanent 
 sudo firewall-cmd --zone=public --add-service=https --permanent

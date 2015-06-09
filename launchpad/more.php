@@ -38,7 +38,7 @@
           <p>We have no plans to include the existing ChEMBL Web Interface with myChEMBL, this is mainly due to portability issues. We do plan an update of the official ChEMBL Web Interface and when this does happen it will become part of the myChEMBL distribution.</p>
           
           <h4><i class="fa fa-rocket"></i>&nbsp;Can you provide some more details on the ChEMBL database?</h4>
-          <p>Have a look at the <a href="/assets/img/chembl_19_schema.png">ChEMBL schema diagram</a> to get an idea of the data captured in the database and how the tables join together. You can then start using the <a href="phppgadmin">phpPgAdmin Interface</a> to query the database directly with SQL. (Note the schema diagram does not include the RDKit tables - see next question)</p>
+          <p>Have a look at the <a href="/assets/img/chembl_20_schema.png">ChEMBL schema diagram</a> to get an idea of the data captured in the database and how the tables join together. You can then start using the <a href="phppgadmin">phpPgAdmin Interface</a> to query the database directly with SQL. (Note the schema diagram does not include the RDKit tables - see next question)</p>
           
           <h4><i class="fa fa-rocket"></i>&nbsp;Are there any differences between the 'core' ChEMBL release database schema and the myChEMBL database schema?</h4>
           <p>Yes, after we have installed the RDKit cartridge we create 2 additional tables, which are:

@@ -5,6 +5,8 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 20.05.2014
 
+export PATH=/home/chembl/.virtualenvs/chembl_webservices/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/chembl/.local/bin:/home/chembl/bin
+
 cd /home/chembl
 
 # We need indigo toolkit as alternative compound rendering engine:
@@ -32,6 +34,8 @@ pip install chembl_compatibility
 # webservices are DB agnostic so they are not shipped with any specific DB
 # driver. We have to install the driver separately, in case of myChEMBL this
 # will be postgres:
+echo $(env)
+echo $(which pg_config)
 pip install psycopg2
 
 # we want our application to support CORS so we have to install django app

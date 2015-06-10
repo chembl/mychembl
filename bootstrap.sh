@@ -6,7 +6,7 @@ export RAW="https://raw.githubusercontent.com/chembl/mychembl/master"
 sudo apt-get install -y wget
 
 wget $RAW/settings.sh && source settings.sh
-wget $RAW/install_core_libs.sh && bash install_core_libs.sh
+wget $RAW/install_core_libs_centOS.sh && bash install_core_libs_${AUX_OS_NAME}.sh
 wget $RAW/install_py_libs.sh && bash install_py_libs.sh
 wget $RAW/ensure_ipv6.sh && bash ensure_ipv6.sh
 

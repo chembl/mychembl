@@ -32,9 +32,9 @@ python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S semanage fcont
 python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S restorecon -R /var/run/postgresql
 
 ## Download target prediction models
-#wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/target_predictions/chembl_${CHEMBL_VERSION}_models.tar.gz
-#tar -zxf chembl_${CHEMBL_VERSION}_models.tar.gz
-#rm chembl_${CHEMBL_VERSION}_models.tar.gz
+wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/target_predictions/chembl_${CHEMBL_VERSION}_models.tar.gz
+tar -zxf chembl_${CHEMBL_VERSION}_models.tar.gz
+rm chembl_${CHEMBL_VERSION}_models.tar.gz
 
 ## Install ChEMBLdb
 wget $EBI_FTP/chembl_${CHEMBL_VERSION}_postgresql.tar.gz

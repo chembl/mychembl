@@ -23,7 +23,7 @@ sudo yum install -y boost
 sudo yum install -y boost-devel
 sudo yum install -y flex
 sudo yum install -y bison
-sudo yum install -y gcc*
+sudo yum install -y gcc++
 sudo yum install -y cmake
 sudo yum install -y make
 sudo yum install -y libffi-devel
@@ -66,8 +66,8 @@ sudo ./VBoxLinuxAdditions.run
 
 gem install gist
 
-sudo audit2allow -a -M httpd_postgresql_unix_socket_connect
-sudo semodule -i httpd_postgresql_unix_socket_connect.pp
+#sudo audit2allow -a -M httpd_postgresql_unix_socket_connect
+#sudo semodule -i httpd_postgresql_unix_socket_connect.pp
 
 sudo firewall-cmd --zone=public --add-service=http --permanent 
 sudo firewall-cmd --zone=public --add-service=https --permanent

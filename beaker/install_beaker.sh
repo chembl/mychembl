@@ -5,6 +5,10 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 06.10.2014
 
+export HOME=/home/chembl
+BEAKER_DIR="$HOME/chembl_beaker/conf.d"
+RAW_BEAKER=$RAW/beaker
+
 # First, create a new virtualenv called chembl_beaker
 source virtualenvwrapper.sh
 mkvirtualenv chembl_beaker
@@ -21,10 +25,9 @@ pip install matplotlib
 pip install chembl_beaker
 
 #configure beaker and Apache:
-mkdir -p /home/chembl/chembl_beaker/conf.d/
+mkdir -p $BEAKER_DIR
 
 # Now we have to download configuration files:
-RAW=https://raw.githubusercontent.com/chembl/mychembl/master/beaker
-curl $RAW/beaker.py > /home/chembl/chembl_beaker/conf.d/beaker.py
-curl $RAW/beaker.conf > /home/chembl/chembl_beaker/conf.d/beaker.conf
+curl $RAW_BEAKER/beaker.py > $BEAKER_DIR/beaker.py
+curl $RAW_BEAKER/beaker.conf > $BEAKER_DIR/beaker.conf
 

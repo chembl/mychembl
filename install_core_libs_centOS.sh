@@ -23,7 +23,7 @@ sudo yum install -y boost
 sudo yum install -y boost-devel
 sudo yum install -y flex
 sudo yum install -y bison
-sudo yum install -y gcc++
+sudo yum install -y gcc-c++
 sudo yum install -y cmake
 sudo yum install -y make
 sudo yum install -y libffi-devel

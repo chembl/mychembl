@@ -37,7 +37,7 @@ sudo curl -o /etc/profile.d/mychembl.sh $RAW/configuration/mychembl_bashrc
 #sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth $RAW/branding/ubuntu-text.plymouth
 
 cd /tmp
-wget $RAW/osra.sh && bash osra.sh
+wget $RAW/osra.sh && source osra.sh
 wget $RAW/rdkit_install.sh && sudo su -c "bash rdkit_install.sh" chembl
 wget $RAW/ipynb_setup.sh && sudo su -c "bash ipynb_setup.sh" chembl
 wget $RAW/ipython_notebooks/ipynb_deamonise.sh && bash ipynb_deamonise.sh

@@ -8,7 +8,7 @@ export RAW="https://raw.githubusercontent.com/chembl/mychembl/master"
 sudo yum install -y wget
 
 wget $RAW/settings.sh && source settings.sh
-wget $RAW/install_core_libs_centOS.sh && bash install_core_libs_${AUX_OS_NAME}.sh
+wget $RAW/install_core_libs_${AUX_OS_NAME}.sh && bash install_core_libs_${AUX_OS_NAME}.sh
 wget $RAW/install_py_libs.sh && bash install_py_libs.sh
 
 sudo useradd -G wheel -s /bin/bash -m chembl

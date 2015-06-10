@@ -61,7 +61,7 @@ wget $RAW/indexes.sql
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -a -f indexes.sql
 rm indexes.sql
 
-wget https://github.com/chembl/mychembl_webapp/tree/master/sql/webapp.sql
+wget https://raw.githubusercontent.com/chembl/mychembl_webapp/master/sql/webapp.sql
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -a -f webapp.sql
 rm webapp.sql
 

@@ -5,16 +5,17 @@
 # Author: Michal Nowotka, mnowotka@ebi.ac.uk
 # Created date: 20.05.2014
 
-export PATH=/home/chembl/.virtualenvs/chembl_webservices/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/chembl/.local/bin:/home/chembl/bin
-export PYTHONPATH=/home/chembl/rdkit:/home/chembl/indigo-python-1.1.11-linux
-export RDBASE=/home/chembl/rdkit
+export HOME=/home/chembl
+export PATH=$HOME/.virtualenvs/chembl_webservices/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/chembl/.local/bin:/home/chembl/bin
+export PYTHONPATH=$HOME/rdkit:$HOME/indigo-python-1.1.11-linux
+export RDBASE=$HOME/rdkit
 
-cd /home/chembl
+cd $HOME
 
 # We need indigo toolkit as alternative compound rendering engine:
-wget https://dl.dropboxusercontent.com/u/10967207/indigo-python-1.1.11-linux.zip
-unzip indigo-python-1.1.11-linux.zip
-rm indigo-python-1.1.11-linux.zip
+wget $INDIGO_LOCATION -O indigo.zip
+unzip indigo.zip
+rm indigo.zip
 
 # Source virtualenvwrapper because it makes our job lot easier:
 source virtualenvwrapper.sh
@@ -46,17 +47,17 @@ pip install django-cors-headers
 
 # OK, now we are ready to configure our webservices django app.
 # First, lets create new django project:
-cd /home/chembl
+cd $HOME
 mkdir chembl_webservices
 cd chembl_webservices/
 django-admin.py startproject deployment
 
 # Now we have to download configuration files:
-RAW=https://raw.githubusercontent.com/chembl/mychembl/master/webservices/conf
+RAW_WS=$RAW/webservices/conf
 
-curl $RAW/settings.py > deployment/deployment/settings.py
-curl $RAW/urls.py > deployment/deployment/urls.py
-curl $RAW/wsgi.py > deployment/deployment/wsgi.py
+curl $RAW_WS/settings.py > deployment/deployment/settings.py
+curl $RAW_WS/urls.py > deployment/deployment/urls.py
+curl $RAW_WS/wsgi.py > deployment/deployment/wsgi.py
 
 # Lets configure cache by creating DB table for storing the cache:
 cd deployment

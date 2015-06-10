@@ -3,7 +3,6 @@
 SUPERVISOR_DIR="/etc/supervisor.d"
 
 sudo mkdir -p $SUPERVISOR_DIR
-
 sudo curl -o $SUPERVISOR_DIR/supervisor.conf $RAW/configuration/supervisor.conf
 sudo curl -o $SUPERVISOR_DIR/ipynb.ini $RAW/configuration/ipynb.ini
 

@@ -17,16 +17,20 @@ export RDKIT_REPO="https://github.com/rdkit/rdkit"
 export RDKIT_RELEASE="Release_2015_03_1"
 
 # TCLAP (http://tclap.sourceforge.net/) location:
-export TCLAP_LOCATION="http://downloads.sourceforge.net/project/tclap/tclap-1.2.1.tar.gz"
+export TCLAP_VERSION="1.2.1"
+export TCLAP_LOCATION="http://downloads.sourceforge.net/project/tclap/tclap-${TCLAP_VERSION}.tar.gz"
 
 # OCRAD (https://www.gnu.org/software/ocrad/) location:
-export OCRAD_LOCATION="http://ftp.heanet.ie/mirrors/gnu/ocrad/ocrad-0.21.tar.gz"
+export OCRAD_VERSION="0.21"
+export OCRAD_LOCATION="http://ftp.heanet.ie/mirrors/gnu/ocrad/ocrad-${OCRAD_VERSION}.tar.gz"
 
 # GOCR location:
-export GOCR_LOCATION="http://sourceforge.net/projects/osra/files/gocr-patched/gocr-0.50pre-patched.tgz"
+export GOCR_VERSION="0.50pre-patched"
+export GOCR_LOCATION="http://sourceforge.net/projects/osra/files/gocr-patched/gocr-${GOCR_VERSION}.tgz"
 
 # OSRA location:
-export OSRA_LOCATION="http://sourceforge.net/projects/osra/files/osra/2.0.0/osra-2.0.0.tgz"
+export OSRA_VERSION="2.0.0"
+export OSRA_LOCATION="http://sourceforge.net/projects/osra/files/osra/${OSRA_VERSION}/osra-${OSRA_VERSION}.tgz"
 
 # BLAST location:
 export BLAST_LOCATION="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.29/ncbi-blast-2.2.29+-x64-linux.tar.gz"

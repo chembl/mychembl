@@ -53,3 +53,7 @@ export RAPHAEL_JS_LOCATION="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0
 
 # MathJax (https://www.mathjax.org/) location:
 export MATHJAX_LOCATION="https://cdn.mathjax.org/mathjax/latest/MathJax.js"
+
+export CHEMBL_GIT_ROOT="https://github.com/chembl"
+export MYCHEMBL_GIT="$CHEMBL_GIT_ROOT/mychembl.git"
+export MYCHEMBL_WEBAPP="$CHEMBL_GIT_ROOT/mychembl_webapp.git"

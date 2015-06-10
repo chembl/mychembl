@@ -6,6 +6,8 @@
 # Created date: 20.05.2014
 
 export PATH=/home/chembl/.virtualenvs/chembl_webservices/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/chembl/.local/bin:/home/chembl/bin
+export PYTHONPATH=/home/chembl/rdkit:/home/chembl/indigo-python-1.1.11-linux
+export RDBASE=/home/chembl/rdkit
 
 cd /home/chembl
 

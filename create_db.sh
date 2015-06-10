@@ -1,38 +1,43 @@
 #!/bin/bash
 
+export $HOME=/home/chembl
 cd /tmp
 
-CHEMBL_VERSION=20
-python -mplatform | grep Ubuntu && export POSTGRES_CONFIG=/etc/postgresql/9.3/main || export POSTGRES_CONFIG=/var/lib/pgsql/9.3/data
-python -mplatform | grep Ubuntu && export AUX_OS_NAME="Ubuntu" || export AUX_OS_NAME="CentOS"
-RAW="https://raw.githubusercontent.com/chembl/mychembl/master"
-EBI_FTP="ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_${CHEMBL_VERSION}"
-NCBI_FTP="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.29/ncbi-blast-2.2.29+-x64-linux.tar.gz"
-python -mplatform | grep Ubuntu && export SYSCTL_PATH=/etc || export SYSCTL_PATH=/usr/lib
+if [ $(python -mplatform | grep Ubuntu) ]
+   then
+       POSTGRES_CONFIG=/etc/postgresql/9.3/main
+       SYSCTL_PATH=/etc
+   else
+       POSTGRES_CONFIG=/var/lib/pgsql/9.3/data
+       SYSCTL_PATH=/usr/lib
+fi
 
 ## Creating BLAST database
-mkdir -p /home/chembl/blast/chembl
-cd /home/chembl/blast/
-wget $NCBI_FTP
-tar -xzf ncbi-blast-2.2.29+-x64-linux.tar.gz 
-rm ncbi-blast-2.2.29+-x64-linux.tar.gz
-cd /home/chembl/blast/chembl
+mkdir -p $HOME/blast/chembl
+cd $HOME/blast/
+wget $BLAST_LOCATION -O blast.tar.gz
+tar -xzf blast.tar.gz 
+rm blast.tar.gz
+cd $HOME/blast/chembl
 wget $EBI_FTP/chembl_${CHEMBL_VERSION}.fa.gz
 wget $EBI_FTP/chembl_${CHEMBL_VERSION}_bio.fa.gz
 gunzip chembl_${CHEMBL_VERSION}.fa.gz
 gunzip chembl_${CHEMBL_VERSION}_bio.fa.gz
-/home/chembl/blast/ncbi-blast-2.2.29+/bin/makeblastdb -in chembl_${CHEMBL_VERSION}.fa -dbtype prot
-/home/chembl/blast/ncbi-blast-2.2.29+/bin/makeblastdb -in chembl_${CHEMBL_VERSION}_bio.fa -dbtype prot
-cd /home/chembl
+$HOME/blast/ncbi-blast-${BLAST_VERSION}+/bin/makeblastdb -in chembl_${CHEMBL_VERSION}.fa -dbtype prot
+$HOME/blast/ncbi-blast-${BLAST_VERSION}+/bin/makeblastdb -in chembl_${CHEMBL_VERSION}_bio.fa -dbtype prot
+cd $HOME
 
-python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S mkdir /var/run/postgresql
-python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S chown postgres:postgres /var/run/postgresql
-python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S chmod 0755 /var/run/postgresql
-python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S semanage fcontext -a -t httpd_var_run_t "/var/run/postgresql(/.*)?"
-python -mplatform | grep Ubuntu && : || echo "chemblvm" | sudo -S restorecon -R /var/run/postgresql
+if [ ! $(python -mplatform | grep Ubuntu) ]
+   then
+       echo "chemblvm" | sudo -S mkdir /var/run/postgresql
+       echo "chemblvm" | sudo -S chown postgres:postgres /var/run/postgresql
+       echo "chemblvm" | sudo -S chmod 0755 /var/run/postgresql
+       echo "chemblvm" | sudo -S semanage fcontext -a -t httpd_var_run_t "/var/run/postgresql(/.*)?"
+       echo "chemblvm" | sudo -S restorecon -R /var/run/postgresql
+fi
 
 ## Download target prediction models
-wget ftp://ftp.ebi.ac.uk/pub/databases/chembl/target_predictions/chembl_${CHEMBL_VERSION}_models.tar.gz
+wget $TARGET_PREDICTIONS_LOCATION
 tar -zxf chembl_${CHEMBL_VERSION}_models.tar.gz
 rm chembl_${CHEMBL_VERSION}_models.tar.gz
 
@@ -45,7 +50,12 @@ echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configurati
 # see: http://michael.otacoo.com/postgresql-2/take-care-of-kernel-memory-limitation-for-postgresql-shared-buffers/
 echo "chemblvm" | sudo -SE bash -c 'echo "kernel.shmmax = 2147483648" > ${SYSCTL_PATH}/sysctl.d/10-mychembl-pgsql.conf'
 
-python -mplatform | grep Ubuntu && echo "chemblvm" | sudo -S service postgresql restart || echo "chemblvm" | sudo -S systemctl restart postgresql-9.3
+if [ $(python -mplatform | grep Ubuntu) ]
+   then
+       echo "chemblvm" | sudo -S service postgresql restart
+   else
+       echo "chemblvm" | sudo -S systemctl restart postgresql-9.3
+fi
 
 createdb chembl_${CHEMBL_VERSION}
 
@@ -61,12 +71,12 @@ wget $RAW/indexes.sql
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -a -f indexes.sql
 rm indexes.sql
 
-wget https://raw.githubusercontent.com/chembl/mychembl_webapp/master/sql/webapp.sql
+wget $RAW_MYCHEMBL_APP/sql/webapp.sql
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -a -f webapp.sql
 rm webapp.sql
 
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -c "create user mychembl password 'read';"
 psql --username=chembl -d chembl_${CHEMBL_VERSION} -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO mychembl;"
 
-cd /home/chembl/
+cd $HOME
 rm chembl_${CHEMBL_VERSION}_postgresql/ -rf

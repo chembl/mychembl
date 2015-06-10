@@ -41,7 +41,7 @@ wget $RAW/ipynb_setup.sh && sudo -E su -m -c "bash ipynb_setup.sh" chembl
 wget $RAW/create_db.sh && sudo su -c "bash create_db.sh" chembl
 wget $RAW/webservices/ws_setup.sh && sudo su -c "bash ws_setup.sh" chembl
 wget $RAW/beaker/install_beaker.sh && sudo su -c "bash install_beaker.sh" chembl
-wget $RAW/ipython_notebooks/ipynb_deamonise.sh && bash ipynb_deamonise.sh
+wget $RAW/ipython_notebooks/ipynb_deamonise.sh && source ipynb_deamonise.sh
 wget $RAW/apache.sh && bash apache.sh
 wget $RAW/launchpad.sh && bash launchpad.sh
 

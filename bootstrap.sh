@@ -24,7 +24,6 @@ sudo swapon /swapfile
 echo "vagrant" | sudo -Su postgres createuser -dsr chembl # sudo -u postgres createuser -dsr chembl
 
 cd /tmp
-sudo mkdir -p mkdir /usr/share/themes/mychembl
 sudo curl -o /etc/network/interfaces $RAW/configuration/mychembl_interfaces
 sudo curl -o /etc/init/failsafe.conf $RAW/configuration/failsafe.conf
 sudo curl -o /etc/profile.d/mychembl.sh $RAW/configuration/mychembl_bashrc
@@ -32,7 +31,7 @@ sudo curl -o /etc/init/mychembl-upnp.conf $RAW/zeroconf/mychembl-upnp.conf
 sudo curl -o /etc/avahi/services/mychembl.service $RAW/zeroconf/mychembl.service
 sudo curl -o /usr/bin/mychembl-upnp.py $RAW/zeroconf/mychembl-upnp.py
 sudo chmod +x /usr/bin/mychembl-upnp.py
-sudo mkdir /usr/share/themes/mychembl
+sudo mkdir -p /usr/share/themes/mychembl
 sudo curl -o /usr/share/themes/mychembl/mychembl.png $RAW/branding/mychembl.png
 sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth $RAW/branding/ubuntu-text.plymouth
 

@@ -7,9 +7,6 @@
 # myChEMBL version:
 export CHEMBL_VERSION="20"
 
-# location of raw files of this repository
-export RAW="https://raw.githubusercontent.com/chembl/mychembl/master"
-
 # operating system, currently only Ubuntu and CentOS are supported:
 python -mplatform | grep Ubuntu && export AUX_OS_NAME="Ubuntu" || export AUX_OS_NAME="CentOS"
 

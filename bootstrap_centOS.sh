@@ -45,7 +45,7 @@ wget $RAW/create_db.sh && sudo -E su -m -c "bash create_db.sh" chembl
 wget $RAW/webservices/ws_setup.sh && sudo -E su -m -c "bash ws_setup.sh" chembl
 wget $RAW/beaker/install_beaker.sh && sudo -E su -m -c "bash install_beaker.sh" chembl
 wget $RAW/apache.sh && source apache.sh
-wget $RAW/launchpad.sh && bash launchpad.sh
+wget $RAW/launchpad.sh && source launchpad.sh
 
 sudo swapoff -v /swapfile
 sudo rm /swapfile

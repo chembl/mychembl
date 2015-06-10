@@ -37,3 +37,7 @@ export BLAST_LOCATION="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.2
 
 # EBI FTP location:
 export EBI_FTP="ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_${CHEMBL_VERSION}"
+
+export RAPHAEL_JS_LOCATION="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"
+
+export MATHJAX_LOCATION="https://cdn.mathjax.org/mathjax/latest/MathJax.js"

@@ -48,22 +48,14 @@ sudo -E kill -9 $(pidof $APACHE_NAME)
 
 if [ $(python -mplatform | grep Ubuntu) ]
    then
-       APACHE_NAME="apache2"
-       APACHE_HOME=/etc/$APACHE_NAME
-       APACHE_ENV_FILE=/etc/apache2/envvars
-       APACHE_EXPORT="export "
-       PHPPGADMIN="phppgadmin"
-       APACHE_SITES="$APACHE_HOME/sites-available"
-       PHP_INI="/etc/php5/apache2/php.ini"
-       sudo a2dissite 000-default
-       sudo service apache2 reload
-       sudo -E rm $APACHE_SITES/*
+      sudo a2enmod rewrite
+      sudo a2ensite phppgadmin
+      sudo a2ensite launchpad
+      sudo a2ensite chembl_webservices
+      sudo service apache2 restart
+   else
+      sudo bash -c 'echo "LoadModule rewrite_module modules/mod_rewrite.so" > /etc/httpd/conf.modules.d/10-rewrite.conf'
+      sudo systemctl restart httpd -l
 fi
-
-python -mplatform | grep Ubuntu && sudo a2enmod rewrite || sudo bash -c 'echo "LoadModule rewrite_module modules/mod_rewrite.so" > /etc/httpd/conf.modules.d/10-rewrite.conf'
-python -mplatform | grep Ubuntu && sudo a2ensite phppgadmin
-python -mplatform | grep Ubuntu && sudo a2ensite launchpad
-python -mplatform | grep Ubuntu && sudo a2ensite chembl_webservices
-python -mplatform | grep Ubuntu && sudo service apache2 restart || sudo systemctl restart httpd -l
 
 #wget $RAW/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh

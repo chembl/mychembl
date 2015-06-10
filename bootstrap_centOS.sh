@@ -38,7 +38,7 @@ sudo curl -o /etc/profile.d/mychembl.sh $RAW/configuration/mychembl_bashrc
 
 cd /tmp
 wget $RAW/osra.sh && source osra.sh
-wget $RAW/rdkit_install.sh && sudo su -c "bash rdkit_install.sh" chembl
+wget $RAW/rdkit_install.sh && sudo -E su -m -c "bash rdkit_install.sh" chembl
 wget $RAW/ipynb_setup.sh && sudo su -c "bash ipynb_setup.sh" chembl
 wget $RAW/ipython_notebooks/ipynb_deamonise.sh && bash ipynb_deamonise.sh
 wget $RAW/create_db.sh && sudo su -c "bash create_db.sh" chembl

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HOME=/home/chembl
+export HOME=/home/chembl
 RDBASE=$HOME/rdkit
 LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 PYTHONPATH=$RDBASE:$PYTHONPATH

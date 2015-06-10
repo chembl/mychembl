@@ -25,6 +25,7 @@ sudo swapon /swapfile
 sudo -Hu postgres createuser -dsr chembl
 
 cd /tmp
+#sudo mkdir -p mkdir /usr/share/themes/mychembl
 #sudo curl -o /etc/network/interfaces $RAW/configuration/mychembl_interfaces
 #sudo curl -o /etc/init/failsafe.conf $RAW/configuration/failsafe.conf
 sudo curl -o /etc/profile.d/mychembl.sh $RAW/configuration/mychembl_bashrc

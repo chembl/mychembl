@@ -20,7 +20,8 @@ export RDKIT_REPO="https://github.com/rdkit/rdkit"
 export RDKIT_RELEASE="Release_2015_03_1"
 
 # indigo toolkit location
-export INDIGO_LOCATION="https://dl.dropboxusercontent.com/u/10967207/indigo-python-1.1.11-linux.zip"
+export INDIGO_FILENAME="indigo-python-1.1.11-linux"
+export INDIGO_LOCATION="https://dl.dropboxusercontent.com/u/10967207/${INDIGO_FILENAME}.zip"
 
 # TCLAP (http://tclap.sourceforge.net/) location:
 export TCLAP_VERSION="1.2.1"

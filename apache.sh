@@ -2,7 +2,7 @@
 
 sudo su -c "chmod -R 755 /home/chembl" chembl
 
-if [ ! $(python -mplatform | grep Ubuntu) ]
+if [ "$AUX_OS_NAME" != "Ubuntu" ]
    then
         sudo su -c "chcon -R -t httpd_user_content_t /home/chembl" chembl
         sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/rdkit" chembl
@@ -13,7 +13,7 @@ if [ ! $(python -mplatform | grep Ubuntu) ]
         sudo setsebool -P httpd_enable_homedirs on
 fi
 
-if [ $(python -mplatform | grep Ubuntu) ]
+if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then
        export APACHE_NAME="apache2"
        export APACHE_HOME=/etc/$APACHE_NAME
@@ -46,7 +46,7 @@ sudo -E curl -o $PGADMIN_CONFIG $RAW/configuration/phppgadmin_${AUX_OS_NAME}.con
 sudo -E curl -o $PHP_INI $RAW/configuration/mychembl_php.ini
 sudo -E kill -9 $(pidof $APACHE_NAME)
 
-if [ $(python -mplatform | grep Ubuntu) ]
+if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then
       sudo a2enmod rewrite
       sudo a2ensite phppgadmin

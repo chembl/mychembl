@@ -15,27 +15,27 @@ fi
 
 if [ $(python -mplatform | grep Ubuntu) ]
    then
-       APACHE_NAME="apache2"
-       APACHE_HOME=/etc/$APACHE_NAME
-       APACHE_ENV_FILE=/etc/apache2/envvars
-       APACHE_EXPORT="export "
-       PHPPGADMIN="phppgadmin"
-       APACHE_SITES="$APACHE_HOME/sites-available"
-       PHP_INI="/etc/php5/apache2/php.ini"
+       export APACHE_NAME="apache2"
+       export APACHE_HOME=/etc/$APACHE_NAME
+       export APACHE_ENV_FILE=/etc/apache2/envvars
+       export APACHE_EXPORT="export "
+       export PHPPGADMIN="phppgadmin"
+       export APACHE_SITES="$APACHE_HOME/sites-available"
+       export PHP_INI="/etc/php5/apache2/php.ini"
        sudo a2dissite 000-default
        sudo service apache2 reload
        sudo -E rm $APACHE_SITES/*
    else
-       APACHE_NAME="httpd"
-       APACHE_HOME=/etc/$APACHE_NAME
-       APACHE_ENV_FILE=/etc/sysconfig/httpd
-       APACHE_EXPORT=""
-       PHPPGADMIN="phpPgAdmin"
-       APACHE_SITES="$APACHE_HOME/conf.d"
-       PHP_INI="/etc/php.ini"
+       export APACHE_NAME="httpd"
+       export APACHE_HOME=/etc/$APACHE_NAME
+       export APACHE_ENV_FILE=/etc/sysconfig/httpd
+       export APACHE_EXPORT=""
+       export PHPPGADMIN="phpPgAdmin"
+       export APACHE_SITES="$APACHE_HOME/conf.d"
+       export PHP_INI="/etc/php.ini"
 fi
 
-PGADMIN_CONFIG="$APACHE_SITES/$PHPPGADMIN.conf"
+export PGADMIN_CONFIG="$APACHE_SITES/$PHPPGADMIN.conf"
 
 sudo -E curl -o $APACHE_SITES/launchpad.conf $RAW/configuration/launchpad.conf
 sudo -E curl -o $APACHE_SITES/chembl_webservices.conf $RAW/webservices/conf/chembl_webservices.conf

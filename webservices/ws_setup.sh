@@ -9,6 +9,7 @@ export HOME=/home/chembl
 export PATH=$HOME/.virtualenvs/chembl_webservices/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/chembl/.local/bin:/home/chembl/bin
 export PYTHONPATH=$HOME/rdkit:$HOME/indigo-python-1.1.11-linux
 export RDBASE=$HOME/rdkit
+export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 
 cd $HOME
 

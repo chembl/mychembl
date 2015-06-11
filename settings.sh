@@ -58,4 +58,5 @@ export CHEMBL_GIT_ROOT="https://github.com/chembl"
 export MYCHEMBL_GIT="$CHEMBL_GIT_ROOT/mychembl.git"
 export MYCHEMBL_WEBAPP="$CHEMBL_GIT_ROOT/mychembl_webapp.git"
 
-export JSME_LOCATION="http://peter-ertl.com/jsme/download/JSME_2013-08-04.zip"
+export JSME_VERSION="2013-08-04"
+export JSME_LOCATION="http://peter-ertl.com/jsme/download/JSME_${JSME_VERSION}.zip"

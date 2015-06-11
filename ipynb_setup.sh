@@ -38,7 +38,7 @@ touch $WORKBENCH/__init__.py
 # install some files to ipynb_workbench:
 curl -o $WORKBENCH/physchem_props_heatmap.csv $I_NOTEBOOKS/physchem_props_heatmap.csv
 curl -o $WORKBENCH/settings.py $I_NOTEBOOKS/settings.py
-sed -i 's/chembl_XXX/chembl_${CHEMBL_VERSION}/' $WORKBENCH/settings.py
+sed -i 's/chembl_XXX/chembl_${CHEMBL_VERSION}/g' $WORKBENCH/settings.py
 curl -o $WORKBENCH/A2A_Adenosine_set_mychembl.csv $I_NOTEBOOKS/A2A_Adenosine_set_mychembl.csv
 curl -o $WORKBENCH/US_antimalarial_patents_cmpds.txt $I_NOTEBOOKS/US_antimalarial_patents_cmpds.txt
 curl -o $WORKBENCH/fps.pkl $I_NOTEBOOKS/fps.pkl

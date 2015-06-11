@@ -6,7 +6,7 @@ if [ ! $(python -mplatform | grep Ubuntu) ]
    then
         sudo su -c "chcon -R -t httpd_user_content_t /home/chembl" chembl
         sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/rdkit" chembl
-        sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/indigo-python-1.1.11-linux" chembl
+        sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/indigo" chembl
         sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/.virtualenvs" chembl
         sudo setsebool -P httpd_can_network_connect_db on
         sudo setsebool -P httpd_can_network_connect on

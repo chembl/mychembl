@@ -57,6 +57,7 @@ django-admin.py startproject deployment
 RAW_WS=$RAW/webservices/conf
 
 curl $RAW_WS/settings.py > deployment/deployment/settings.py
+sed -i 's/chembl_XXX/chembl_${CHEMBL_VERSION}/' deployment/deployment/settings.py
 curl $RAW_WS/urls.py > deployment/deployment/urls.py
 curl $RAW_WS/wsgi.py > deployment/deployment/wsgi.py
 

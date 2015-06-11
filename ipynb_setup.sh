@@ -18,6 +18,7 @@ curl -o $NOTEBOOKS/09_myChEMBL_BLAST_and_druggability.ipynb $I_NOTEBOOKS/09_myCh
 curl -o $NOTEBOOKS/10_myChEMBL_machine_learning.ipynb $I_NOTEBOOKS/10_myChEMBL_machine_learning.ipynb
 curl -o $NOTEBOOKS/11_myChEMBL_SureChEMBL.ipynb $I_NOTEBOOKS/11_myChEMBL_SureChEMBL.ipynb
 curl -o $NOTEBOOKS/12_myChEMBL_drugs_ADME.ipynb $I_NOTEBOOKS/12_myChEMBL_drugs_ADME.ipynb
+sed -i 's/chembl_XXX/chembl_${CHEMBL_VERSION}/g' $NOTEBOOKS/*.ipynb
 
 ipython profile create mychembl
 curl -o $HOME/.ipython/profile_mychembl/ipython_notebook_config.py $RAW/configuration/mychembl_ipython_notebook_config.py

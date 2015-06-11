@@ -18,4 +18,4 @@ unzip JSME.zip
 sudo -E mv JSME_${JSME_VERSION}/jsme ${AUX_WWW}mychembl/static/js/
 
 sudo -E kill -9 $(pidof $APACHE_NAME)
-python -mplatform | grep Ubuntu && sudo service apache2 restart || sudo systemctl restart httpd -l
+[[ "$AUX_OS_NAME" = "Ubuntu" ]] && sudo service apache2 restart || sudo systemctl restart httpd -l

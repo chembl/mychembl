@@ -3,7 +3,7 @@
 export HOME=/home/chembl
 cd /tmp
 
-if [ $(python -mplatform | grep Ubuntu) ]
+if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then
        export POSTGRES_CONFIG=/etc/postgresql/9.3/main
        export SYSCTL_PATH=/etc
@@ -27,7 +27,7 @@ $HOME/blast/ncbi-blast-${BLAST_VERSION}+/bin/makeblastdb -in chembl_${CHEMBL_VER
 $HOME/blast/ncbi-blast-${BLAST_VERSION}+/bin/makeblastdb -in chembl_${CHEMBL_VERSION}_bio.fa -dbtype prot
 cd $HOME
 
-if [ ! $(python -mplatform | grep Ubuntu) ]
+if [ "$AUX_OS_NAME" != "Ubuntu" ]
    then
        echo "chemblvm" | sudo -S mkdir /var/run/postgresql
        echo "chemblvm" | sudo -S chown postgres:postgres /var/run/postgresql
@@ -50,7 +50,7 @@ echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configurati
 # see: http://michael.otacoo.com/postgresql-2/take-care-of-kernel-memory-limitation-for-postgresql-shared-buffers/
 echo "chemblvm" | sudo -SE bash -c 'echo "kernel.shmmax = 2147483648" > ${SYSCTL_PATH}/sysctl.d/10-mychembl-pgsql.conf'
 
-if [ $(python -mplatform | grep Ubuntu) ]
+if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then
        echo "chemblvm" | sudo -S service postgresql restart
    else

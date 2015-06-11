@@ -6,7 +6,7 @@ sudo mkdir -p $SUPERVISOR_DIR
 sudo curl -o $SUPERVISOR_DIR/supervisor.conf $RAW/configuration/supervisor.conf
 sudo curl -o $SUPERVISOR_DIR/ipynb.ini $RAW/configuration/ipynb.ini
 
-if [ $(python -mplatform | grep Ubuntu) ]
+if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then
        sudo curl -o /etc/init.d/supervisord $RAW/configuration/supervisord
        sudo chmod +x /etc/init.d/supervisord

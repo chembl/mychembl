@@ -1,15 +1,15 @@
 #!/bin/bash
 
-export $HOME=/home/chembl
+export HOME=/home/chembl
 cd /tmp
 
 if [ $(python -mplatform | grep Ubuntu) ]
    then
-       POSTGRES_CONFIG=/etc/postgresql/9.3/main
-       SYSCTL_PATH=/etc
+       export POSTGRES_CONFIG=/etc/postgresql/9.3/main
+       export SYSCTL_PATH=/etc
    else
-       POSTGRES_CONFIG=/var/lib/pgsql/9.3/data
-       SYSCTL_PATH=/usr/lib
+       export POSTGRES_CONFIG=/var/lib/pgsql/9.3/data
+       export SYSCTL_PATH=/usr/lib
 fi
 
 ## Creating BLAST database

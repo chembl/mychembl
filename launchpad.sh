@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python -mplatform | grep Ubuntu && export APACHE_NAME="apache2" || export APACHE_NAME="httpd"
+[[ "$AUX_OS_NAME" = "Ubuntu" ]] && export APACHE_NAME="apache2" || export APACHE_NAME="httpd"
 export AUX_WWW="/var/www/html/"
 
 cd /tmp

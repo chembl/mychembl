@@ -8,7 +8,7 @@ export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 
 ## RDKit ENV variables
 export RDBASE=$HOME/rdkit
-export INDIGOBASE=$HOME/indigo-python-1.1.11-linux
+export INDIGOBASE=$HOME/indigo
 export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=$RDBASE:$INDIGOBASE:$PYTHONPATH
 source virtualenvwrapper.sh

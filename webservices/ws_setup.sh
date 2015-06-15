@@ -6,6 +6,7 @@
 # Created date: 20.05.2014
 
 export HOME=/home/chembl
+export VIRTUALENVWRAPPER_PYTHON=$(which python)
 export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/chembl/.local/bin:/home/chembl/bin
 export PYTHONPATH=$HOME/rdkit:$HOME/indigo
 export RDBASE=$HOME/rdkit

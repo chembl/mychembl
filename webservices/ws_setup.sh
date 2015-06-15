@@ -10,6 +10,7 @@ export PATH=$HOME/.virtualenvs/chembl_webservices/bin:/usr/local/bin:/bin:/usr/b
 export PYTHONPATH=$HOME/rdkit:$HOME/indigo
 export RDBASE=$HOME/rdkit
 export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
+export WORKON_HOME=$HOME/.virtualenvs
 
 cd $HOME
 

@@ -11,7 +11,7 @@ sudo -E mkdir -p ${AUX_WWW}mychembl
 sudo -E cp -r mychembl/launchpad/* $AUX_WWW
 sudo -E cp -r mychembl/launchpad/.htaccess $AUX_WWW
 sudo -E cp -r mychembl_webapp/* ${AUX_WWW}mychembl/
-sed -i "s/Release XXX/Release ${CHEMBL_VERSION}/g" ${AUX_WWW}*.php
+sudo -E sed -i "s/Release XXX/Release ${CHEMBL_VERSION}/g" ${AUX_WWW}*.php
 
 wget $JSME_LOCATION -O JSME.zip
 unzip JSME.zip

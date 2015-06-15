@@ -36,7 +36,7 @@ pip install tastypie_spore_docs
 # Because webservices on myChEMBL VM will be run against exported CHEMBL schema,
 # which is only a subset of chembl_app schema we will have to install
 # a compatibility layer that can handle differences between schemas:
-pip install chembl_compatibility
+pip install 'chembl_compatibility>=2.0.0'
 
 # webservices are DB agnostic so they are not shipped with any specific DB
 # driver. We have to install the driver separately, in case of myChEMBL this

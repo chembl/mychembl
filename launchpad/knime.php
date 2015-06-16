@@ -34,7 +34,7 @@
           The KREST nodes send GET or POST requests to the server and format the response back to a KNIME table.</li>
           </ul>
           </p>
-          <p>For an example workflow showcasing the KNIME/myChEMBL connectivity, download <a href="/assets/knime/myChEMBL18_KNIME.zip">this</a> file to your host machine. 
+          <p>For an example workflow showcasing the KNIME/myChEMBL connectivity, download <a href="/assets/knime/myChEMBLXXX_KNIME.zip">this</a> file to your host machine. 
           Then, open your KNIME desktop on your host machine and click File --> Import KNIME workflow... --> Select archive file --> Browse.. and then navigate to the zip file you’ve just downloaded and click Finish. 
           If everything worked properly, you will be able to see something like this on your KNIME desktop:
           </p>
@@ -42,7 +42,7 @@
           <span><img src="/assets/img/knime_workflows.png" /></a>
     
           <h4><i class="fa fa-rocket"></i>&nbsp;Downloads</h4>
-          <p><a href="/assets/knime/myChEMBL19_KNIME.zip">myChEMBL19_KNIME.zip</a></p>
+          <p><a href="/assets/knime/myChEMBLXXX_KNIME.zip">myChEMBLXXX_KNIME.zip</a></p>
           
         </div>
       </div>

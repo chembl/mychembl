@@ -34,6 +34,7 @@ if [ "$AUX_OS_NAME" != "Ubuntu" ]
        echo "chemblvm" | sudo -S chmod 0755 /var/run/postgresql
        echo "chemblvm" | sudo -S semanage fcontext -a -t httpd_var_run_t "/var/run/postgresql(/.*)?"
        echo "chemblvm" | sudo -S restorecon -R /var/run/postgresql
+       echo "chemblvm" | sudo -SE curl -o /etc/tmpfiles.d/postgres.conf $RAW/configuration/tmp_postgres.conf
 fi
 
 ## Download target prediction models

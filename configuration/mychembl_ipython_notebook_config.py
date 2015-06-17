@@ -71,7 +71,7 @@ c.NotebookApp.port = 9612
 # c.NotebookApp.base_url = '/'
 
 # The directory to use for notebooks and kernels.
-c.NotebookApp.notebook_dir = u'/home/chembl/notebooks'
+c.NotebookApp.notebook_dir = u'/home/chembl/ipynb_workbench'
 
 # 
 # c.NotebookApp.file_to_run = ''
@@ -622,7 +622,7 @@ c.IPKernelApp.pylab = 'inline'
 # c.FileNotebookManager.save_script = False
 
 # 
-c.FileNotebookManager.notebook_dir = u'/home/chembl/notebooks'
+c.FileContentsManager.root_dir = u'/home/chembl/notebooks'
 
 #------------------------------------------------------------------------------
 # NotebookNotary configuration

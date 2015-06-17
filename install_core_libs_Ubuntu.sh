@@ -20,6 +20,7 @@ sudo apt-get install -y g++
 sudo apt-get install -y cmake
 sudo apt-get install -y make
 sudo apt-get install -y libffi-dev
+sudo apt-get install -y gfortran libopenblas-dev liblapack-dev
 sudo apt-get install -y libxml2 libxml2-dev
 sudo apt-get install -y libxslt1.1 libxslt1-dev
 sudo apt-get install -y wget

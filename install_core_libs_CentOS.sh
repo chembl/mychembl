@@ -27,6 +27,7 @@ sudo yum install -y gcc-c++
 sudo yum install -y cmake
 sudo yum install -y make
 sudo yum install -y libffi-devel
+sudo yum install -y lapack-devel
 sudo yum -y --enablerepo=epel install uuid
 sudo yum install -y postgresql93 postgresql93-server postgresql93-contrib postgresql93-devel postgresql93-libs --disablerepo=* --enablerepo=pgdg93
 sudo yum install -y python-psycopg2

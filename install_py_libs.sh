@@ -10,6 +10,7 @@ sudo -H pip install lxml
 sudo -H pip install supervisor --pre
 sudo -H pip install Pillow
 sudo -H pip install numpy
+sudo -H pip install scipy
 sudo -H pip install matplotlib
 sudo -H pip install networkx
 sudo -H pip install "ipython[notebook]"

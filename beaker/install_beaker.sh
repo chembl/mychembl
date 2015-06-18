@@ -9,20 +9,19 @@ export HOME=/home/chembl
 BEAKER_DIR="$HOME/chembl_beaker/conf.d"
 RAW_BEAKER=$RAW/beaker
 
-# First, create a new virtualenv called chembl_beaker
+# Switching to webservices virtualenv, beaker should be already installed
 source virtualenvwrapper.sh
-mkvirtualenv chembl_beaker
+workon chembl_webservices
+
+pip install chembl_beaker
 
 # Install all (optional) dependencies 
-pip install Pillow
 pip install standardiser
+pip install matplotlib
+pip install Pillow
 pip install lxml
 pip install cairocffi
 pip install numpy
-pip install matplotlib
-
-#installing beaker:
-pip install chembl_beaker
 
 #configure beaker and Apache:
 mkdir -p $BEAKER_DIR
@@ -30,4 +29,3 @@ mkdir -p $BEAKER_DIR
 # Now we have to download configuration files:
 curl $RAW_BEAKER/beaker.py > $BEAKER_DIR/beaker.py
 curl $RAW_BEAKER/beaker.conf > $BEAKER_DIR/beaker.conf
-

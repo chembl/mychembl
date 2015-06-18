@@ -25,9 +25,8 @@ curl -o $HOME/.ipython/profile_mychembl/ipython_notebook_config.py $RAW/configur
 
 cd /home/chembl/.ipython/nbextensions/
 wget $RAPHAEL_JS_LOCATION
-mkdir mathjax
-cd mathjax
-wget $MATHJAX_LOCATION
+
+python -m IPython.external.mathjax
 
 # create directory for storing temporary files:
 mkdir $WORKBENCH

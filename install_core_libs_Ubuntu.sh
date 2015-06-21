@@ -26,6 +26,7 @@ sudo apt-get install -y libxslt1.1 libxslt1-dev
 sudo apt-get install -y wget
 sudo apt-get install -y python-psycopg2
 sudo apt-get install -y python-imaging-tk
+sudo apt-get install -y python-cairo
 sudo apt-get install -y libnss-mdns
 sudo apt-get install -y avahi-utils
 sudo apt-get install -y python-gobject

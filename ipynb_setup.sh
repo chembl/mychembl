@@ -40,6 +40,7 @@ curl -o $WORKBENCH/settings.py $I_NOTEBOOKS/settings.py
 sed -i "s/chembl_XXX/chembl_${CHEMBL_VERSION}/g" $WORKBENCH/settings.py
 curl -o $WORKBENCH/A2A_Adenosine_set_mychembl.csv $I_NOTEBOOKS/A2A_Adenosine_set_mychembl.csv
 curl -o $WORKBENCH/US_antimalarial_patents_cmpds.txt $I_NOTEBOOKS/US_antimalarial_patents_cmpds.txt
+curl -o $WORKBENCH/document_chemistry_20141011_114421_271.csv $I_NOTEBOOKS/document_chemistry_20141011_114421_271.csv
 curl -o $WORKBENCH/fps.pkl $I_NOTEBOOKS/fps.pkl
 curl -o $WORKBENCH/smiles_cas_N6512.smi $I_NOTEBOOKS/smiles_cas_N6512.smi
 

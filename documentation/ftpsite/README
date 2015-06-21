@@ -26,11 +26,11 @@ README                      This file
 
 REQUIRED_ATTRIBUTION        ChEMBL data required attribution file 
 
-myChEMBL-19_0-disk1.vmdk    myChEMBL Virtual Machine Disk file
+myChEMBL-20_0-disk1.vmdk    myChEMBL Virtual Machine Disk file
 
-myChEMBL-19_0.mf            myChEMBL manifest file
+myChEMBL-20_0.mf            myChEMBL manifest file
 
-myChEMBL-19_0.ovf           myChEMBL Open Virtualization Format file
+myChEMBL-20_0.ovf           myChEMBL Open Virtualization Format file
 
 
 These .vmdk, .ovf and .mf files have been created using the "Export an OVF

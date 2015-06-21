@@ -23,7 +23,7 @@ Nothing fancy, just modifying the Plymouth console config to change colours and 
 	ModuleName=ubuntu-text
 
 	[ubuntu-text]
-	title=myChEMBL 19
+	title=myChEMBL 20
 	black=0x207a7a
 	white=0xafeeee
 	brown=0x70bdbd

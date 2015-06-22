@@ -10,7 +10,7 @@ curl -o $NOTEBOOKS/01_myChEMBL_introduction.ipynb $I_NOTEBOOKS/01_myChEMBL_intro
 curl -o $NOTEBOOKS/02_myChEMBL_RDKit_tutorial.ipynb $I_NOTEBOOKS/02_myChEMBL_RDKit_tutorial.ipynb
 curl -o $NOTEBOOKS/03_myChEMBL_predict_targets.ipynb $I_NOTEBOOKS/03_myChEMBL_predict_targets.ipynb
 curl -o $NOTEBOOKS/04_myChEMBL_plotting_tutorial.ipynb $I_NOTEBOOKS/04_myChEMBL_plotting_tutorial.ipynb
-curl -o $NOTEBOOKS/05_myChEMBL_mds_tutorial.ipynb $I_NOTEBOOKS/05_myChEMBL_mds_tutorial.ipynb
+curl -o $NOTEBOOKS/05_myChEMBL_MDS_tutorial.ipynb $I_NOTEBOOKS/05_myChEMBL_mds_tutorial.ipynb
 curl -o $NOTEBOOKS/06_myChEMBL_differences_with_ChEMBL.ipynb $I_NOTEBOOKS/06_myChEMBL_differences_with_ChEMBL.ipynb
 curl -o $NOTEBOOKS/07_myChEMBL_Beaker.ipynb $I_NOTEBOOKS/07_myChEMBL_Beaker.ipynb
 curl -o $NOTEBOOKS/08_myChEMBL_Django_ORM.ipynb $I_NOTEBOOKS/08_myChEMBL_Django_ORM.ipynb

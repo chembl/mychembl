@@ -7,17 +7,20 @@ I_NOTEBOOKS="$RAW/ipython_notebooks"
 
 mkdir $NOTEBOOKS
 curl -o $NOTEBOOKS/01_myChEMBL_introduction.ipynb $I_NOTEBOOKS/01_myChEMBL_introduction.ipynb
-curl -o $NOTEBOOKS/02_myChEMBL_web_services.ipynb $I_NOTEBOOKS/02_myChEMBL_web_services.ipynb
+curl -o $NOTEBOOKS/02_myChEMBL_RDKit_tutorial.ipynb $I_NOTEBOOKS/02_myChEMBL_RDKit_tutorial.ipynb
 curl -o $NOTEBOOKS/03_myChEMBL_predict_targets.ipynb $I_NOTEBOOKS/03_myChEMBL_predict_targets.ipynb
 curl -o $NOTEBOOKS/04_myChEMBL_plotting_tutorial.ipynb $I_NOTEBOOKS/04_myChEMBL_plotting_tutorial.ipynb
-curl -o $NOTEBOOKS/05_myChEMBL_MDS_tutorial.ipynb $I_NOTEBOOKS/05_myChEMBL_mds_tutorial.ipynb
+curl -o $NOTEBOOKS/05_myChEMBL_mds_tutorial.ipynb $I_NOTEBOOKS/05_myChEMBL_mds_tutorial.ipynb
 curl -o $NOTEBOOKS/06_myChEMBL_differences_with_ChEMBL.ipynb $I_NOTEBOOKS/06_myChEMBL_differences_with_ChEMBL.ipynb
 curl -o $NOTEBOOKS/07_myChEMBL_Beaker.ipynb $I_NOTEBOOKS/07_myChEMBL_Beaker.ipynb
 curl -o $NOTEBOOKS/08_myChEMBL_Django_ORM.ipynb $I_NOTEBOOKS/08_myChEMBL_Django_ORM.ipynb
-curl -o $NOTEBOOKS/09_myChEMBL_BLAST_and_druggability.ipynb $I_NOTEBOOKS/09_myChEMBL_BLAST_and_druggability.ipynb
+curl -o $NOTEBOOKS/09_myChEMBL_web_services.ipynb $I_NOTEBOOKS/09_myChEMBL_web_services.ipynb
 curl -o $NOTEBOOKS/10_myChEMBL_machine_learning.ipynb $I_NOTEBOOKS/10_myChEMBL_machine_learning.ipynb
-curl -o $NOTEBOOKS/11_myChEMBL_SureChEMBL.ipynb $I_NOTEBOOKS/11_myChEMBL_SureChEMBL.ipynb
-curl -o $NOTEBOOKS/12_myChEMBL_drugs_ADME.ipynb $I_NOTEBOOKS/12_myChEMBL_drugs_ADME.ipynb
+curl -o $NOTEBOOKS/11_myChEMBL_SureChEMBL_tutorial_1.ipynb $I_NOTEBOOKS/11_myChEMBL_SureChEMBL_tutorial_1.ipynb
+curl -o $NOTEBOOKS/12_myChEMBL_SureChEMBL_tutorial_2.ipynb $I_NOTEBOOKS/12_myChEMBL_SureChEMBL_tutorial_2.ipynb
+curl -o $NOTEBOOKS/13_myChEMBL_drugs_ADME.ipynb $I_NOTEBOOKS/13_myChEMBL_drugs_ADME.ipynb
+curl -o $NOTEBOOKS/14_myChEMBL_BLAST_and_druggability.ipynb $I_NOTEBOOKS/14_myChEMBL_BLAST_and_druggability.ipynb
+
 sed -i "s/chembl_XXX/chembl_${CHEMBL_VERSION}/g" $NOTEBOOKS/*.ipynb
 
 ipython profile create mychembl

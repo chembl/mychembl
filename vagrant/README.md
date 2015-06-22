@@ -1,7 +1,7 @@
 ## Chef provisioning / berkshelf / Berksfile is not currenty used
 
 Becasue of the problems we had (some of them described [here](https://stackoverflow.com/questions/23652761/why-berkshelf-vagrant-plugin-ignores-git-source)) we decided to temporarily switch to simple
-bash provisioning. This means that Berksfile is not necessary. All you have to do to brew your own mycheml
+bash provisioning. This means that Berksfile is not necessary. All you have to do to brew your own mychembl
 machine is:
 
     vagrant up

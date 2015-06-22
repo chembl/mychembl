@@ -17,7 +17,7 @@
           
           <h4><i class="fa fa-rocket"></i>&nbsp;How do I get KNIME?</h4>
           <p>Installing KNIME is really easy across all popular platforms (Windows, Mac OS, Linux). 
-          Just follow <a href="http://www.knime.org/node/81" target="_blank">this</a> link.</p>
+          Just follow <a href="https://www.knime.org/downloads/overview" target="_blank">this</a> link.</p>
           
           <h4><i class="fa fa-rocket"></i>&nbsp;How do I find out more about KNIME?</h4>
           <p>Here’s a useful <a href="http://www.knime.org/learning-hub" target="_blank">page</a>. 

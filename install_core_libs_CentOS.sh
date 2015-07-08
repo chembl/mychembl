@@ -54,6 +54,7 @@ sudo yum install -y phpPgAdmin
 sudo yum install -y mod_wsgi
 sudo yum install -y vim-enhanced
 sudo yum install -y policycoreutils-python
+sudo yum install -y yum-cron
 
 gem install gist
 

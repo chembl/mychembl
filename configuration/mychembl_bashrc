@@ -7,8 +7,8 @@ HISTFILESIZE=1000000
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 ## RDKit ENV variables
-export RDBASE=$HOME/rdkit
-export INDIGOBASE=$HOME/indigo
+export RDBASE=/home/chembl/rdkit
+export INDIGOBASE=/home/chembl/indigo
 export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=$RDBASE:$INDIGOBASE:$PYTHONPATH
 source virtualenvwrapper.sh

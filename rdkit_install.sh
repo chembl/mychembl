@@ -5,7 +5,7 @@ export RDBASE=$HOME/rdkit
 export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=$RDBASE:$PYTHONPATH
 [[ "$AUX_OS_NAME" = "Ubuntu" ]] && export PATH=$PATH || export PATH=$PATH:/usr/pgsql-9.3/bin/
-[[ "$AUX_OS_NAME" = "Ubuntu" ]] && export PYTHON_NUMPY_INCLUDE_PATH=/usr/local/lib/python2.7/dist-packages/numpy/ || export PYTHON_NUMPY_INCLUDE_PATH=/usr/lib/python2.7/site-packages/numpy/
+[[ "$AUX_OS_NAME" = "Ubuntu" ]] && export PYTHON_NUMPY_INCLUDE_PATH=/usr/local/lib/python2.7/dist-packages/numpy/core/include/ || export PYTHON_NUMPY_INCLUDE_PATH=/usr/lib/python2.7/site-packages/numpy/core/include/
 
 cd $HOME
 git clone $RDKIT_REPO

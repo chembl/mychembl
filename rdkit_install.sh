@@ -5,6 +5,7 @@ export RDBASE=$HOME/rdkit
 export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=$RDBASE:$PYTHONPATH
 [[ "$AUX_OS_NAME" = "Ubuntu" ]] && export PATH=$PATH || export PATH=$PATH:/usr/pgsql-9.3/bin/
+[[ "$AUX_OS_NAME" = "Ubuntu" ]] && export PYTHON_NUMPY_INCLUDE_PATH=/usr/local/lib/python2.7/dist-packages/numpy/ || export PYTHON_NUMPY_INCLUDE_PATH=/usr/lib/python2.7/site-packages/numpy/
 
 cd $HOME
 git clone $RDKIT_REPO
@@ -17,7 +18,7 @@ bash download-inchi.sh
 cd $RDBASE
 mkdir build
 cd build
-cmake -DRDK_BUILD_INCHI_SUPPORT=ON -DBoost_USE_STATIC_LIBS=OFF ..
+cmake -DRDK_BUILD_INCHI_SUPPORT=ON -DBoost_USE_STATIC_LIBS=OFF -DPYTHON_NUMPY_INCLUDE_PATH=$PYTHON_NUMPY_INCLUDE_PATH ..
 make -j4 install
 ctest
 

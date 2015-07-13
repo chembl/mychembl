@@ -51,5 +51,6 @@ sudo apt-get install -y php5-pgsql
 sudo apt-get install -y phppgadmin
 sudo apt-get install -y libapache2-mod-wsgi
 sudo apt-get install -y ruby
+sudo apt-get install -y iptables
 
 sudo gem install gist

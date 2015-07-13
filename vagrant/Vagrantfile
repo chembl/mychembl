@@ -1,18 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 VAGRANTFILE_API_VERSION = "2"
+ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.provider "virtualbox" do |v|
-    v.memory = 4096
-    v.cpus = 2
-    v.customize(['storagectl', :id, '--name', 'SATAController', '--hostiocache', 'off'])
-  end
-  config.vm.box = "ubuntu/trusty64"
-  config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
+    config.vm.define "mychembl" do |mychembl|
+        mychembl.vm.hostname = "mychembl"
+        mychembl.vm.box = "trusty-server"
+        mychembl.vm.box_url = "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box"
+    end
+    config.vm.provider "virtualbox" do |v|
+        v.memory = 4096
+        v.cpus = 2
+        v.customize(['storagectl', :id, '--name', 'SATA Controller', '--hostiocache', 'on'])
+    end
 
-  config.vm.network "forwarded_port", guest: 80, host: 8000, auto_correct: true
-  config.vm.network "forwarded_port", guest: 9612, host: 9612, auto_correct: true
-  config.vm.network "forwarded_port", guest: 5432, host: 5432, auto_correct: true
+    config.vm.network "forwarded_port", guest: 80, host: 8000, auto_correct: true
+    config.vm.network "forwarded_port", guest: 9612, host: 9612, auto_correct: true
+    config.vm.network "forwarded_port", guest: 5432, host: 5432, auto_correct: true
 
-  config.vm.provision :shell, :path => "../bootstrap.sh"
 end
-

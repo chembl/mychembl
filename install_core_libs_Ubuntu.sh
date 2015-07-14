@@ -53,5 +53,7 @@ sudo apt-get install -y libapache2-mod-wsgi
 sudo apt-get install -y ruby
 sudo apt-get install -y iptables
 sudo apt-get install -y curl
+sudo apt-get install -y openssh-server
+sudo apt-get install -y vim
 
 sudo gem install gist

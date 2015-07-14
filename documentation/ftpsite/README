@@ -26,9 +26,9 @@ README                      This file
 
 REQUIRED_ATTRIBUTION        ChEMBL data required attribution file 
 
-Ubuntu                      Directory containing Ubuntu 14.04 OS myChEMBL VM in 3 VM technologies (VirtualBox, QEMU-KVM, Generic) 
+Ubuntu                      Directory containing Ubuntu 14.04 myChEMBL VM in 3 VM technologies (VirtualBox, QEMU-KVM, Generic) 
 
-CentOS                      Directory containing CentOS 7 OS myChEMBL VM in 3 VM technologies (VirtualBox, QEMU-KVM, Generic)
+CentOS                      Directory containing CentOS 7 myChEMBL VM in 3 VM technologies (VirtualBox, QEMU-KVM, Generic)
 
 Each VM directory contains 3 files, for example for Ubuntu/VirtualBox:
 

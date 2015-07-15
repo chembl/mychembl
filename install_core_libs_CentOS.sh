@@ -55,6 +55,7 @@ sudo yum install -y mod_wsgi
 sudo yum install -y vim-enhanced
 sudo yum install -y policycoreutils-python
 sudo yum install -y yum-cron
+sudo yum install -y openssh-server
 
 gem install gist
 

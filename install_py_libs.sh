@@ -28,5 +28,12 @@ sudo -H pip install -U paste
 sudo -H pip install -U netifaces
 sudo -H pip install virtualenv
 sudo -H pip install virtualenvwrapper
+
+wget $CHEM_FP_LOCATION
+tar -zxvf $CHEM_FP_VERSION.tar.gz
+cd $CHEM_FP_VERSION
+sudo python setup.py install
+rm $CHEM_FP_VERSION.tar.gz
+
 python -c "import mpld3; mpld3.utils.write_ipynb_local_js()"
 

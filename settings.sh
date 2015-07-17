@@ -58,3 +58,7 @@ export MYCHEMBL_WEBAPP="$CHEMBL_GIT_ROOT/mychembl_webapp.git"
 
 export JSME_VERSION="2013-08-04"
 export JSME_LOCATION="http://peter-ertl.com/jsme/download/JSME_${JSME_VERSION}.zip"
+
+# chem_fp (https://code.google.com/p/chem-fingerprints/) version:
+export CHEM_FP_VERSION="chemfp-1.1p1"
+export CHEM_FP_LOCATION="https://pypi.python.org/packages/source/c/chemfp/${CHEM_FP_VERSION}.tar.gz"

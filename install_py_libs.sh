@@ -28,6 +28,7 @@ sudo -H pip install -U paste
 sudo -H pip install -U netifaces
 sudo -H pip install virtualenv
 sudo -H pip install virtualenvwrapper
+sudo -H pip install progressbar
 
 wget $CHEM_FP_LOCATION
 tar -zxvf $CHEM_FP_VERSION.tar.gz

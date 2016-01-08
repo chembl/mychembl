@@ -14,22 +14,45 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
                             <p>{{ post.description }}</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">{{ post.client }}</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">{{ post.project-date }}</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">{{ post.category }}</a>
-                                    </strong>
-                                </li>
-                            </ul>
+
+
+                          <div class="grid">
+                            <div class="unit golden-small center-on-mobiles">
+                              <h3>Get up and running <em>in&nbsp;seconds</em>.</h3>
+                            </div>
+                            <div class="unit golden-large code">
+                              <p class="title">Quick-start Instructions</p>
+                              <div class="shell">
+                                <p class="line">
+                                  <span class="path">~</span>
+                                  <span class="prompt">$</span>
+                                  <span class="command">gem install jekyll</span>
+                                </p>
+                                <p class="line">
+                                  <span class="path">~</span>
+                                  <span class="prompt">$</span>
+                                  <span class="command">jekyll new my-awesome-site</span>
+                                </p>
+                                <p class="line">
+                                  <span class="path">~</span>
+                                  <span class="prompt">$</span>
+                                  <span class="command">cd my-awesome-site</span>
+                                </p>
+                                <p class="line">
+                                  <span class="path">~/my-awesome-site</span>
+                                  <span class="prompt">$</span>
+                                  <span class="command">jekyll serve</span>
+                                </p>
+                                <p class="line">
+                                  <span class="output"># => Now browse to http://localhost:4000</span>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="clear"></div>
+                          </div>
+
+
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -38,3 +61,4 @@
         </div>
     </div>
 {% endfor %}
+

@@ -4,7 +4,7 @@ email: mychembl@ebi.ac.uk
 url: http://chembl.github.io/mychembl
 description: ""
 skills: "Open Source Scalable Drug Design Platform"
-meta_author: LastName FirstName
+meta_author: Michal Nowotka
 
 # Google webmaster tools
 google_verify:
@@ -33,15 +33,12 @@ color:
 footer:
   copyright: ChEMBL Group EMBL-EBI
   location: Cambridge, UK
-  social: Around the Web
+  social: Our team
   credits: Credits
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: https://twitter.com/ChEMBL
-  - title: github
-    url: https://github.com/chembl
+#social
+twitter_username: ChEMBL
+github_username: chembl
 
 # Postal address (add as many lines as necessary)
 address:

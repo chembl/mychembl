@@ -1,0 +1,11 @@
+---
+layout: default
+title: MyChEMBL A Virtual Platform for Distributing Cheminformatics Tools and Open Data
+modal-id: 8
+date: 2014-07-17
+img: pub_1.png
+alt: 10.3390/challe5020334
+link: http://docs.google.com/gview?url=http://www.mdpi.com/2078-1547/5/2/334/pdf&embedded=true
+category: Publications
+---
+

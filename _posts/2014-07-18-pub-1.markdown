@@ -1,0 +1,13 @@
+---
+layout: default
+title: myChEMBL a virtual machine implementation of open data and cheminformatics tools
+modal-id: 6
+date: 2014-07-18
+img: pub_2.png
+alt: 10.1093/bioinformatics/btt666
+link: http://bioinformatics.oxfordjournals.org/content/30/2/298.full.pdf+html
+category: Publications
+
+---
+
+

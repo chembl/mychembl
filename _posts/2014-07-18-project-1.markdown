@@ -5,9 +5,46 @@ modal-id: 1
 date: 2014-07-18
 img: vb_logo.png
 alt: Virtual Box
-project-date: April 2014
-client: Start Bootstrap
 category: Virtualisation
-description: Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+description:
 
 ---
+
+Installing myChEMBL using Virtual Box is the oldest and safest method that should always work.
+It can also be a bit tedious as it requires to create and configure a new virtual machine from scratch so if you want to
+save some time, you can try Vagrant method instead.
+
+In order to install myChEMBL using Virtual Box you have to:
+
+1. Install [Virtual Box](https://www.virtualbox.org/).
+2. Download [myChEMBL disk image](ftp://ftp.ebi.ac.uk/pub/databases/chembl/VM/myChEMBL/releases/myChEMBL-20_0/Ubuntu/VirtualBox/ubuntu.vmdk.tar.gz),
+   this will download latest version of myChEMBL by default, if you want to get different one, check the [archive](http://).
+   The file containing myChEMBL image is big (several gigabytes) so you may want to make sure you have a stable
+   internet connection. You may also want to use a download manager (or FTP program) in order to be able to restore the
+   process in case your internet connection drops. Finally you have to know the location where the file is saved, this
+   is usually your system defined Downloads folder.
+3. Once your copy of the myChEMBL image is downloaded you have to unpack it. You can do it by double-clicking on the
+   file icon if you have archive utilities installed in your system. On Unix systems you can do it from the command line
+   by executing:
+
+       tar -zxvf ubuntu.vmdk.tar.gz
+
+   in the Downloads folder.
+4. Create a Virtual Machine.
+   Start the VirtualBox application and click on the New button to create a new VM, and then Next.
+   ![New VM](img/virtualbox.png)
+
+5. Enter a name such as mychembl, and choose Linux as the “Operating system”, and Ubuntu as the “Version”.
+   ![VB select name](img/virtualbox_select_name.png)
+
+6. In the next screen set the memory to 1024 MB (or more if your host computer has more than 4GB).
+   ![VMDK memory](img/vmdk_memory.png)
+
+7. Continue to the next screen and choose “Use existing hard disk”.
+   Now click on the button (a folder icon) to browse to where you saved the ubuntu.vmdk file.
+   Select this file, press Next and Create.
+   ![VMDK disk](img/vmdk_disk.png)
+
+8. Now bootup the VM by clicking the Start (green arrow) button. Once the myChEMBL system finish booting, you can
+   navigate your browser to [http://localhost:8000](http://localhost:8000) and start using myChEMBL.
+

@@ -5,9 +5,24 @@ modal-id: 2
 date: 2014-07-17
 img: vagrant_logo.png
 alt: Vagrant
-project-date: April 2014
-client: Start Bootstrap
 category: Virtualisation
-description: Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+description: Get myChEMBL up and running in seconds.
+command_title: install mychembl
+commands:
+    - command: vagrant init chembl/mychembl_20_ubuntu
+    - command: vagrant up
+
+outputs:
+    - Now browse to http://localhost:8000
 
 ---
+
+Using vagrant is our recommended method to get myChEMBL up and running.
+This is because it only requires executing two commands in your terminal and you don't have to care about downloading
+Virtual Machine image and configuring it.
+In order to install myChEMBL using Vagrant do the following:
+
+1. Install [Virtual Box](https://www.virtualbox.org/).
+2. Install [Vagrant](https://www.vagrantup.com/downloads.html)
+
+Now all you need to do is top open a terminal and execute two simple commands:

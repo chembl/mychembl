@@ -14,44 +14,35 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
-                            <p>{{ post.description }}</p>
+                            <p>{{ post.content }}</p>
 
+                          {% if post.commands %}
 
-                          <div class="grid">
-                            <div class="unit golden-small center-on-mobiles">
-                              <h3>Get up and running <em>in&nbsp;seconds</em>.</h3>
-                            </div>
-                            <div class="unit golden-large code">
-                              <p class="title">Quick-start Instructions</p>
+                          <div class="center-on-mobiles">
+                            <h3>{{ post.description }}</h3>
+                          </div>
+
+                          <div class="quickstart">
+                            <div class="code">
+                              <p class="title">{{ post.command_title }}</p>
                               <div class="shell">
+                                {% for command in post.commands %}
                                 <p class="line">
-                                  <span class="path">~</span>
-                                  <span class="prompt">$</span>
-                                  <span class="command">gem install jekyll</span>
+                                  <span class="path">{{ command.path | default: '~' }}</span>
+                                  <span class="prompt">{{ command.prompt | default: '$' }}$</span>
+                                  <span class="command">{{ command.command }}</span>
                                 </p>
+                                {% endfor %}
+                                {% for output in post.outputs %}
                                 <p class="line">
-                                  <span class="path">~</span>
-                                  <span class="prompt">$</span>
-                                  <span class="command">jekyll new my-awesome-site</span>
+                                  <span class="output"># => {{ output }}</span>
                                 </p>
-                                <p class="line">
-                                  <span class="path">~</span>
-                                  <span class="prompt">$</span>
-                                  <span class="command">cd my-awesome-site</span>
-                                </p>
-                                <p class="line">
-                                  <span class="path">~/my-awesome-site</span>
-                                  <span class="prompt">$</span>
-                                  <span class="command">jekyll serve</span>
-                                </p>
-                                <p class="line">
-                                  <span class="output"># => Now browse to http://localhost:4000</span>
-                                </p>
+                                {% endfor %}
                               </div>
                             </div>
                             <div class="clear"></div>
                           </div>
-
+                          {% endif %}
 
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>

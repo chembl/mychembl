@@ -5,9 +5,45 @@ modal-id: 3
 date: 2014-07-16
 img: docker_logo.png
 alt: Docker
-project-date: April 2014
-client: Start Bootstrap
 category: Virtualisation
-description: Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+command_title: install mychembl
+commands:
+    - command: wget http://ftp.ebi.ac.uk/pub/databases/chembl/VM/Docker/mychembl_20_ubuntu_docker.tar.gz
+    - command: gunzip mychembl_20_ubuntu_docker.tar.gz
+    - command: docker load < mychembl_20_ubuntu_docker.tar
+    - command: docker run -p 2222:22 -p 80:80 -p 9612:9612 -t -i chembl/mychembl_20_ubuntu /usr/local/bin/supervisord
+
+outputs:
+    - Now browse to http://localhost
 
 ---
+
+[Docker](https://www.docker.com/) is a new open-source project that automates the deployment of distributed applications.
+It takes advantage of some new cool features of modern Linux kernel in order to run virtual containers, avoiding the
+overhead of starting and maintaining virtual machines.
+
+In contrast to virtual machines, which emulate virtual hardware, docker containers employ the kernel of the host machine
+so they don't require or include the whole operating system. While still separated from the host, they only add a very
+thin level of abstraction.
+
+This method is only for advanced users but it gives the best performance.
+
+Please note, that the following instruction is for Linux operating system only.
+If you plan to use myChEMBL on other operating systems (such as OS X or Windows) we suggest Vagrant or Virtual Box
+methods.
+
+In order to install myChEMBL using Docker you have to:
+
+1. Install Docker. For Linux the easiest way to do this is to invoke the following command:
+
+       wget -qO- https://get.docker.com/ | sh
+
+2. Once you have docker installed in your system all you have to do is:
+
+      * Download myChEMBL image
+      * Uncompress
+      * Load the image into docker
+      * Run it
+
+   You can do it all from your terminal by executing following commands:
+

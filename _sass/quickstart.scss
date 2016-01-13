@@ -192,3 +192,23 @@
     text-shadow: 0 -1px 0 rgba(0,0,0,.5);
   }
 }
+
+#about .text-muted{
+  color: #C2E5FF;
+}
+
+#about .text-primary{
+  color: #EEF580;
+}
+
+#install .oses .portfolio-link.selected{
+  border: 3px solid #A1E0A3;
+}
+
+@media (max-width: 767px)
+{
+    a.fork
+    {
+        display: none;
+    }
+}

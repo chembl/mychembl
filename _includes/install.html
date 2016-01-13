@@ -10,10 +10,10 @@
                     <br />
                 </div>
             </div>
-            <div class="row">
+            <div class="row oses">
                 {% for post in site.categories.['operating systems'] %}
                     <div class="col-sm-6 portfolio-item">
-                        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link {{post.alt}}" data-toggle="modal">
                             <div class="caption">
                                 <div class="caption-content">
                                     <i class="fa fa-lightbulb-o fa-3x"></i><br/>

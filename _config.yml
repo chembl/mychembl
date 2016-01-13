@@ -31,7 +31,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: ChEMBL Group EMBL-EBI
+  copyright: ChEMBL Group | EMBL-EBI |
   location: Cambridge, UK
   social: Our team
   credits: Credits
@@ -46,7 +46,8 @@ address:
   - line: Cambridgeshire, CB10 1SD, UK
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: '<i>Funding:</i> Strategic Award for Chemogenomics from the Wellcome Trust (WT086151/Z/08/Z)<br/> European Molecular Biology Laboratory.'
+acknowledgments: 'myChEMBL relies upon Open Source software.'
 
 # Build settings
 markdown: kramdown

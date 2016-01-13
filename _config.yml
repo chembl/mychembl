@@ -46,8 +46,8 @@ address:
   - line: Cambridgeshire, CB10 1SD, UK
 
 # Credits content
-credits: '<i>Funding:</i> Strategic Award for Chemogenomics from the Wellcome Trust (WT086151/Z/08/Z)<br/> European Molecular Biology Laboratory.'
-acknowledgments: 'myChEMBL relies upon Open Source software.'
+credits: 'Strategic Award for Chemogenomics from the Wellcome Trust <br />(WT086151/Z/08/Z)<br/> <a href="http://www.embl.de/">European Molecular Biology Laboratory</a>.'
+acknowledgments: 'myChEMBL relies upon <a href="https://opensource.org/">Open Source</a> software.'
 
 # Build settings
 markdown: kramdown

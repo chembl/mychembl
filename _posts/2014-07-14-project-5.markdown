@@ -7,3 +7,13 @@ img: centos_logo.png
 alt: CentOS
 category: Operating Systems
 ---
+
+[CentOS](https://www.centos.org) (abbreviated from Community Enterprise Operating System) is a Linux distribution that attempts to provide a free,
+enterprise-class, community-supported computing platform which aims to be functionally compatible with its upstream
+source, Red Hat Enterprise Linux (RHEL).
+
+CentOS emphasises the security and therefore is very popular among system and network administrators and widely used
+as a production Operating Systems in companies with a large IT infrastructure.
+Similar to Ubuntu, CentoOS Linux is no-cost and free to redistribute.
+
+CentOS-based myChEMBL distribution is build on top of CentOS 7.

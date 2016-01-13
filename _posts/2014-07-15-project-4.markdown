@@ -8,3 +8,13 @@ alt: Ubuntu
 category: Operating Systems
 
 ---
+
+[Ubuntu](http://www.ubuntu.com/), also known as 'Linux for human beings' is a Debian-based Linux distribution, commited
+to the principles of open-source software development. Because of its user-friendliness, Ubuntu is one of the most
+popular Operating Systems and can be found preinstalled on PCs, laptops and mobile phones.
+It's also widely supported by cloud platforms such as Amazon EC2, OpenStack and DigitalOcean.
+
+This is why Ubuntu is a default OS for the myChEMBL platform and should be an OS of choice for people that are new
+to myChEMBL.
+
+The current myChEMBL release is using Ubuntu 12.04 LTS.

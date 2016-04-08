@@ -16,7 +16,8 @@ sudo -H pip install matplotlib
 sudo -H pip install networkx
 sudo -H pip install "ipython[notebook]"
 sudo -H pip install biopython
-sudo -H pip install -U scikit-learn==0.14.1
+# sudo -H pip install -U scikit-learn==0.14.1
+sudo -H pip install scikit-learn
 sudo -H pip install -U chembl_migration_model
 sudo -H pip install -U chembl_webresource_client
 echo "numpy==1.8.2" | cat > /tmp/pandas.requirement.txt

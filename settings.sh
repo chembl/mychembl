@@ -5,7 +5,7 @@
 # Is sets some important variables.
 
 # myChEMBL version:
-export CHEMBL_VERSION="20"
+export CHEMBL_VERSION="21"
 
 # location of raw files for mychembl webapp:
 export RAW_MYCHEMBL_APP="https://raw.githubusercontent.com/chembl/mychembl_webapp/master"
@@ -17,7 +17,7 @@ python -mplatform | grep Ubuntu && export AUX_OS_NAME="Ubuntu" || export AUX_OS_
 export RDKIT_REPO="https://github.com/rdkit/rdkit"
 
 # rdkit release tag:
-export RDKIT_RELEASE="Release_2015_03_1"
+export RDKIT_RELEASE="Release_2015_09_2"
 
 # indigo toolkit location
 export INDIGO_FILENAME="indigo-python-1.1.11-linux"

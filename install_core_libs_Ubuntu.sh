@@ -24,13 +24,13 @@ sudo apt-get install -y gfortran libopenblas-dev liblapack-dev
 sudo apt-get install -y libxml2 libxml2-dev
 sudo apt-get install -y libxslt1.1 libxslt1-dev
 sudo apt-get install -y wget
-sudo apt-get install -y python-psycopg2
-sudo apt-get install -y python-imaging-tk
-sudo apt-get install -y python-cairo
+#sudo apt-get install -y python-psycopg2
+#sudo apt-get install -y python-imaging-tk
+#sudo apt-get install -y python-cairo
 sudo apt-get install -y libnss-mdns
 sudo apt-get install -y avahi-utils
-sudo apt-get install -y python-gobject
-sudo apt-get install -y python-dev
+#sudo apt-get install -y python-gobject
+#sudo apt-get install -y python-dev
 sudo apt-get install -y rcconf
 sudo apt-get install -y graphicsmagick
 sudo apt-get install -y libgraphicsmagick++1-dev

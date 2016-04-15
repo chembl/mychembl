@@ -2,10 +2,7 @@
 
 wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
 sudo bash miniconda.sh -b -p /opt/conda
-sudo rm /usr/bin/python
-sudo ln -s /opt/conda/bin/python /usr/bin/python
-sudo ln -s /opt/conda/bin/conda /usr/bin/conda
-sudo ln -s /opt/conda/bin/pip /usr/bin/pip
+sudo ln -sf /opt/conda/bin/* /usr/local/bin
 hash -r
 sudo conda config --set always_yes yes --set changeps1 no
 sudo conda update -q conda
@@ -37,6 +34,8 @@ sudo -H pip install -U netifaces
 #sudo -H pip install virtualenvwrapper
 sudo conda install progressbar
 sudo -H pip install -U plotly
+sudo conda install -c https://conda.binstar.org/rdkit rdkit-postgresql
+sudo ln -sf /opt/conda/bin/* /usr/local/bin
 
 wget $CHEM_FP_LOCATION
 tar -zxvf $CHEM_FP_VERSION.tar.gz

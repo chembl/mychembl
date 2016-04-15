@@ -1,40 +1,48 @@
 #!/bin/bash
 
-wget https://bootstrap.pypa.io/get-pip.py
-sudo -H python get-pip.py
+wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+sudo bash miniconda.sh -b -p /opt/conda
+sudo rm /usr/bin/python
+sudo ln -s /opt/conda/bin/python /usr/bin/python
+sudo ln -s /opt/conda/bin/conda /usr/bin/conda
+sudo ln -s /opt/conda/bin/pip /usr/bin/pip
+hash -r
+sudo conda config --set always_yes yes --set changeps1 no
+sudo conda update -q conda
+sudo conda install anaconda-client
 
-sudo -H pip install pyopenssl 
-sudo -H pip install ndg-httpsclient 
-sudo -H pip install pyasn1
-sudo -H pip install lxml
+#sudo -H pip install pyopenssl 
+sudo conda install ndg-httpsclient
+#sudo -H pip install pyasn1
+sudo conda install lxml
 sudo -H pip install supervisor --pre
-sudo -H pip install Pillow
-sudo -H pip install cairocffi
-sudo -H pip install numpy
-sudo -H pip install scipy
-sudo -H pip install matplotlib
-sudo -H pip install networkx
-sudo -H pip install "ipython[notebook]"
-sudo -H pip install biopython
-# sudo -H pip install -U scikit-learn==0.14.1
-sudo -H pip install scikit-learn
+sudo conda install Pillow
+sudo conda install cairo #sudo -H pip install cairocffi
+sudo conda install numpy
+sudo conda install scipy
+sudo conda install matplotlib
+sudo conda install networkx
+sudo conda install ipython-notebook
+sudo conda install biopython
+sudo conda install scikit-learn
 sudo -H pip install -U chembl_migration_model
 sudo -H pip install -U chembl_webresource_client
-echo "numpy==1.8.2" | cat > /tmp/pandas.requirement.txt
-sudo -H pip install -U pandas -r /tmp/pandas.requirement.txt
-sudo -H pip install -U mpld3
-sudo -H pip install -U service_identity
+sudo conda install pandas
+sudo conda install mpld3
+sudo conda install service_identity
 sudo -H pip install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz
-sudo -H pip install -U paste
+sudo conda install paste
 sudo -H pip install -U netifaces
-sudo -H pip install virtualenv
-sudo -H pip install virtualenvwrapper
-sudo -H pip install progressbar
+#sudo -H pip install virtualenv
+#sudo -H pip install virtualenvwrapper
+sudo conda install progressbar
+sudo -H pip install -U plotly
 
 wget $CHEM_FP_LOCATION
 tar -zxvf $CHEM_FP_VERSION.tar.gz
 cd $CHEM_FP_VERSION
 sudo python setup.py install
+cd ..
 rm $CHEM_FP_VERSION.tar.gz
 
 python -c "import mpld3; mpld3.utils.write_ipynb_local_js()"

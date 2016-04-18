@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install software-properties-common
+sudo apt-get install -y software-properties-common
 
 sudo add-apt-repository "deb https://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main"
 wget --quiet -O - https://postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -

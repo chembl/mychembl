@@ -21,8 +21,11 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 
-export POSTGRES_CONFIG=/etc/postgresql/9.4/main
+export POSTGRES_VERSION=9.4
+export POSTGRES_ROOT=/etc/postgresql/$POSTGRES_VERSION
+export POSTGRES_CONFIG=$POSTGRES_ROOT/main
 echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/postgresql.conf $RAW/configuration/mychembl_postgresql_${AUX_OS_NAME}.conf
+ln -sf /opt/conda/share/postgresql/extension/* $POSTGRES_ROOT/extension/
 echo "chemblvm" | sudo -S service postgresql restart
 
 echo "vagrant" | sudo -Su postgres createuser -dsr chembl # sudo -u postgres createuser -dsr chembl

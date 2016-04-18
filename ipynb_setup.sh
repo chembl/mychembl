@@ -29,7 +29,7 @@ curl -o $HOME/.ipython/profile_mychembl/ipython_notebook_config.py $RAW/configur
 cd /home/chembl/.ipython/nbextensions/
 wget $RAPHAEL_JS_LOCATION
 
-python -m IPython.external.mathjax
+#python -m IPython.external.mathjax
 
 # create directory for storing temporary files:
 mkdir $WORKBENCH
@@ -47,4 +47,5 @@ curl -o $WORKBENCH/document_chemistry_20141011_114421_271.csv $I_NOTEBOOKS/docum
 curl -o $WORKBENCH/fps.pkl $I_NOTEBOOKS/fps.pkl
 curl -o $WORKBENCH/smiles_cas_N6512.smi $I_NOTEBOOKS/smiles_cas_N6512.smi
 
+mkdir -p /home/chembl/.ipython/profile_mychembl/static/custom/
 curl -o /home/chembl/.ipython/profile_mychembl/static/custom/custom.css $I_NOTEBOOKS/custom.css

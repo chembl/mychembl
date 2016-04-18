@@ -15,7 +15,7 @@ sudo apt-get install -y libjpeg8 libjpeg-dev
 sudo apt-het install -y libtiff5 libtiff5-dev
 sudo apt-get install -y libpng12-0 libpng12-dev
 sudo apt-get install -y libboost-all-dev
-sudo apt-get install postgresql-9.4
+sudo apt-get install -y postgresql-9.4
 sudo apt-get install -y flex
 sudo apt-get install -y bison
 sudo apt-get install -y g++

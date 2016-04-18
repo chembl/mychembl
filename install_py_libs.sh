@@ -25,7 +25,7 @@ sudo conda install scikit-learn
 sudo -H pip install -U chembl_migration_model
 sudo -H pip install -U chembl_webresource_client
 sudo conda install pandas
-sudo conda install mpld3
+sudo -H pip install git+git://github.com/jakevdp/mpld3.git@master
 sudo conda install service_identity
 sudo -H pip install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz
 sudo conda install paste
@@ -44,5 +44,5 @@ sudo python setup.py install
 cd ..
 rm $CHEM_FP_VERSION.tar.gz
 
-python -c "import mpld3; mpld3.utils.write_ipynb_local_js()"
+sudo python -c "import mpld3; mpld3.utils.write_ipynb_local_js()"
 

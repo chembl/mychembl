@@ -21,6 +21,18 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 
+echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/postgresql.conf $RAW/configuration/mychembl_postgresql_${AUX_OS_NAME}.conf
+echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/pg_hba.conf $RAW/configuration/mychembl_pg_hba.conf
+# see: http://michael.otacoo.com/postgresql-2/take-care-of-kernel-memory-limitation-for-postgresql-shared-buffers/
+echo "chemblvm" | sudo -SE bash -c 'echo "kernel.shmmax = 2147483648" > ${SYSCTL_PATH}/sysctl.d/10-mychembl-pgsql.conf'
+
+if [ "$AUX_OS_NAME" = "Ubuntu" ]
+   then
+       echo "chemblvm" | sudo -S service postgresql restart
+   else
+       echo "chemblvm" | sudo -S systemctl restart postgresql-9.3
+fi
+
 echo "vagrant" | sudo -Su postgres createuser -dsr chembl # sudo -u postgres createuser -dsr chembl
 
 cd /tmp

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+sudo apt-get install software-properties-common
+
+sudo add-apt-repository "deb https://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main"
+wget --quiet -O - https://postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
 sudo apt-get update
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y bash
@@ -10,10 +15,7 @@ sudo apt-get install -y libjpeg8 libjpeg-dev
 sudo apt-het install -y libtiff5 libtiff5-dev
 sudo apt-get install -y libpng12-0 libpng12-dev
 sudo apt-get install -y libboost-all-dev
-sudo apt-get install -y postgresql
-sudo apt-get install -y postgresql-server-dev-all
-sudo apt-get install -y postgresql-doc
-sudo apt-get install -y postgresql-contrib
+sudo apt-get install postgresql-9.4
 sudo apt-get install -y flex
 sudo apt-get install -y bison
 sudo apt-get install -y g++

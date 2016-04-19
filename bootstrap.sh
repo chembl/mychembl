@@ -44,7 +44,7 @@ sudo curl -o /usr/share/themes/mychembl/mychembl.png $RAW/branding/mychembl.png
 sudo curl -o /lib/plymouth/themes/ubuntu-text/ubuntu-text.plymouth $RAW/branding/ubuntu-text.plymouth
 
 wget $RAW/osra.sh && source osra.sh
-wget $RAW/rdkit_install.sh && sudo -E su -m -c "bash rdkit_install.sh" chembl
+#wget $RAW/rdkit_install.sh && sudo -E su -m -c "bash rdkit_install.sh" chembl
 wget $RAW/ipynb_setup.sh && sudo -E su -m -c "bash ipynb_setup.sh" chembl
 wget $RAW/create_db.sh && sudo -E su -m -c "bash create_db.sh" chembl
 wget $RAW/webservices/ws_setup.sh && sudo -E su -m -c "bash ws_setup.sh" chembl

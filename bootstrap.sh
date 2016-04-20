@@ -28,6 +28,8 @@ export POSTGRES_CONFIG=$POSTGRES_ROOT/main
 echo "chemblvm" | sudo -SE curl -o $POSTGRES_CONFIG/postgresql.conf $RAW/configuration/mychembl_postgresql_${AUX_OS_NAME}.conf
 echo "vagrant" | sudo -Su postgres mkdir -p $POSTGRES_EXTENTION
 sudo ln -sf /opt/conda/share/postgresql/extension/* $POSTGRES_EXTENTION
+sudo rm /usr/lib/postgresql/9.4/lib/ -rf
+sudo ln -s /opt/conda/lib/postgresql/ /usr/lib/postgresql/9.4/lib
 echo "chemblvm" | sudo -S service postgresql restart
 
 echo "vagrant" | sudo -Su postgres createuser -dsr chembl # sudo -u postgres createuser -dsr chembl

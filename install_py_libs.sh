@@ -24,6 +24,11 @@ sudo conda install biopython
 sudo conda install scikit-learn
 sudo -H pip install -U chembl_migration_model
 sudo -H pip install -U chembl_webresource_client
+sudo -H pip install -U chembl_webservices
+sudo -H pip install -U tastypie_spore_docs
+sudo -H pip install -U 'chembl_compatibility>=2.0.0'
+sudo -H pip install -U django-cors-headers
+sudo conda install psycopg2
 sudo conda install pandas
 sudo -H pip install git+git://github.com/jakevdp/mpld3.git@master
 sudo conda install service_identity

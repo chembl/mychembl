@@ -17,7 +17,7 @@ create index fps_ffp2_idx on fps_rdkit using gist(ffp2);
 create index fps_rdkfp_idx on fps_rdkit using gist(rdkfp);
 create index fps_atombv_idx on fps_rdkit using gist(atombv);
 create index fps_layfp_idx on fps_rdkit using gist(layeredfp);
-create index fps_maccsfp_idx on fps_rdkit using gist(maccsfp);
+-- create index fps_maccsfp_idx on fps_rdkit using gist(maccsfp); -- crashes postgres server
 
 -- #5. Create the primary keys
 alter table fps_rdkit add primary key (molregno);

@@ -10,18 +10,18 @@ BEAKER_DIR="$HOME/chembl_beaker/conf.d"
 RAW_BEAKER=$RAW/beaker
 
 # Switching to webservices virtualenv, beaker should be already installed
-source virtualenvwrapper.sh
-workon chembl_webservices
+#source virtualenvwrapper.sh
+#workon chembl_webservices
 
-pip install chembl_beaker
+#pip install chembl_beaker
 
 # Install all (optional) dependencies 
-pip install standardiser
-pip install matplotlib
-pip install Pillow
-pip install lxml
-pip install cairocffi
-pip install numpy
+#pip install standardiser
+#pip install matplotlib
+#pip install Pillow
+#pip install lxml
+#pip install cairocffi
+#pip install numpy
 
 #configure beaker and Apache:
 mkdir -p $BEAKER_DIR

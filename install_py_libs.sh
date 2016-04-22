@@ -40,6 +40,7 @@ sudo -H pip install -U netifaces
 sudo conda install progressbar
 sudo -H pip install -U plotly
 sudo conda install -c https://conda.binstar.org/rdkit rdkit-postgresql
+sudo -H pip install -U "django-tastypie==0.10"
 sudo ln -sf /opt/conda/bin/* /usr/local/bin
 
 wget $CHEM_FP_LOCATION

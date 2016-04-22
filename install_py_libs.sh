@@ -22,6 +22,8 @@ sudo conda install networkx
 sudo conda install ipython-notebook
 sudo conda install biopython
 sudo conda install scikit-learn
+sudo -H pip install -U standardiser
+sudo -H pip install -U chembl_beaker
 sudo -H pip install -U chembl_migration_model
 sudo -H pip install -U chembl_webresource_client
 sudo -H pip install -U chembl_webservices

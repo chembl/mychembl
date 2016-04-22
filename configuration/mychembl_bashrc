@@ -11,5 +11,5 @@ export RDBASE=/home/chembl/rdkit
 export INDIGOBASE=/home/chembl/indigo
 export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=$RDBASE:$INDIGOBASE:$PYTHONPATH
-source virtualenvwrapper.sh
+#source virtualenvwrapper.sh
 

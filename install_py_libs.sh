@@ -22,6 +22,7 @@ sudo conda install networkx
 sudo conda install ipython-notebook
 sudo conda install biopython
 sudo conda install scikit-learn
+sudo conda install --channel https://conda.anaconda.org/kalefranz mod_wsgi
 sudo -H pip install -U standardiser
 sudo -H pip install -U chembl_beaker
 sudo -H pip install -U chembl_migration_model

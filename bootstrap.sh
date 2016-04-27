@@ -32,7 +32,8 @@ sudo rm /usr/lib/postgresql/9.4/lib/ -rf
 sudo ln -s /opt/conda/lib/postgresql/ /usr/lib/postgresql/9.4/lib
 echo "chemblvm" | sudo -S service postgresql restart
 
-echo "vagrant" | sudo -Su postgres createuser -dsr chembl # sudo -u postgres createuser -dsr chembl
+echo "vagrant" | sudo -Su postgres createuser -dsr chembl
+echo "vagrant" | sudo -Su postgres createuser -dsr www-data
 
 cd /tmp
 sudo curl -o /etc/network/interfaces $RAW/configuration/mychembl_interfaces

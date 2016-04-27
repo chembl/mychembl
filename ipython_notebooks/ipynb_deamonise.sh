@@ -6,7 +6,7 @@ sudo mkdir -p $SUPERVISOR_DIR
 sudo curl -o $SUPERVISOR_DIR/supervisor.conf $RAW/configuration/supervisor.conf
 sudo curl -o $SUPERVISOR_DIR/ipynb.ini $RAW/configuration/ipynb.ini
 sudo curl -o $SUPERVISOR_DIR/ws.ini $RAW/configuration/ws.ini
-sudo curl -o $SUPERVISOR_DIR/ws.ini $RAW/configuration/beaker.ini
+sudo curl -o $SUPERVISOR_DIR/beaker.ini $RAW/configuration/beaker.ini
 
 if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then

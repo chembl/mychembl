@@ -37,7 +37,6 @@ export PGADMIN_CONFIG="$APACHE_SITES/$PHPPGADMIN.conf"
 
 sudo -E curl -o $APACHE_SITES/launchpad.conf $RAW/configuration/launchpad.conf
 sudo -E curl -o $APACHE_SITES/chembl_webservices.conf $RAW/webservices/conf/chembl_webservices.conf
-sudo -E bash -c 'echo "${APACHE_EXPORT}LD_LIBRARY_PATH=/home/chembl/rdkit/lib:\$LD_LIBRARY_PATH" >> ${APACHE_ENV_FILE}'
 sudo -E curl -o /etc/$PHPPGADMIN/config.inc.php $RAW/configuration/phppgadmin_config.inc.php
 sudo -E curl -o $PGADMIN_CONFIG $RAW/configuration/phppgadmin_${AUX_OS_NAME}.conf
 

@@ -5,9 +5,7 @@ sudo su -c "chmod -R 755 /home/chembl" chembl
 if [ "$AUX_OS_NAME" != "Ubuntu" ]
    then
         sudo su -c "chcon -R -t httpd_user_content_t /home/chembl" chembl
-        sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/rdkit" chembl
-        sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/indigo" chembl
-        sudo su -c "chcon -R -t httpd_sys_script_exec_t /home/chembl/.virtualenvs" chembl
+        sudo su -c "chcon -R -t httpd_sys_script_exec_t /opt/indigo" chembl
         sudo setsebool -P httpd_can_network_connect_db on
         sudo setsebool -P httpd_can_network_connect on
         sudo setsebool -P httpd_enable_homedirs on
@@ -60,4 +58,4 @@ if [ "$AUX_OS_NAME" = "Ubuntu" ]
       sudo systemctl restart httpd -l
 fi
 
-#wget $RAW/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh
+wget $RAW/webservices/ws_cache_generation.sh && sh ws_cache_generation.sh

@@ -56,11 +56,14 @@ cd $HOME
 mkdir chembl_webservices
 cd chembl_webservices/
 django-admin.py startproject deployment
+mkdir deployment/logs
+mkdir deployment/run
 
 # Now we have to download configuration files:
 RAW_WS=$RAW/webservices/conf
 
 curl $RAW_WS/settings.py > deployment/deployment/settings.py
+curl $RAW_WS/gunicorn.conf > deployment/deployment/gunicorn.conf
 sed -i "s/chembl_XXX/chembl_${CHEMBL_VERSION}/g" deployment/deployment/settings.py
 curl $RAW_WS/urls.py > deployment/deployment/urls.py
 curl $RAW_WS/wsgi.py > deployment/deployment/wsgi.py

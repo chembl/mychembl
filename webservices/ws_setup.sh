@@ -9,17 +9,17 @@ export HOME=/home/chembl
 #export VIRTUALENVWRAPPER_PYTHON=$(which python)
 #export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/chembl/.local/bin:/home/chembl/bin
 #export PYTHONPATH=$HOME/rdkit:$HOME/indigo
-export PYTHONPATH=$HOME/indigo
+export PYTHONPATH=/opt/indigo
 #export RDBASE=$HOME/rdkit
 #export LD_LIBRARY_PATH=$RDBASE/lib:$LD_LIBRARY_PATH
 #export WORKON_HOME=$HOME/.virtualenvs
 
-cd $HOME
+cd /tmp
 
 # We need indigo toolkit as alternative compound rendering engine:
 wget $INDIGO_LOCATION -O indigo.zip
 unzip indigo.zip
-mv $INDIGO_FILENAME indigo
+mv $INDIGO_FILENAME /opt/indigo
 rm indigo.zip
 
 # Source virtualenvwrapper because it makes our job lot easier:

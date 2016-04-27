@@ -50,6 +50,7 @@ if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then
       sudo a2enmod rewrite
       sudo a2enmod proxy
+      sudo a2enmod proxy_http
       sudo a2ensite phppgadmin
       sudo a2ensite launchpad
       sudo a2ensite chembl_webservices

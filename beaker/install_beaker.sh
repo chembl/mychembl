@@ -29,3 +29,4 @@ mkdir -p $BEAKER_DIR
 # Now we have to download configuration files:
 curl $RAW_BEAKER/beaker.py > $BEAKER_DIR/beaker.py
 curl $RAW_BEAKER/beaker.conf > $BEAKER_DIR/beaker.conf
+curl $RAW_BEAKER/gunicorn.conf > $BEAKER_DIR/gunicorn.conf

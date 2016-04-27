@@ -13,8 +13,10 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 WS_NAME='chemblws'
-WS_BASE_URL='/chemblws'
+WS_BASE_URL='/'
 WS_DOCS_TITLE='ChEMBL web services live documentation'
+
+USE_X_FORWARDED_HOST = True
 
 ADMINS = (
     ('Michael Nowotka', 'mnowotka@ebi.ac.uk'),

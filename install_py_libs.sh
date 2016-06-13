@@ -20,6 +20,7 @@ sudo conda install scipy
 sudo conda install matplotlib
 sudo conda install networkx
 sudo conda install ipython-notebook
+sudo conda install -c conda-forge ipywidgets
 sudo conda install biopython
 sudo conda install scikit-learn
 sudo conda install gunicorn

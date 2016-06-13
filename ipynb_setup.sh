@@ -23,8 +23,8 @@ curl -o $NOTEBOOKS/14_myChEMBL_BLAST_and_druggability.ipynb $I_NOTEBOOKS/14_myCh
 
 sed -i "s/chembl_XXX/chembl_${CHEMBL_VERSION}/g" $NOTEBOOKS/*.ipynb
 
-ipython profile create mychembl
-curl -o $HOME/.ipython/profile_mychembl/ipython_notebook_config.py $RAW/configuration/mychembl_ipython_notebook_config.py
+jupyter notebook --generate-config
+curl -o $HOME/.jupyter/jupyter_notebook_config.py $RAW/configuration/jupyter_notebook_config.py
 
 cd /home/chembl/.ipython/nbextensions/
 wget $RAPHAEL_JS_LOCATION

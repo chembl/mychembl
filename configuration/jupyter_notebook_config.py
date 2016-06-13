@@ -68,7 +68,7 @@
 # Use '*' to allow any origin to access your server.
 # 
 # Takes precedence over allow_origin_pat.
-# c.NotebookApp.allow_origin = ''
+c.NotebookApp.allow_origin = '*'
 
 # Use a regular expression for the Access-Control-Allow-Origin header
 # 
@@ -192,20 +192,20 @@
 # c.NotebookApp.logout_handler_class = 'notebook.auth.logout.LogoutHandler'
 
 # The url for MathJax.js.
-# c.NotebookApp.mathjax_url = ''
+c.NotebookApp.mathjax_url = '/nbextensions/mathjax/MathJax.js'
 
 # Dict of Python modules to load as notebook server extensions.Entry values can
 # be used to enable and disable the loading ofthe extensions.
 # c.NotebookApp.nbserver_extensions = {}
 
 # The directory to use for notebooks and kernels.
-# c.NotebookApp.notebook_dir = u''
+c.NotebookApp.notebook_dir = u'/home/chembl/ipynb_workbench'
 
 # Whether to open in a browser after starting. The specific browser used is
 # platform dependent and determined by the python standard library `webbrowser`
 # module, unless it is overridden using the --browser (NotebookApp.browser)
 # configuration option.
-# c.NotebookApp.open_browser = True
+c.NotebookApp.open_browser = False
 
 # Hashed password to use for web authentication.
 # 
@@ -217,7 +217,7 @@
 # c.NotebookApp.password = u''
 
 # The port the notebook server will listen on.
-# c.NotebookApp.port = 8888
+c.NotebookApp.port = 9612
 
 # The number of additional ports to try if the specified port is not available.
 # c.NotebookApp.port_retries = 50

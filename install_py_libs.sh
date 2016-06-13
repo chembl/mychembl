@@ -8,6 +8,7 @@ sudo conda config --set always_yes yes --set changeps1 no
 sudo conda update -q conda
 sudo conda install anaconda-client
 
+sudo -H pip install --upgrade pip
 #sudo -H pip install pyopenssl 
 sudo conda install ndg-httpsclient
 #sudo -H pip install pyasn1

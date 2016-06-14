@@ -26,10 +26,8 @@ sed -i "s/chembl_XXX/chembl_${CHEMBL_VERSION}/g" $NOTEBOOKS/*.ipynb
 jupyter notebook --generate-config
 curl -o $HOME/.jupyter/jupyter_notebook_config.py $RAW/configuration/jupyter_notebook_config.py
 
-cd /home/chembl/.ipython/nbextensions/
-wget $RAPHAEL_JS_LOCATION
-
-#python -m IPython.external.mathjax
+#cd /home/chembl/.ipython/nbextensions/
+#wget $RAPHAEL_JS_LOCATION
 
 # create directory for storing temporary files:
 mkdir $WORKBENCH

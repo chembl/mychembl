@@ -192,7 +192,7 @@ c.NotebookApp.ip = '*'
 # c.NotebookApp.logout_handler_class = 'notebook.auth.logout.LogoutHandler'
 
 # The url for MathJax.js.
-c.NotebookApp.mathjax_url = '/nbextensions/mathjax/MathJax.js'
+# c.NotebookApp.mathjax_url = '/nbextensions/mathjax/MathJax.js'
 
 # Dict of Python modules to load as notebook server extensions.Entry values can
 # be used to enable and disable the loading ofthe extensions.

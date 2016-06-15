@@ -34,7 +34,7 @@ sudo -H pip install -U tastypie_spore_docs
 sudo -H pip install -U 'chembl_compatibility>=2.0.0'
 sudo -H pip install -U django-cors-headers
 sudo conda install psycopg2
-sudo conda install pandas
+sudo conda install pandas=0.18.0
 sudo -H pip install git+git://github.com/jakevdp/mpld3.git@master
 sudo conda install service_identity
 sudo -H pip install https://garage.maemo.org/frs/download.php/8363/python-brisa_0.10.3maemo0.tar.gz

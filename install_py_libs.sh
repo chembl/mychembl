@@ -18,6 +18,7 @@ sudo conda install Pillow
 sudo conda install cairo #sudo -H pip install cairocffi
 sudo conda install numpy
 sudo conda install scipy
+sudo conda install pymongo
 sudo conda install matplotlib
 sudo conda install networkx
 sudo conda install ipython-notebook

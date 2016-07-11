@@ -20,6 +20,7 @@ curl -o $NOTEBOOKS/11_myChEMBL_SureChEMBL_tutorial_1.ipynb $I_NOTEBOOKS/11_myChE
 curl -o $NOTEBOOKS/12_myChEMBL_SureChEMBL_tutorial_2.ipynb $I_NOTEBOOKS/12_myChEMBL_SureChEMBL_tutorial_2.ipynb
 curl -o $NOTEBOOKS/13_myChEMBL_drugs_ADME.ipynb $I_NOTEBOOKS/13_myChEMBL_drugs_ADME.ipynb
 curl -o $NOTEBOOKS/14_myChEMBL_BLAST_and_druggability.ipynb $I_NOTEBOOKS/14_myChEMBL_BLAST_and_druggability.ipynb
+curl -o $NOTEBOOKS/15_Unichem.ipynb $I_NOTEBOOKS/15_Unichem.ipynb
 
 sed -i "s/chembl_XXX/chembl_${CHEMBL_VERSION}/g" $NOTEBOOKS/*.ipynb
 

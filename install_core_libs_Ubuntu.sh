@@ -57,5 +57,6 @@ sudo apt-get install -y iptables
 sudo apt-get install -y curl
 sudo apt-get install -y openssh-server
 sudo apt-get install -y vim
+sudo apt-get install mongodb
 
 sudo gem install gist

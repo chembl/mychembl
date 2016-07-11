@@ -5,10 +5,10 @@ cd /tmp
 
 if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then
-       export POSTGRES_CONFIG=/etc/postgresql/9.3/main
+       export POSTGRES_CONFIG=/etc/postgresql/9.4/main
        export SYSCTL_PATH=/etc
    else
-       export POSTGRES_CONFIG=/var/lib/pgsql/9.3/data
+       export POSTGRES_CONFIG=/var/lib/pgsql/9.4/data
        export SYSCTL_PATH=/usr/lib
 fi
 
@@ -55,7 +55,7 @@ if [ "$AUX_OS_NAME" = "Ubuntu" ]
    then
        echo "chemblvm" | sudo -S service postgresql restart
    else
-       echo "chemblvm" | sudo -S systemctl restart postgresql-9.3
+       echo "chemblvm" | sudo -S systemctl restart postgresql-9.4
 fi
 
 createdb chembl_${CHEMBL_VERSION}

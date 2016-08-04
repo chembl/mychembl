@@ -2,7 +2,12 @@ The data in ChEMBL is covered by the licence in the file CHEMBL.LICENSE.
 
 Under the -BY clause, we request attribution for subsequent use of ChEMBL.
 
-For publications using ChEMBL data, the primary current citation is: 
+For publications using the myChEMBL system, please use the following references:
+
+1. Ochoa, R.; Davies, M.; Papadatos, G.; Atkinson, F.; Overington, J. P. myChEMBL: a Virtual Machine Implementation of Open Data and Cheminformatics Tools. Bioinformatics 2014, 30 (2), 298–300.
+2. Davies, M.; Nowotka, M.; Papadatos, G.; Atkinson, F.; Overington, J. P. myChEMBL: a Virtual Platform for Distributing Cheminformatics Tools and Open Data. Challenges 2014.
+
+For publications using ChEMBL data, the primary current reference is: 
 
 1. A.P. Bento, A. Gaulton, A. Hersey, L.J. Bellis, J. Chambers, M. Davies, F.A. Krüger, Y. Light, L. Mak, S. McGlinchey, M. Nowotka, G. Papadatos, R. Santos & J.P. Overington (2014) 'The ChEMBL bioactivity database: an update' Nucl. Acids Res. Database Issue. 42 D1083-D1090 DOI:10.1093/nar/gkt1031 PMID:242149652.
 

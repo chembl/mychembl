@@ -2,9 +2,9 @@
 *
 * Title:            myChEMBL ACKNOWLEDGMENTS 
 * 
-* myChEMBL Version  20.0
+* myChEMBL Version  21.0
 *
-* ChEMBL Release:   20
+* ChEMBL Release:   21
 *
 ***************************************************************************
 
@@ -16,14 +16,14 @@ this file (also refer to the 'LaunchPad More Information' page):
 
 1. Greg Lundrum and the RDKit community (http://www.rdkit.org/)
 
-2. Peter Ertl and Bruno Bienfait for allowing us to disttribute JSME, which
+2. Peter Ertl and Bruno Bienfait for allowing us to distribute JSME, which
    is used by the web interface (http://peter-ertl.com/jsme/)
 
 3. PostgreSQL (http://www.postgresql.org/)
 
 4. Ubuntu linux distribution (http://www.ubuntu.com/)
 
-5. IPython notebook (software http://ipython.org)
+5. IPython Notebook (software http://ipython.org)
 
 6. Django Web Framework (https://www.djangoproject.com)
 
